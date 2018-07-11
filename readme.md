@@ -10,3 +10,5 @@
 * update the .env file with your db credentials
 
 * `php artisan key:generate`
+
+o luidy ta na area
