@@ -8,16 +8,16 @@
 
     {{-- @include ('errors.list') --}}
 
-    <h1><i class='fa fa-key'></i> Edit {{$permission->name}}</h1>
+    <h1><i class='fa fa-key'></i> Editar {{$permission->name}}</h1>
     <br>
     {{ Form::model($permission, array('route' => array('permissions.update', $permission->id), 'method' => 'PUT')) }}
 
     <div class="form-group">
-        {{ Form::label('name', 'Permission Name') }}
+        {{ Form::label('name', 'Nome da permissão') }}
         {{ Form::text('name', null, array('class' => 'form-control')) }}
     </div>
     <br>
-    {{ Form::submit('Edit', array('class' => 'btn btn-primary')) }}
+    {{ Form::submit('Salvar', array('class' => 'btn btn-primary')) }}
 
     {{ Form::close() }}
 

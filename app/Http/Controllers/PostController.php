@@ -37,7 +37,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        $user_id = Auth::id();
+        return view('posts.create', compact('user_id'));
     }
 
     /**
@@ -55,8 +56,9 @@ class PostController extends Controller
 
         $title = $request['title'];
         $body = $request['body'];
+        $user_id = $request['user_id'];
 
-        $post = Post::create($request->only('title', 'body'));
+        $post = Post::create($request->only('title', 'user_id', 'body'));
 
         return redirect()->route('posts.index')
             ->with('flash_message', 'Article,
@@ -86,6 +88,11 @@ class PostController extends Controller
     {
         $post = Post::findOrFail($id);
 
+        if(!(Auth::user()->id == $post->user_id) && !Auth::user()->hasPermissionTo('Edit AllPost'))
+        {
+            abort('401');
+        }
+
         return view('posts.edit', compact('post'));
     }
 
@@ -98,19 +105,30 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'title'=>'required|max:100',
-            'body'=>'required',
-        ]);
+        
+        if(!(Auth::user()->id == Post::findOrFail($id)->user_id) && !Auth::user()->hasPermissionTo('Edit AllPost'))
+        {
+            abort('401');
+        }
+        else
+        {
+            $this->validate($request, [
+                'title'=>'required|max:100',
+                'body'=>'required',
+            ]);
+            $post = Post::findOrFail($id);
+            $post->title = $request->input('title');
+            $post->body = $request->input('body');
+            $post->save();
+            return redirect()->route('posts.show', 
+                $post->id)->with('flash_message', 
+                'Article, '. $post->title.' updated');
+        }
+        
 
-        $post = Post::findOrFail($id);
-        $post->title = $request->input('title');
-        $post->body = $request->input('body');
-        $post->save();
+        
 
-        return redirect()->route('posts.show', 
-            $post->id)->with('flash_message', 
-            'Article, '. $post->title.' updated');
+        
     }
 
     /**

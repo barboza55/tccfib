@@ -11,8 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
+});*/
+
+Route::get('/cunha', function () {
+	return view('cunha');
 });
 
 Auth::routes();
@@ -28,3 +32,22 @@ Route::resource('roles', 'RoleController');
 Route::resource('permissions', 'PermissionController');
 
 Route::resource('posts', 'PostController');
+
+Route::get('/sian', 'SianController@index');
+Route::get('/sian/{id}', 'SianController@analisar');
+
+
+Route::get('/aprove', 'SianController@aproveOrder');
+Route::get('/boleto', 'SianController@boleto')->name('boleto');
+Route::post('/isentar', 'SianController@isentar');
+Route::get('/apagar', 'SianController@apagar')->name('apagar');
+Route::get('/sugestao', 'SianController@sugestaoCompra')->name('sugestao');
+Route::get('/conta', 'SianController@testeConta');
+Route::get('/localiza/{id}', 'SianController@find');
+Route::get('/editar/{id}', 'SianController@editar');
+
+
+
+
+
+Route::get('/home', 'HomeController@index');

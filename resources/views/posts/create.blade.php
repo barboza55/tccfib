@@ -16,6 +16,7 @@
         <div class="form-group">
             {{ Form::label('title', 'Title') }}
             {{ Form::text('title', null, array('class' => 'form-control')) }}
+            {{ Form::hidden('user_id', $user_id) }}
             <br>
 
             {{ Form::label('body', 'Post Body') }}

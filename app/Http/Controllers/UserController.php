@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Contracts\Validation\Validator;
 
 use App\User;
 use Auth;
@@ -16,6 +17,8 @@ class UserController extends Controller
     {
         $this->middleware(['auth', 'isAdmin']);
     }
+
+    
     
     /**
      * Display a listing of the resource.
@@ -48,6 +51,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        echo 'snhgufnbgdikjbvkhbvkxjsbh,';
         $this->validate($request, [
             'name'=>'required|max:120',
             'email'=>'required|email|unique:users',
@@ -108,11 +112,12 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $this->validate($request, [
             'name'=>'required|max:120',
-            'email'=>'required|email|unique:users,email,'.$id,
-            'password'=>'required|min:6|confirmed'
+            'email'=>'required|email|unique:users,email,'.$id
+            //'password'=>'required|min:6|confirmed'
         ]);
 
-        $input = $request->only(['name', 'email', 'password']);
+        //$input = $request->only(['name', 'email', 'password']);
+        $input = $request->only(['name', 'email']);
         $roles = $request['roles'];
         $user->fill($input)->save();
 

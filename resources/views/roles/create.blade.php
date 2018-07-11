@@ -6,18 +6,18 @@
 
 <div class='col-lg-4 col-lg-offset-4'>
 
-    <h1><i class='fa fa-key'></i> Add Role</h1>
+    <h1><i class='fa fa-key'></i>Nova Função</h1>
     <hr>
     {{-- @include ('errors.list') --}}
 
     {{ Form::open(array('url' => 'roles')) }}
 
     <div class="form-group">
-        {{ Form::label('name', 'Name') }}
+        {{ Form::label('name', 'Nome') }}
         {{ Form::text('name', null, array('class' => 'form-control')) }}
     </div>
 
-    <h5><b>Assign Permissions</b></h5>
+    <h5><b>Vincular permissão</b></h5>
 
     <div class='form-group'>
         @foreach ($permissions as $permission)
@@ -27,7 +27,7 @@
         @endforeach
     </div>
 
-    {{ Form::submit('Add', array('class' => 'btn btn-primary')) }}
+    {{ Form::submit('Criar', array('class' => 'btn btn-primary')) }}
 
     {{ Form::close() }}
 

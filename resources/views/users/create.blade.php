@@ -6,15 +6,24 @@
 
 <div class='col-lg-4 col-lg-offset-4'>
 
-    <h1><i class='fa fa-user-plus'></i> Add User</h1>
+    <h1><i class='fa fa-user-plus'></i>Adicionar Usuário</h1>
     <hr>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     {{-- @include ('errors.list') --}}
 
     {{ Form::open(array('url' => 'users')) }}
 
     <div class="form-group">
-        {{ Form::label('name', 'Name') }}
+        {{ Form::label('name', 'Nome') }}
         {{ Form::text('name', '', array('class' => 'form-control')) }}
     </div>
 
@@ -32,18 +41,18 @@
     </div>
 
     <div class="form-group">
-        {{ Form::label('password', 'Password') }}<br>
+        {{ Form::label('password', 'Senha') }}<br>
         {{ Form::password('password', array('class' => 'form-control')) }}
 
     </div>
 
     <div class="form-group">
-        {{ Form::label('password', 'Confirm Password') }}<br>
+        {{ Form::label('password', 'Confirmar Senha') }}<br>
         {{ Form::password('password_confirmation', array('class' => 'form-control')) }}
 
     </div>
 
-    {{ Form::submit('Add', array('class' => 'btn btn-primary')) }}
+    {{ Form::submit('Criar', array('class' => 'btn btn-primary')) }}
 
     {{ Form::close() }}
 

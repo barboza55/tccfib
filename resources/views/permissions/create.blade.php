@@ -8,20 +8,20 @@
 
     {{-- @include ('errors.list') --}}
 
-    <h1><i class='fa fa-key'></i> Add Permission</h1>
+    <h1><i class='fa fa-key'></i>Nova permissão</h1>
     <br>
 
     {{ Form::open(array('url' => 'permissions')) }}
 
     <div class="form-group">
-        {{ Form::label('name', 'Name') }}
+        {{ Form::label('name', 'Nome') }}
         {{ Form::text('name', '', array('class' => 'form-control')) }}
     </div>
     <br>
 
     @if(!$roles->isEmpty())
 
-        <h4>Assign Permission to Roles</h4>
+        <h4>Vincular Funções</h4>
 
         @foreach ($roles as $role) 
             {{ Form::checkbox('roles[]',  $role->id ) }}
@@ -32,7 +32,7 @@
     @endif
     
     <br>
-    {{ Form::submit('Add', array('class' => 'btn btn-primary')) }}
+    {{ Form::submit('Cadastrar', array('class' => 'btn btn-primary')) }}
 
     {{ Form::close() }}
 

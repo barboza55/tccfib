@@ -34,6 +34,18 @@ class ClearanceMiddleware {
             }
         }
 
+        if($request->is('sian') or $request->is('sian/*'))
+        {
+            if(!Auth::user()->hasPermissionTo('Analisar'))
+            {
+                abort('401');
+            }
+            else
+            {
+                return $next($request);
+            }
+        }
+
         if ($request->isMethod('Delete')) {
             if (!Auth::user()->hasPermissionTo('Delete Post')) {
                 abort('401');
