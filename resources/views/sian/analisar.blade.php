@@ -69,6 +69,9 @@
 								<p style="color: white; background: blue">{{ $item['amount'] }} Sh silicone 250</p>
 							@endif
 						@endforeach -->
+						@if($pedido['totalhomecare'] >= 300.0 && $pedido['podes'])
+							<p style="color: white; background: red">PROMOCAO BLOND REVIVE</p>
+						@endif
 						<table class="table table-striped table-condensed">
 							<thead>
 								<th>Cod</th>

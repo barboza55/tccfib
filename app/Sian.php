@@ -19,6 +19,25 @@ class Sian extends Model
         770
 
     ];
+    private $homecare = [
+        150, 125, 117, 128, 154, 155, 156,
+        181, 182, 183, 184, 185,
+        129, 130, 131,
+        171, 172, 173, 174, 175,
+        178, 179, 180, 177,
+        91, 93, 94,
+        136, 1, 4, 162, 2, 6, 37,
+        159, 160, 161, 157, 158,
+        109, 140, 111, 106, 107, 108,
+        88, 152, 153, 135, 87, 119, 134, 151,
+        89, 66, 137, 64, 62, 63, 65,
+        69, 142, 127, 22, 24, 26, 70, 138, 72,
+        73, 139, 76,
+        176, 90, 133, 51, 50, 102, 45, 47,
+        191, 166, 164, 165,
+        147, 143, 144, 148, 146, 149, 189, 190, 145,
+        186, 187, 188
+    ];
     public function __construct()
     {
         $this->cookie_file = dirname(__FILE__).'/cookie.txt';
@@ -225,6 +244,8 @@ class Sian extends Model
                 $opts[] = $opt;
             }
             $pedido['opts'] = $opts;
+            $pedido['totalhomecare'] = 0;
+            $pedido['podes'] = false;
             $linhas = $tabelaItens->getElementsByTagName('tr');
             $itens = [];
             foreach($linhas as $linha)
@@ -237,6 +258,12 @@ class Sian extends Model
                         $item['grupo'] = FALSE;
                         $item['namegrupo'] = '-';
                         $item['product_id'] = (int) $linha->getElementsByTagName('td')[0]->textContent;
+                        $totalItem = $linha->getElementsByTagName('td')[4]->textContent;
+                        $totalItem = str_replace('.', '', $totalItem);
+                        $totalItem = (float) str_replace(',', '.', $totalItem);
+
+                        if(in_array($item['product_id'], $this->homecare)) $pedido['totalhomecare'] += $totalItem;
+                        if($item['product_id'] == 192) $pedido['podes'] = true;
                         $item['product_name'] = $linha->getElementsByTagName('td')[1]->textContent;
                         $item['amount'] = (int) $linha->getElementsByTagName('td')[2]->textContent;
                         $item['style'] = '';
