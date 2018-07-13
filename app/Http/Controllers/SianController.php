@@ -29,25 +29,10 @@ class SianController extends Controller
     	}*/
         //dd($fullOrders);
         $cidades = [
-            'Assis',
-            'Avare',
-            'Jau',
-            'Ourinhos',
-            'Santa Cruz Do Rio Pardo',
-            'Quata',
-            'Agudos',
-            'Emilianopolis',
-            'Indiana',
-            'Itapolis',
-            'Pederneiras',
-            'Espirito Santo do Turvo',
-            'Santo Anastacio',
-            'Taguai',
-            'Itai',
-            'Torrinha',
-            'Presidente Epitacio',
-            'Presidente Prudente',
-            'Alvares Machado',
+            'Araraquara',
+            'Cafelandia',
+            'Marilia',
+            'Palmital',
         ];
         
         /*foreach($fullOrders as $key => $pedido)

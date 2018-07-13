@@ -13,6 +13,26 @@
 					</div>
 					<div class="panel-body">
 						<textarea class="form-control" rows="5">{{ $customer['obs'] }}</textarea>
+						@if($customer['relacionamento'])
+							<table class="table table-striped table-condensed table-bordered">
+								<thead>
+									<th>Data</th>
+									<th>Contato</th>
+									<th>Obs</th>
+								</thead>
+								<tbody>
+									@foreach($customer['relacionamentoData'] as $linha)
+										<tr>
+											<td>{{ $linha['data'] }}</td>
+											<td>{{ $linha['contato'] }}</td>
+											<td>{{ $linha['obs'] }}</td>
+										</tr>
+									@endforeach
+								</tbody>
+							</table>
+						@else
+							<p>Nao Tem relacionamento</p>
+						@endif
 					</div>
 				</div>
 			</div>
@@ -71,6 +91,8 @@
 						@endforeach -->
 						@if($pedido['totalhomecare'] >= 300.0 && $pedido['podes'])
 							<p style="color: white; background: red">PROMOCAO BLOND REVIVE</p>
+						@elseif($pedido['totalhomecare'] >= 300.0)
+							<p style="color: white; background: red">Possibilidade promo Blond</p>
 						@endif
 						<table class="table table-striped table-condensed">
 							<thead>

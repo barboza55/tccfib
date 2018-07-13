@@ -317,7 +317,26 @@ class Sian extends Model
     public function getCustomerData($id)
     {
         $url = 'http://aneethun-sian.com.br/app?component=edit_&page=pages%2Frecord%2FClientRecordList&service=direct&session=T&sp=' . $id;
-        return $this->getHiddenSian($url, 'form');
+        $customerData = $this->getHiddenSian($url, 'form');
+        $url = 'http://aneethun-sian.com.br/app?component=%24partials%24ClientTabs.%24PageTabs.changePage&page=pages%2Fclient%2FClientSalesHistory&service=direct&sp=4&sp='. $id .'&sp=X';
+        $this->setDomDocument($url);
+        $xpath = new \DOMXpath($this->dom);
+        $tabela = $xpath->query("//table[@class='list-table']")->item(1);
+        if($tabela){
+            $customerData['relacionamento'] = true;
+            $customerData['relacionamentoData'] = [];
+            $trs = $tabela->getElementsByTagName('tbody')[0]->getElementsByTagName('tr');
+            foreach ($trs as $key => $tr) {
+                $linha = [];
+                $linha['data'] = trim($tr->getElementsByTagName('td')[2]->firstChild->textContent);
+                $linha['contato'] = trim($tr->getElementsByTagName('td')[3]->textContent);
+                $linha['obs'] = trim($tr->getElementsByTagName('td')[4]->textContent);
+                $customerData['relacionamentoData'][] = $linha;
+            }
+        }else{
+            $customerData['relacionamento'] = false;
+        }
+        return $customerData;
     }
 
     public function getVendas($id)
