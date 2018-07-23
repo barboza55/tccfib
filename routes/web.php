@@ -40,6 +40,8 @@ Route::get('/sian/{id}', 'SianController@analisar');
 Route::get('/aprove', 'SianController@aproveOrder');
 Route::get('/boleto', 'SianController@boleto')->name('boleto');
 Route::post('/isentar', 'SianController@isentar');
+Route::get('/comparativo', 'SianController@comparativo');
+Route::post('/comparativo', 'SianController@comparativo');
 Route::get('/apagar', 'SianController@apagar')->name('apagar');
 Route::get('/sugestao', 'SianController@sugestaoCompra')->name('sugestao');
 Route::get('/conta', 'SianController@testeConta');

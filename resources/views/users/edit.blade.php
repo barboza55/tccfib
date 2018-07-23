@@ -22,6 +22,15 @@
         {{ Form::email('email', null, array('class' => 'form-control')) }}
     </div>
 
+    <div class="form-group">
+        {{ Form::label('sian_user', 'Usuario Sian') }}
+        {{ Form::text('sian_user', null, array('class' => 'form-control')) }}
+    </div>
+    <div class="form-group">
+        {{ Form::label('sian_pass','Senha Sian') }}<br>
+        {{ Form::password('sian_pass', null, array('class' => 'form-control')) }}
+    </div>
+
     <h5><b>Função(ões)</b></h5>
 
     <div class='form-group'>

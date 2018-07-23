@@ -14,7 +14,9 @@
 					<div class="panel-body">
 						<textarea class="form-control" rows="5">{{ $customer['obs'] }}</textarea>
 						@if($customer['relacionamento'])
-							<table class="table table-striped table-condensed table-bordered">
+							<textarea rows="5" class="form-control">@foreach($customer['relacionamentoData'] as $linha){{ $linha['data'] }}:&nbsp{{ $linha['obs'] }}&#10;@endforeach</textarea>
+							
+							<!-- <table class="table table-striped table-condensed table-bordered">
 								<thead>
 									<th>Data</th>
 									<th>Contato</th>
@@ -29,7 +31,7 @@
 										</tr>
 									@endforeach
 								</tbody>
-							</table>
+							</table> -->
 						@else
 							<p>Nao Tem relacionamento</p>
 						@endif

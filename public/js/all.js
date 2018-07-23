@@ -1,4 +1,5 @@
 $(function(){
+  
     var texto = '';
     document.addEventListener('copy', function(e) {
       // e.clipboardData is initially empty, but we can set it to the

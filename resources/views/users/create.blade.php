@@ -32,6 +32,8 @@
         {{ Form::email('email', '', array('class' => 'form-control')) }}
     </div>
 
+
+
     <div class='form-group'>
         @foreach ($roles as $role)
             {{ Form::checkbox('roles[]',  $role->id ) }}
@@ -50,6 +52,15 @@
         {{ Form::label('password', 'Confirmar Senha') }}<br>
         {{ Form::password('password_confirmation', array('class' => 'form-control')) }}
 
+    </div>
+    <div class="form-group">
+        {{ Form::label('sian_user', 'Usuario Sian') }}<br>
+        {{ Form::text('sian_user', '', array('class' => 'form-control')) }}
+    </div>
+    
+    <div class="form-group">
+        {{ Form::label('sian_pass', 'Senha Sian') }}<br>
+        {{ Form::password('sian_pass', '', array('class' => 'form-control')) }}
     </div>
 
     {{ Form::submit('Criar', array('class' => 'btn btn-primary')) }}

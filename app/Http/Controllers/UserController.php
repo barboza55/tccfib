@@ -56,9 +56,10 @@ class UserController extends Controller
             'name'=>'required|max:120',
             'email'=>'required|email|unique:users',
             'password'=>'required|min:6|confirmed'
+
         ]);
 
-        $user = User::create($request->only('email', 'name', 'password'));
+        $user = User::create($request->only('email', 'name', 'password', 'sian_pass', 'sian_user'));
 
         $roles = $request['roles'];
 
@@ -117,7 +118,7 @@ class UserController extends Controller
         ]);
 
         //$input = $request->only(['name', 'email', 'password']);
-        $input = $request->only(['name', 'email']);
+        $input = $request->only(['name', 'email', 'sian_pass', 'sian_user']);
         $roles = $request['roles'];
         $user->fill($input)->save();
 

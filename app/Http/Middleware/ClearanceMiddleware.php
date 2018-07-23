@@ -46,6 +46,37 @@ class ClearanceMiddleware {
             }
         }
 
+        if($request->is('comparativo')){
+            if(!Auth::user()->hasPermissionTo('Comparativo')){
+                abort('401');
+            }else{
+                return $next($request);
+            }
+        }
+
+        if($request->is('boleto')){
+            if(!Auth::user()->hasPermissionTo('boleto')){
+                abort('401');
+            }else{
+                return $next($request);
+            }
+        }
+
+        if($request->is('apagar')){
+            if(!Auth::user()->hasPermissionTo('apagar')){
+                abort('401');
+            }else{
+                return $next($request);
+            }
+        }
+        if($request->is('sugestao')){
+            if(!Auth::user()->hasPermissionTo('sugestao')){
+                abort('401');
+            }else{
+                return $next($request);
+            }
+        }
+
         if ($request->isMethod('Delete')) {
             if (!Auth::user()->hasPermissionTo('Delete Post')) {
                 abort('401');

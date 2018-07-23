@@ -7,6 +7,7 @@ use App\Conta;
 use SoapClient;
 use SoapHeader;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SianController extends Controller
 {
@@ -265,6 +266,27 @@ class SianController extends Controller
         $lista = $sian->editarPedido($id);
         return redirect(url('sian', $id));
     }
+     public function comparativo(Request $request){
+        $sian = new Sian();
+        $user = Auth::user()->sian_user;
+        $pass = Auth::user()->sian_pass;
+        $sian->connect('17165', 'porquesou10');
+        //echo Auth::user()->sian_user;
+        //echo $request->method;
+        //dd($request);
+        $request->flash();
+        $tabela = $sian->comparativo($request);
+        if($request->isMethod('post')){
+            $customer = $sian->getCustomerData($request->input('cliente_id'));
+        }elseif($request->isMethod('get')){
+            $form['client'] = '';
+        }
+        
+        //dd($form);
+        $data = 1;
+        
+        return view('sian.comparativo', compact('tabela', 'data'));
+     }
 
 
 

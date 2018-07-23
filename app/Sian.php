@@ -3,6 +3,7 @@
 namespace App;
 ini_set('max_execution_time', 3000);
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Sian extends Model
 {
@@ -331,6 +332,7 @@ class Sian extends Model
                 $linha['data'] = trim($tr->getElementsByTagName('td')[2]->firstChild->textContent);
                 $linha['contato'] = trim($tr->getElementsByTagName('td')[3]->textContent);
                 $linha['obs'] = trim($tr->getElementsByTagName('td')[4]->textContent);
+                //dd($linha['obs']);
                 $customerData['relacionamentoData'][] = $linha;
             }
         }else{
@@ -960,6 +962,78 @@ class Sian extends Model
     public function sianMetodo()
     {
         echo 'metodo sian';
+    }
+
+    public function comparativo($request){
+        $url = 'http://aneethun-sian.com.br/app?page=pages%2Fperformance%2FPerformanceComparison&service=page';
+        $form = $this->getHiddenSian($url, 'config');
+        $areas = $this->dom->getElementById('input_0')->getElementsByTagName('option');
+        foreach($areas as $area){
+            if($area->textContent == Auth::user()->sian_user){
+                $form['input_0'] = $area->getAttribute('value');
+            }
+        }
+        if($request->isMethod('post')){
+            $form['client'] = $request->input('cliente_id');
+            $form['valueUnit'] = $request->input('valueUnit');
+        }elseif($request->isMethod('get')){
+            $form['client'] = '';
+        }
+        $form['submitmode'] = 'submit';
+        $form['Submit'] = 'Aguarde...';
+        unset($form['year']);
+        unset($form['year']);
+        unset($form['month']);
+        $url = 'http://aneethun-sian.com.br/app';
+        //dd($post);
+        $this->setDomDocument($url, TRUE, TRUE, $form);
+        $xpath = new \DOMXpath($this->dom);
+        $table = $xpath->query("//table[@class='list-table']")->item(0);
+        $tabela = [];
+        $tabela['exist'] = false;
+        if($table){
+            $ths = $table->getElementsByTagName('thead')->item(0)->getElementsByTagName('th');
+            $thsft = $table->getElementsByTagName('tfoot')->item(0)->getElementsByTagName('th');
+            $trs = $table->getElementsByTagName('tbody')->item(0)->getElementsByTagName('tr');
+            
+            $tabela['exist'] = true;
+            $tabela['ths'] = [];
+            $tabela['thsft'] = [];
+            $tabela['trs'] = [];
+            foreach ($ths as $key => $value) {
+                $th = [];
+                $th['text'] = trim($value->textContent);
+                $th['colspan'] = $value->getAttribute('colspan');
+                $tabela['ths'][] = $th;
+            }
+            foreach ($thsft as $key => $value) {
+                $th = [];
+                if($value->getAttribute('class') == 'number'){
+                    $th['text'] = trim($value->textContent);
+                    $tabela['thsft'][] = $th;
+                }
+            }
+            foreach ($trs as $key => $value) {
+                $tr = [];
+                if($value->getAttribute('class') == 'even' or $value->getAttribute('class') == 'odd'){
+                    $tds = $value->getElementsByTagName('td');
+                    foreach ($tds as $key => $value) {
+                        if($value->getAttribute('class') == 'smallText nowrap'){
+                            continue;
+                        }
+                        $td = trim($value->textContent);
+                        $tr['tds'][] = $td;
+                    }
+                }else{
+                    continue;
+                }
+                $tabela['trs'][] = $tr;
+            }
+        }
+        
+        //dd($tabela['trs']);
+
+        return $tabela;
     }
 
 
