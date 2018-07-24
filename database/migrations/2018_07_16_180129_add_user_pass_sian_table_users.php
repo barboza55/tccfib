@@ -14,8 +14,8 @@ class AddUserPassSianTableUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('sian_pass')->nullable()->after('password');
-            $table->string('sian_user')->nullable()->after('sian_pass');
+            //$table->string('sian_pass')->nullable()->after('password');
+            //$table->string('sian_user')->nullable()->after('sian_pass');
         });
     }
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBostasTable extends Migration
+class CreateCustomerAlterationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateBostasTable extends Migration
      */
     public function up()
     {
-        Schema::create('bostas', function (Blueprint $table) {
+        Schema::create('customer_alterations', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ class CreateBostasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bostas');
+        Schema::dropIfExists('customer_alterations');
     }
 }

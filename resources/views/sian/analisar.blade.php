@@ -3,8 +3,6 @@
 
 
 @section('content')
-
-	
 		<div class="row">
 			<div class="col-md-6">
 				<div class="panel panel-primary">
@@ -181,7 +179,13 @@
 											<td>
 												<label for="valor" class="control-label">Valor</label>
 											</td>
-											<td>{{ $pedido['valor'] }}</td>
+											<td>
+												{{ $pedido['valor'] }}
+												<span>
+													Média
+													{{ $customer['mediaAnual'] }}
+												</span>
+											</td>
 										</tr>
 									</table>
 								</div>
@@ -203,7 +207,7 @@
 							<div class="form-group">
 								<div class="row botao">
 									<div class="col-sm-offset-2 col-sm-10">
-										<a class="btn btn-primary" href="{{ url('editar', $pedido['codigo']) }}" role="button">Zerar</a>
+										<a class="btn btn-primary botao2" href="{{ url('editar', $pedido['codigo']) }}">Zerar</a>
 										<button type="submit" class="btn btn-success" name="action" value="aprove" title="Tooltip on top">Aprovar</button>
 										<button type="submit" class="btn btn-primary" name="action" value="save">Salvar</button>
 										<button type="submit" class="btn btn-danger" name="action" value="cancel">Cancelar</button>

@@ -338,7 +338,46 @@ class Sian extends Model
         }else{
             $customerData['relacionamento'] = false;
         }
+
+        $dataInicio = '01/01/' . date('Y');
+        $dataFim = '30/06/' . date('Y');
+
+        $filtros = [
+            'filterClientCode'  =>  $id,
+            'input_0'  => $dataInicio,
+            'input_1'  => $dataFim
+        ];
+
+        $vendaAnual = $this->vendaAnoatual($filtros);
+        $vendaAnual = $vendaAnual / 6; 
+        $customerData['mediaAnual'] = number_format($vendaAnual, 2, ',', '.');
+        
         return $customerData;
+    }
+
+    public function formatValor($valor)
+    {
+        $valor = str_replace(".","", $valor);
+        $valor = (double) str_replace(",",".", $valor);
+        return $valor;
+    }
+
+    public function vendaAnoatual($filtros)
+    {
+        $pedidos = $this->findPedidos($filtros);
+        $valor = 0;
+        foreach ($pedidos as $key => $pedido) {
+            if(!($pedido['status'] == 'Finalizado'))
+            {
+                continue;
+            }
+            else
+            {
+                $valor += $this->formatValor($pedido['total']);
+                //echo $pedido['total'] . '<br>';
+            }
+        }
+        return $valor;
     }
 
     public function getVendas($id)
@@ -385,10 +424,12 @@ class Sian extends Model
         unset($post['Submit_0']);
         $post['submitmode'] = 'submit';
         //$post['input_0'] = '';
-        $post['input_0'] = '01/' . date('m/Y');
-        $post['input_1'] = date('t/m/Y');
+        //$post['input_0'] = '01/' . date('m/Y');
+        //$post['input_1'] = date('t/m/Y');
         //$post['input_1'] = '';
         $post['filterClientCode'] = $filtros['filterClientCode'];
+        $post['input_0'] = $filtros['input_0'];
+        $post['input_1'] = $filtros['input_1'];
         $url = 'http://aneethun-sian.com.br/app';
         $this->setDomDocument($url, TRUE, TRUE, $post);
         $xpath = new \DOMXpath($this->dom);
@@ -407,7 +448,8 @@ class Sian extends Model
             }
             else
             {
-                $status = trim($value->textContent);
+                $status = 'Cancelado';
+
                 $trs = $table->item($key)->getElementsByTagName('tr');
             }
             foreach($trs as $tr)
@@ -667,7 +709,7 @@ class Sian extends Model
         unset($fields['save']);
         unset($fields['edit']);
         $fields['submitmode'] = 'submit';
-        $fields['msg'] = 'Cancelado por Luizinho.';
+        $fields['msg'] = 'Cancelado';
         return $fields;
     }
 

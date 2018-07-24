@@ -68,8 +68,12 @@ class SianController extends Controller
     	$pedido = $sian->getOptions($idPedido);
     	$customer = $sian->getCustomerData($pedido['customer_id']);
     	$pedidos = $sian->getVendas($pedido['customer_id']);
+        $dataInicio = '01/' . date('m/Y');
+        $dataFim = date('t/m/Y');
         $filtros = [
-            'filterClientCode'  => $pedido['customer_id']
+            'filterClientCode'  => $pedido['customer_id'],
+            'input_0'  => $dataInicio,
+            'input_1'  => $dataFim,
         ];
         
         $dados = [];
@@ -77,6 +81,8 @@ class SianController extends Controller
     	$contas = $sian->getContas($dados);
 
         $pedidosTransito = $sian->findPedidos($filtros);
+
+        //$filtros = 
         //dd($pedidosTransito);
         /*
         Opcoes para alerta de produtos
