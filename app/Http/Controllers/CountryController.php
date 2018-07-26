@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Panel\Country;
+use App\User;
 use Illuminate\Http\Request;
 
 class CountryController extends Controller
@@ -22,9 +23,13 @@ class CountryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(User $user, Country $country)
     {
-        //
+        if($user->can('create-country'))
+        {
+            return 'pode';
+        }
+        return 'nao pode';
     }
 
     /**

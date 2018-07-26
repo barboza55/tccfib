@@ -30,7 +30,7 @@ class CountryPolicy
      */
     public function create(User $user)
     {
-        //
+        return $user->hasPermission('criarPais');
     }
 
     /**
