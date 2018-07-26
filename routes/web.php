@@ -33,8 +33,10 @@ Route::resource('permissions', 'PermissionController');
 
 Route::resource('posts', 'PostController');
 
+Route::resource('countries', 'CountryController');
+
 Route::get('/sian', 'SianController@index');
-Route::get('/sian/{id}', 'SianController@analisar');
+Route::get('/sian/{id}/status/{status?}', 'SianController@analisar')->name('sian');
 
 
 Route::get('/aprove', 'SianController@aproveOrder');

@@ -13,7 +13,8 @@ class PostController extends Controller
     
     public function __construct()
     {
-        $this->middleware(['auth', 'clearance'])
+        //$this->middleware(['auth', 'clearance'])            ->except('index', 'show');
+        $this->middleware(['auth'])
             ->except('index', 'show');
     }
 
@@ -103,10 +104,14 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, User $user)
     {
+        if(!$user->can('update', $post))
+        {
+            abort('401');
+        }
         
-        if(!(Auth::user()->id == Post::findOrFail($id)->user_id) && !Auth::user()->hasPermissionTo('Edit AllPost'))
+        if(!(Auth::user()->id == Post::findOrFail($id)->user_id) && !(Auth::user()->hasPermissionTo('Edit AllPost')))
         {
             abort('401');
         }

@@ -25,7 +25,7 @@
 					<img src="{{ url('img/') .'/'.$order['statuscliente'].'.png'}}" alt="">
 				</td>
 				<td>
-					<a href="{{ url('sian', $order['id']) }}">{{ $order['nome'] }}</a>
+					<a href="{{ route('sian', ['id' => $order['id'], 'status' => $order['statuscliente']]) }}">{{ $order['nome'] }}</a>
 				</td>
 				
 				<td>{{ $order['cidade'] }}</td>

@@ -62,10 +62,12 @@ class SianController extends Controller
         
     }
 
-    public function analisar($idPedido)
+    public function analisar($idPedido, $status = 'nada')
     {
     	$sian = new Sian();
-    	$pedido = $sian->getOptions($idPedido);
+
+    	$pedido = $sian->getOptions($idPedido, $status);
+
     	$customer = $sian->getCustomerData($pedido['customer_id']);
     	$pedidos = $sian->getVendas($pedido['customer_id']);
         $dataInicio = '01/' . date('m/Y');
@@ -78,7 +80,7 @@ class SianController extends Controller
         
         $dados = [];
         $dados['clientCodeOrName'] = $pedido['customer_id'];
-    	$contas = $sian->getContas($dados);
+    	$contas = $sian->getContas($dados, '1');
 
         $pedidosTransito = $sian->findPedidos($filtros);
 
@@ -100,11 +102,11 @@ class SianController extends Controller
             
         }*/
         //dd($pedidosTransito);
-    	$recebidas = $sian->getContas($dados, TRUE);
+    	$recebidas = $sian->getContas($dados, '2', TRUE);
     	return view('sian.analisar', compact('pedido', 'customer', 'pedidos', 'contas', 'recebidas', 'pedidosTransito'));
     }
 
-    public function aproveOrder(Request $request)
+    public function aproveOrder(Request $request, $status = 'nada')
     {
     	$sian = new Sian();
         $data = $request->all();
@@ -139,7 +141,7 @@ class SianController extends Controller
     	$sian->aproveOrder($postQuery);
         if($data['action'] == 'save')
         {
-            return redirect(url('sian', $data['codigo']));
+            return redirect(route('sian', ['id' => $data['codigo']]));
         }
     	return redirect(url('sian'));
     }

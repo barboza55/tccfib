@@ -17,7 +17,8 @@ class Sian extends Model
         7544,
         3968,
         5081,
-        770
+        770,
+        3305,
 
     ];
     private $homecare = [
@@ -213,7 +214,7 @@ class Sian extends Model
 
 
 
-    public function getOptions($order)
+    public function getOptions($order, $status)
     {
     	//foreach($orders as $order)
     	//{
@@ -288,6 +289,10 @@ class Sian extends Model
             $obsPub = $this->dom->getElementById('publicObs')->getAttribute('value');
             $obsPriv = $this->dom->getElementById('privateObs')->getAttribute('value');
             $pedido['publicObs'] = $obsPub;
+            if($status == 'icon-bullet-black')
+            {
+                $pedido['publicObs'] = 'Kit Abertura ' . $obsPub;
+            }
             $pedido['privateObs'] = $obsPriv;
     		$div = $xpath->query("//div[@class='grid-data']")->item(0);
             $pedido['customer_id'] = trim($div->getElementsByTagName('tr')[0]->getElementsByTagName('td')[0]->getElementsByTagName('span')[0]->textContent);
@@ -365,6 +370,7 @@ class Sian extends Model
     public function vendaAnoatual($filtros)
     {
         $pedidos = $this->findPedidos($filtros);
+        //dd($pedidos);
         $valor = 0;
         foreach ($pedidos as $key => $pedido) {
             if(!($pedido['status'] == 'Finalizado'))
@@ -448,7 +454,8 @@ class Sian extends Model
             }
             else
             {
-                $status = 'Cancelado';
+                $status = trim($value->firstChild->textContent);
+                
 
                 $trs = $table->item($key)->getElementsByTagName('tr');
             }
@@ -482,18 +489,33 @@ class Sian extends Model
         return $pedidos;
     }
 
-    public function getContas($fields, $flag = FALSE)
+    public function getContas($fields, $page, $flag = FALSE)
     {
-        $url = 'http://aneethun-sian.com.br/app?page=pages%2Ffinance%2FBillToReceiveList&service=page';
+        //$url = 'http://aneethun-sian.com.br/app?component=filter.received1&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=' . $flag;
+        
+
+        switch ($page) {
+            case '1':
+                $url = 'http://aneethun-sian.com.br/app?component=filter.toReceive3&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=1';
+                break;
+            case '2':
+                $url = 'http://aneethun-sian.com.br/app?component=filter.received1&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=2';
+                break;
+            case '3':
+                $url = 'http://aneethun-sian.com.br/app?component=filter.replaced2&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=3';
+                break;
+        }
         $post = $this->getHiddenSian($url, 'filterForm');
-        if($flag)
+        /*if($flag)
         {
             $url = 'http://aneethun-sian.com.br/app?component=filter.received1&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=2';
+            $post = $this->getHiddenSian($url, 'filterForm');
         }
         else
         {
             $url = 'http://aneethun-sian.com.br/app?component=filter.toReceive2&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=1';
-        }
+            $post = $this->getHiddenSian($url, 'filterForm');
+        }*/
         $this->setDomDocument($url);
         unset($post['Submit_0']);
         unset($post['showingOnlyProblemBills']);
