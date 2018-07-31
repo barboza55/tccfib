@@ -1032,28 +1032,40 @@ class Sian extends Model
         $url = 'http://aneethun-sian.com.br/app?page=pages%2Fperformance%2FPerformanceComparison&service=page';
         $form = $this->getHiddenSian($url, 'config');
         $areas = $this->dom->getElementById('input_0')->getElementsByTagName('option');
+        
         foreach($areas as $area){
             if($area->textContent == Auth::user()->sian_user){
                 $form['input_0'] = $area->getAttribute('value');
             }
         }
         if($request->isMethod('post')){
-            $form['client'] = $request->input('cliente_id');
+            $form['client'] = $request->input('cliente_id') ? $request->input('cliente_id') : '';
+            //$form['client'] = $request->input('cliente_id');
+            $form['input'] = $request->input('input');
             $form['valueUnit'] = $request->input('valueUnit');
+            //dd($form);
         }elseif($request->isMethod('get')){
+            
             $form['client'] = '';
+            /*foreach ($cidades as $key => $value) {
+                echo $key . ' ' . $value->textContent . '<br>';
+            }*/
         }
+        $cidades = $this->dom->getElementById('input')->getElementsByTagName('option');
         $form['submitmode'] = 'submit';
         $form['Submit'] = 'Aguarde...';
         unset($form['year']);
         unset($form['year']);
         unset($form['month']);
         $url = 'http://aneethun-sian.com.br/app';
-        //dd($post);
+        //dd($form);
         $this->setDomDocument($url, TRUE, TRUE, $form);
+        
         $xpath = new \DOMXpath($this->dom);
         $table = $xpath->query("//table[@class='list-table']")->item(0);
+        //dd($form);
         $tabela = [];
+        $tabela['cidades'] = $cidades;
         $tabela['exist'] = false;
         if($table){
             $ths = $table->getElementsByTagName('thead')->item(0)->getElementsByTagName('th');
@@ -1063,6 +1075,7 @@ class Sian extends Model
             $tabela['exist'] = true;
             $tabela['ths'] = [];
             $tabela['thsft'] = [];
+            
             $tabela['trs'] = [];
             foreach ($ths as $key => $value) {
                 $th = [];
@@ -1074,6 +1087,7 @@ class Sian extends Model
                 $th = [];
                 if($value->getAttribute('class') == 'number'){
                     $th['text'] = trim($value->textContent);
+                    $th['number'] = $this->formatValor(trim($value->textContent));
                     $tabela['thsft'][] = $th;
                 }
             }

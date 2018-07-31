@@ -10,6 +10,14 @@
 				    	<label for="cliente_id">Cliente</label>
 				    	<input type="number" class="form-control" id="cliente_id" name="cliente_id" value="{{ old('cliente_id') }}">
 				    </div>
+
+				    <div class="form-group">
+				    	<select class="form-control" id="input" name="input">
+				    	  @foreach($tabela['cidades'] as $option)
+				    	  	<option value="{{ $loop->index }}" {{ old('input') == $loop->index ? 'selected="selected"' : '' }}>{{ $option->textContent }}</option>
+				    	  @endforeach
+				    	</select>
+				    </div>
 				    
 				    <div class="form-group">
 				    	<div class="btn-group">
@@ -19,10 +27,10 @@
 				    <div class="form-group">
 				    	<div class="radio">
 				    		<label class="radio-inline">
-				    			<input type="radio" name="valueUnit" id="valueUnit" value="0" checked="checked">Valores
+				    			<input type="radio" name="valueUnit" id="valueUnit" value="0" {{ old('valueUnit') == 0 ? 'checked="checked"' : '' }}>Valores
 				    		</label>
 				    		<label class="radio-inline">
-				    			<input type="radio" name="valueUnit" id="valueUnit" value="1">Unidades
+				    			<input type="radio" name="valueUnit" id="valueUnit" value="1" {{ old('valueUnit') == 1 ? 'checked="checked"' : '' }}>Unidades
 				    		</label>
 				    	</div>
 				    </div>
@@ -38,6 +46,16 @@
 								@foreach($tabela['ths'] as $th)
 									<th>{{ $th['text'] }}</th>
 								@endforeach
+							</tr>
+						</thead>
+						<thead>
+							<tr>
+								<th></th>
+								@foreach($tabela['thsft'] as $th)
+									<!-- <th>{{ (float) $th['number'] * 1.02}}</th> -->
+									<th>{{ $loop->parent }}</th>
+								@endforeach
+								<th></th>
 							</tr>
 						</thead>
 						<tfoot>

@@ -285,7 +285,8 @@ class SianController extends Controller
         $request->flash();
         $tabela = $sian->comparativo($request);
         if($request->isMethod('post')){
-            $customer = $sian->getCustomerData($request->input('cliente_id'));
+            $client = $request->input('cliente_id') ? $request->input('cliente_id') : '';
+            //$customer = $sian->getCustomerData($client);
         }elseif($request->isMethod('get')){
             $form['client'] = '';
         }
