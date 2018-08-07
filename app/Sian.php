@@ -42,9 +42,15 @@ class Sian extends Model
     ];
     public function __construct()
     {
+
         $this->cookie_file = dirname(__FILE__).'/cookie.txt';
         //dd($this->cookie_file);
     }
+
+    public function clearCoockie(){
+        unlink($this->cookie_file);
+    }
+
     public function connect($login, $password, $response = TRUE)
     {
     	$unidade = 'bauru';
@@ -201,6 +207,7 @@ class Sian extends Model
     	$trs = $this->getAnaliseList($this->dom);
     	foreach($trs as $tr)
     	{
+            $pedido['tr-class'] = $tr->getAttribute('class');
             $pedido['id'] = trim($tr->getElementsByTagName('td')[0]->textContent);
             $pedido['dataCad'] = trim($tr->getElementsByTagName('td')[1]->textContent);
             $pedido['nome'] = trim($tr->getElementsByTagName('td')[2]->textContent);
@@ -263,6 +270,7 @@ class Sian extends Model
                         $totalItem = $linha->getElementsByTagName('td')[4]->textContent;
                         $totalItem = str_replace('.', '', $totalItem);
                         $totalItem = (float) str_replace(',', '.', $totalItem);
+                        $item['totalItem'] = $totalItem;
 
                         if(in_array($item['product_id'], $this->homecare)) $pedido['totalhomecare'] += $totalItem;
                         if($item['product_id'] == 192) $pedido['podes'] = true;
@@ -280,6 +288,7 @@ class Sian extends Model
                         $item['product_id'] = 0;
                         $item['product_name'] = '-';
                         $item['amount'] = 0;
+                        $item['totalItem'] = 0;
                         $itens[] = $item;
                     }
                     
@@ -344,8 +353,71 @@ class Sian extends Model
             $customerData['relacionamento'] = false;
         }
 
-        $dataInicio = '01/01/' . date('Y');
-        $dataFim = '30/06/' . date('Y');
+
+
+        
+
+        
+         
+        $customerData['mediaAnual'] = number_format($this->media($id), 2, ',', '.');
+        //$vendaAnual = number_format($this->media($id), 2, ',', '.');
+        
+        return $customerData;
+    }
+
+    public function promoRepo($idCliente, $items, $valorPedido){
+        $valor = $this->formatValor($this->metaPromo($this->media($idCliente)));
+        $valorPedido = $this->formatValor($valorPedido);
+        $cinzaLitro = false;
+        $cinzaHome = 0;
+        $combos = [];
+        foreach ($items as $item) {
+            if($item['product_id'] == 165 || $item['product_id'] == 166){
+                if($item['amount'] >= 2){
+                    $valorPedido -= $item['totalItem'] / $item['amount'] * 2;
+                }else{
+                    $valorPedido -= $item['totalItem'];
+                } 
+            }
+
+            //if(in_array(196, $item)) dd('tem');
+            if($item['product_id'] == 196){
+                $cinzaLitro = true;
+            }
+
+            if($item['product_id'] == 197){
+                $cinzaHome = $item['amount'];
+            }
+        }
+        
+        if($valorPedido >= $valor && $cinzaLitro && $cinzaHome >= 3){
+            if($valorPedido >= 850 && $cinzaHome >= 5){
+                $combos['combo1'] = 'ok';
+                $combos['combo2'] = 'ok';
+                $combos['combo3'] = 'ok';
+            }elseif($valorPedido >= 650 && $cinzaHome >= 4){
+                $combos['combo1'] = 'ok';
+                $combos['combo2'] = 'ok';
+                $combos['combo3'] = 'Nao';
+            }else{
+                $combos['combo1'] = 'ok';
+                $combos['combo2'] = 'Nao';
+                $combos['combo3'] = 'Nao';
+            }
+        }else{
+            $combos['combo1'] = 'Nao';
+            $combos['combo2'] = 'Nao';
+            $combos['combo3'] = 'Nao';
+        }
+        return $combos;
+    }
+
+    /**
+    *
+    */
+    public function media($id){
+        $dataInicio = '01/08/2017';
+        $dataFim = '31/07/2018';
 
         $filtros = [
             'filterClientCode'  =>  $id,
@@ -354,15 +426,37 @@ class Sian extends Model
         ];
 
         $vendaAnual = $this->vendaAnoatual($filtros);
-        $vendaAnual = $vendaAnual / 6; 
-        $customerData['mediaAnual'] = number_format($vendaAnual, 2, ',', '.');
-        
-        return $customerData;
+        $vendaAnual = $vendaAnual / 12;
+        //$vendaAnual = number_format($vendaAnual, 2, ',', '.');
+        return $vendaAnual;
+    }
+
+    public function metaPromo($vendaAnual){
+        if($vendaAnual >= 1000){
+            $vendaAnual *= 1.05;
+        }elseif($vendaAnual >= 800){
+            $vendaAnual *= 1.07;
+        }elseif($vendaAnual >= 600){
+            $vendaAnual *= 1.09;
+        }elseif($vendaAnual >= 350){
+            $vendaAnual *= 1.11;
+        }elseif($vendaAnual >= 250){
+            $vendaAnual *= 1.13;
+        }elseif($vendaAnual == 0){
+            $vendaAnual = 350.00;
+        }else{
+            $vendaAnual = 350.00;
+        }
+        $vendaAnual = number_format($vendaAnual, 2, ',', '.');
+        return $vendaAnual;
     }
 
     public function formatValor($valor)
     {
         $valor = str_replace(".","", $valor);
+        $valor = str_replace("R","", $valor);
+        $valor = str_replace("$","", $valor);
+        $valor = trim($valor);
         $valor = (double) str_replace(",",".", $valor);
         return $valor;
     }
@@ -373,7 +467,7 @@ class Sian extends Model
         //dd($pedidos);
         $valor = 0;
         foreach ($pedidos as $key => $pedido) {
-            if(!($pedido['status'] == 'Finalizado'))
+            if($pedido['status'] == 'Cancelado')
             {
                 continue;
             }
@@ -898,7 +992,7 @@ class Sian extends Model
                     $produto['media'] = (int) str_replace('.', '',trim($tr->getElementsByTagName('td')[4]->textContent));
                     $produto['estoque'] = (int) str_replace('.', '',trim($tr->getElementsByTagName('td')[9]->textContent));
                     $produto['pordia'] = ceil($produto['media'] / 30);
-                    $produto['precisa'] =  ceil(((ceil($produto['media'] / 30 * 43)) - $produto['estoque']) / $produto['caixa']);
+                    $produto['precisa'] =  ceil(((ceil($produto['media'] / 30 * 47)) - $produto['estoque']) / $produto['caixa']);
                     $produto['grupo'] = FALSE;
                     $produto['nomegrupo'] = '';
                     $produto['style'] = '';
@@ -934,11 +1028,37 @@ class Sian extends Model
         return $lista2;
     }
 
-    public function editarPedido($id)
+    /**
+    *Metodo para pegar nome dos campos de produtos
+    *e alinhar com o codigo do produto
+    */
+    public function camposPedido($fields){
+        $units = [];
+        $index = 0;
+        foreach ($fields as $key => $value) {
+            if(substr($key, 0, 3) == 'For'){
+                foreach ($value as $codigo){
+                    if(!(strlen($codigo) > 6)){
+                        $codigo = (int) str_replace("P","", $codigo);
+                        if($index == 0){
+                            $units[$codigo] = 'units';
+                        }else{
+                            $units[$codigo] = 'units_' . ($index - 1);
+                        }
+                        $index++;
+                    }
+                }
+            }
+        }
+        return $units;
+    }
+
+    public function editarPedido($id, $combo = null, $retira = null)
     {
         $url = 'http://aneethun-sian.com.br/app?component=edit_&page=pages%2Fsale%2FSaleOrderAnalysisOrderList&service=direct&session=T&sp='.$id;
         $fields = $this->getFormAnalise($url, 'form');
         $fields['submitmode'] = 'submit';
+
         //$fields['publicObs'] = utf8_decode($fields['publicObs']);
         //$fields['privateObs'] = utf8_decode($fields['privateObs']);
         unset($fields['save']);
@@ -955,11 +1075,53 @@ class Sian extends Model
         unset($fields['confirm']);
         unset($fields['confirm_0']);
         unset($fields['edit']);
+
         
         //dd($fields);
+        
         $xpath = new \DOMXpath($this->dom);
-        $discount = trim($xpath->query("//th[@class='number']")->item(0)->textContent);
+        if($combo){
+            switch ($combo) {
+                case 'combo1':
+                    $valor = '131,00';
+                    if($retira){
+                        $units = $this->camposPedido($fields);
+                        $fields[$units[165]] = 1;
+                        $fields[$units[166]] = 1;
+                    }
+                    break;
+                case 'combo2':
+                    $valor = '219,50';
+                    if($retira){
+                        $units = $this->camposPedido($fields);
+                        $fields[$units[165]] = 2;
+                        $fields[$units[166]] = 1;
+                    }
+                    break;
+                case 'combo3':
+                    $valor = '262,00';
+                    if($retira){
+                        $units = $this->camposPedido($fields);
+                        $fields[$units[165]] = 2;
+                        $fields[$units[166]] = 2;
+                    }
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+            //dd($fields);
+            
+            $discount = $valor;
+        }else{
+            $discount = trim($xpath->query("//th[@class='number']")->item(0)->textContent);
+            $discount = str_replace(".","", $discount);
+        }
+        //dd($discount);
         $fields['discountValue'] = $discount;
+        $fields['publicObs'] = utf8_decode($fields['publicObs']);
+        $fields['privateObs'] = utf8_decode($fields['privateObs']);
         $fields = $this->buildPostQuery($fields);
         $this->setDomDocument($url, TRUE, TRUE, $fields);
         //dd($discount);
@@ -1003,7 +1165,7 @@ class Sian extends Model
             if(!$element->hasAttribute('name')) continue;
 
             $name = $element->getAttribute('name');
-            $value = $element->getAttribute('value');
+            $value = utf8_decode($element->getAttribute('value'));
             if(substr($element->getAttribute('name'), 0, 3) == 'For')
             {
                 if(!array_key_exists($name, $fields))

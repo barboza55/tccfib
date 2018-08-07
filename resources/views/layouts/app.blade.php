@@ -135,6 +135,18 @@
                                 </ul>
                         </li>
                     </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Sian</a>
+                            <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ url('usersian') }}">
+                                            Conexão
+                                        </a>
+                                    </li>
+                                </ul>
+                        </li>
+                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">

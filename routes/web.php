@@ -35,6 +35,8 @@ Route::resource('posts', 'PostController');
 
 Route::resource('countries', 'CountryController');
 
+Route::resource('votes', 'VoteController');
+
 Route::get('/sian', 'SianController@index');
 Route::get('/sian/{id}/status/{status?}', 'SianController@analisar')->name('sian');
 
@@ -49,6 +51,11 @@ Route::get('/sugestao', 'SianController@sugestaoCompra')->name('sugestao');
 Route::get('/conta', 'SianController@testeConta');
 Route::get('/localiza/{id}', 'SianController@find');
 Route::get('/editar/{id}', 'SianController@editar');
+Route::get('/media', 'MediaController@media');
+Route::post('/media', 'MediaController@media');
+Route::get('/zera-combo/{id}/combo/{combo}/retira/{retira?}', 'MediaController@zeraCombo');
+Route::get('usersian', 'UserPasswordController@index');
+Route::post('usersiangrava', 'UserPasswordController@store')->name('usersiangrava');
 
 
 

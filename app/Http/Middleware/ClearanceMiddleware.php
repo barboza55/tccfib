@@ -18,6 +18,14 @@ class ClearanceMiddleware {
             return $next($request);
         }
 
+        if($request->is('usersian') || $request->is('usersiangrava')){
+            if (!Auth::user()->hasPermissionTo('sian-senha')) {
+                abort('401');
+            } else {
+                return $next($request);
+            }
+        }
+
         if ($request->is('posts/create')) {
             if (!Auth::user()->hasPermissionTo('Create Post')) {
                 abort('401');

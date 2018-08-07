@@ -1,7 +1,7 @@
 $(function(){
   
-    var texto = '';
-    document.addEventListener('copy', function(e) {
+    //var texto = '';
+    /*document.addEventListener('copy', function(e) {
       // e.clipboardData is initially empty, but we can set it to the
       // data that we want copied onto the clipboard.
 
@@ -10,17 +10,19 @@ $(function(){
 
       // This is necessary to prevent the current document selection from
       // being written to the clipboard.
-      e.preventDefault();
-    });
+      //e.preventDefault();
+    });*/
      
     // Executa o evento click no button
     $('#icone_busca').click(function(){
         // Seleciona o conteúdo do input
+        $('#cpfcnpj').select();
         //var texto = $('#cpfcnpj').value;
-        texto = document.getElementById('cpfcnpj').value;
-        texto = texto.replace(/\.|\/|\-/g, '');
+        /*texto = document.getElementById('cpfcnpj').value;
+        texto = texto.replace(/\.|\/|\-/g, '');*/
         // Copia o conteudo selecionado
-
+        //var texto = $('#cpfcnpj').value;
+        
         
         document.execCommand('copy');
         //var copiar = document.execCommand('copy');

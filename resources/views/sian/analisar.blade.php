@@ -145,6 +145,46 @@
 						</table>
 					</div>
 				</div>
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Combos Agosto</h3>
+					</div>
+					<div class="panel-body pre-scrollable">
+						<table class="table table-striped table-condensed">
+							<thead>
+								<th>Combo</th>
+								<th>Situação</th>
+								<th>Ação</th>
+							</thead>
+							<tbody>
+								@foreach($customer['combos'] as $key => $valor)
+								<tr>
+									<td>{{ $key }}</td>
+									<td>{{ $valor }}</td>
+									<td>
+										@if($valor == 'ok')
+										<a class="btn btn-primary botao2" href="{{ url('zera-combo', [
+											$pedido['codigo'],
+											'combo',
+											$key,
+											'retira',
+											0
+										] ) }}">Desconto</a>
+										<a class="btn btn-success botao2" href="{{ url('zera-combo', [
+											$pedido['codigo'],
+											'combo',
+											$key,
+											'retira',
+											1
+										] ) }}">Desc+Inclui</a>
+										@endif
+									</td>
+								</tr>
+								@endforeach
+							</tbody>
+						</table>
+					</div>
+				</div>
 			</div>
 		</div>
 		<form action="{{ url('aprove') }}" class="form-horizontal">

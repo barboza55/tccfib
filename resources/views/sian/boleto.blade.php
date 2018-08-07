@@ -1,9 +1,5 @@
 @extends('layouts.app')
-
-
-
 @section('content')
-	
 		<div class="row">
 			<div class="col-md-4">
 				<form action="{{ url('isentar') }}" class="form-horizontal" method="POST">
@@ -21,7 +17,6 @@
 				</form>
 			</div>
 		</div>
-	
 @endsection
 	
 

@@ -18,7 +18,7 @@
 		</thead>
 		<tbody>
 			@foreach($fullOrders as $order)
-			<tr>
+			<tr {{ $order['tr-class'] == 'background-red' ? "class=danger" : "" }}>
 				<td>{{ $order['id'] }}</td>
 				<td>{{ $order['dataCad'] }}</td>
 				<td>

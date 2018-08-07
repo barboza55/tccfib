@@ -8,17 +8,21 @@ use SoapClient;
 use SoapHeader;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\UserPassword;
 
 class SianController extends Controller
 {
-    public function __construct()
+    protected $request;
+    public function __construct(Request $request)
     {
         $this->middleware(['auth', 'clearance']);
+        $this->request = $request;
     }
     public function index()
     {
     	$sian = new Sian();
     	$sian->connect('17165', 'porquesou10');
+        
     	//$orders = $sian->getOrders('http://aneethun-sian.com.br/app?page=pages%2Fsale%2FSaleOrderAnalysisOrderList&service=page');
     	$fullOrders = $sian->getOrders();
     	//$elements = $sian->getHiddenSian('http://aneethun-sian.com.br/app?page=pages%2Ffinance%2FBillToReceiveList&service=page', 'filterForm');
@@ -69,6 +73,7 @@ class SianController extends Controller
     	$pedido = $sian->getOptions($idPedido, $status);
 
     	$customer = $sian->getCustomerData($pedido['customer_id']);
+        $customer['combos'] = $sian->promoRepo($pedido['customer_id'], $pedido['itens'], $pedido['valor']);
     	$pedidos = $sian->getVendas($pedido['customer_id']);
         $dataInicio = '01/' . date('m/Y');
         $dataFim = date('t/m/Y');
@@ -108,7 +113,11 @@ class SianController extends Controller
 
     public function aproveOrder(Request $request, $status = 'nada')
     {
+        $user_id = Auth::id();
+        $userpassword = UserPassword::where('user_id', $user_id)->first();
     	$sian = new Sian();
+        $sian->clearCoockie();
+        $sian->connect($userpassword->user, $userpassword->password);
         $data = $request->all();
         
         if($data['action'] == 'aprove')
@@ -262,7 +271,7 @@ class SianController extends Controller
     public function sugestaoCompra()
     {
         $sian = new Sian();
-        $sian->connect('17001', 'luero291205');
+        $sian->connect('caxias', 'lu291205');
         $lista = $sian->sugestaoCompra();
         return view('sian.sugestao', compact('lista'));
     }
@@ -271,8 +280,10 @@ class SianController extends Controller
     {
         $sian = new Sian();
         $sian->connect('17165', 'porquesou10');
+        $request = $this->request->all();
+        //dd($request);
         $lista = $sian->editarPedido($id);
-        return redirect(url('sian', $id));
+        return redirect(route('sian', $id));
     }
      public function comparativo(Request $request){
         $sian = new Sian();
@@ -296,6 +307,12 @@ class SianController extends Controller
         
         return view('sian.comparativo', compact('tabela', 'data'));
      }
+
+     
+
+     
+
+
 
 
 
