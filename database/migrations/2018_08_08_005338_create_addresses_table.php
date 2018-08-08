@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCitiesTable extends Migration
+class CreateAddressesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class CreateCitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('cities', function (Blueprint $table) {
+        Schema::create('addresses', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 150);
-            $table->string('note', 200);
-            $table->string('ibge_code');
+            $table->integer('district');
+            $table->string('number', 10);
+            $table->string('adjunct', 100);
+            $table->integer('zip_code_id');
+            $table->integer('type_address_id');
+            $table->integer('entity_id');
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ class CreateCitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cities');
+        Schema::dropIfExists('addresses');
     }
 }
