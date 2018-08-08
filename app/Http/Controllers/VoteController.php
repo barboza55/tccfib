@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Vote;
 use Illuminate\Http\Request;
+use App\TypeVote;
+use App\ItemVoting;
 
 class VoteController extends Controller
 {
@@ -14,7 +16,9 @@ class VoteController extends Controller
      */
     public function index()
     {
-        //
+        $typeVotes = TypeVote::all();
+        $votes = Vote::count();
+        return view('vote.index', compact('typeVotes', 'votes'));
     }
 
     /**
@@ -24,7 +28,8 @@ class VoteController extends Controller
      */
     public function create()
     {
-        //
+        $typeVotes = TypeVote::all();
+        return view('vote.create', compact('typeVotes'));
     }
 
     /**
@@ -35,7 +40,18 @@ class VoteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $vote = new Vote();
+        $vote->cpf = $data['cpf'];
+        if ($vote->save()) {
+            foreach ($data['itemvote'] as $item) {
+                $itemVote = new ItemVoting();
+                $itemVote->vote_id = $vote->id;
+                $itemVote->type_vote_id = $item;
+                $itemVote->save();
+            }
+        }
+        return redirect(route('votes.index'));
     }
 
     /**

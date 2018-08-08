@@ -15,11 +15,7 @@ p.teaser {
   cursor: pointer;
 }
 
-input{
-  padding: 2px;
-  width: 140px;
-  color: #0d7d1e;
-}
+
 
 #cpfcnpj::-moz-selection{
   background:#FFF;
