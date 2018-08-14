@@ -19,6 +19,7 @@ class Sian extends Model
         5081,
         770,
         3305,
+        1968,
 
     ];
     private $homecare = [
@@ -43,12 +44,15 @@ class Sian extends Model
     public function __construct()
     {
 
-        $this->cookie_file = dirname(__FILE__).'/cookie.txt';
+        $this->cookie_file = storage_path('cookie.txt');
         //dd($this->cookie_file);
     }
 
     public function clearCoockie(){
-        unlink($this->cookie_file);
+        if(file_exists($this->cookie_file)){
+            unlink($this->cookie_file);
+        }
+        
     }
 
     public function connect($login, $password, $response = TRUE)

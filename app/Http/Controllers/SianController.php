@@ -21,7 +21,12 @@ class SianController extends Controller
     public function index()
     {
     	$sian = new Sian();
-    	$sian->connect('17165', 'porquesou10');
+        $user_id = Auth::id();
+        $userpassword = UserPassword::where('user_id', $user_id)->first();
+        $sian = new Sian();
+        $sian->clearCoockie();
+        $sian->connect($userpassword->user, $userpassword->password);
+    	
         
     	//$orders = $sian->getOrders('http://aneethun-sian.com.br/app?page=pages%2Fsale%2FSaleOrderAnalysisOrderList&service=page');
     	$fullOrders = $sian->getOrders();
@@ -69,6 +74,11 @@ class SianController extends Controller
     public function analisar($idPedido, $status = 'nada')
     {
     	$sian = new Sian();
+        $user_id = Auth::id();
+        $userpassword = UserPassword::where('user_id', $user_id)->first();
+        $sian = new Sian();
+        $sian->clearCoockie();
+        $sian->connect($userpassword->user, $userpassword->password);
 
     	$pedido = $sian->getOptions($idPedido, $status);
 
