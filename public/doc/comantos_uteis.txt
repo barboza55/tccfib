@@ -1,0 +1,10 @@
+Comando para serem executados sempre que for trabalhar no projeto:
+
+1 Atualizar repositório local com o repositorio remoto de terceiro
+(esse repositório de terceiro foi apelidado como “upstream”)
+
+	git pull upstream master
+
+2 Atualizar meu repositório remoto (origin) com meu repositório local (branch atual)
+
+	git push -u origin master
