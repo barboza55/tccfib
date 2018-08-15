@@ -21,7 +21,7 @@ class CreateZipCodeStreetsTable extends Migration
             $table->timestamps();
             $table->foreign('zip_code_id')->references('id')->on('zip_codes')->onUpdate('cascade');
             $table->foreign('street_id')->references('id')->on('streets')->onUpdate('cascade');
-            $table->foreign('data_source_id')->references('id')->on('data_source')->onUpdate('cascade');
+            $table->foreign('data_source_id')->references('id')->on('data_sources')->onUpdate('cascade');
         });
     }
 

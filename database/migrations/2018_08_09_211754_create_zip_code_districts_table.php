@@ -23,7 +23,7 @@ class CreateZipCodeDistrictsTable extends Migration
 
             $table->foreign('zip_code_id')->references('id')->on('zip_codes')->onUpdate('cascade');
             $table->foreign('district_id')->references('id')->on('districts')->onUpdate('cascade');
-            $table->foreign('data_source_id')->references('id')->on('data_source')->onUpdate('cascade');
+            $table->foreign('data_source_id')->references('id')->on('data_sources')->onUpdate('cascade');
         });
     }
 
