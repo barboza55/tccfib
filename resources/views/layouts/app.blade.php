@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -23,130 +23,76 @@
         ]) !!};
     </script>
     
-    <style type="text/css">
-        body {
-
-            min-height: 10px;
-            padding-top: 70px;
-        }
-    </style>
+    
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- <div class="container"> -->
+                <!-- <div class="navbar-header"> -->
 
                     <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#app-navbar-collapse">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Lima Bauru') }}
                     </a>
-                </div>
+                <!-- </div> -->
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Posts</a>
-                            <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('posts.index') }}">
-                                            Listar
-                                        </a>
-                                    </li>
-                                    @can('Create Post', Post::class)
-                                    <li>
-                                        <a href="{{ route('posts.create') }}">
-                                            Novo
-                                        </a>
-                                    </li>
-                                    @endcan
-                                </ul>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Posts</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('posts.index') }}">Listar</a>
+                                @can('Create Post', Post::class)
+                                <a class="dropdown-item" href="{{ route('posts.create') }}">Novo</a>
+                                @endcan
+                            </div>
                         </li>
-                    </ul>
 
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Vendas</a>
-                            <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ url('sian') }}">
-                                            Análise
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ url('boleto') }}">
-                                            Retirar Taxa
-                                        </a>
-                                    </li>
-                                </ul>
+                        <li class="nav-item dropdown">
+                            <a  href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vendas</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ url('sian') }}">Análise</a>
+                                @can('Create Post', Post::class)
+                                <a class="dropdown-item" href="{{ url('boleto') }}">Retirar Taxa</a>
+                                @endcan
+                            </div>
                         </li>
-                    </ul>
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Financeiro</a>
-                            <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ url('apagar') }}">
-                                            Contas a Pagar
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ url('sugestao') }}">
-                                            Pedido Compra
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ url('comparativo') }}">
-                                            Comparativo
-                                        </a>
-                                    </li>
-                                </ul>
-                        </li>
-                    </ul>
 
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Administração</a>
-                            <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('users.index') }}">
-                                            Usuários
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('permissions.index') }}">
-                                            Permissões
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('roles.index') }}">
-                                            Funções
-                                        </a>
-                                    </li>
-                                </ul>
+                        <li class="nav-item dropdown">
+                            <a  href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Financeiro</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ url('apagar') }}">Contas a Pagar</a>
+                                @can('Create Post', Post::class)
+                                <a class="dropdown-item" href="{{ url('sugestao') }}">Pedido de Compra</a>
+                                @endcan
+                                <a href="{{ url('comparativo') }}" class="dropdown-item">Comparativo</a>
+                            </div>
                         </li>
-                    </ul>
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Sian</a>
-                            <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ url('usersian') }}">
-                                            Conexão
-                                        </a>
-                                    </li>
-                                </ul>
+                        <li class="nav-item dropdown">
+                            <a  href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administração</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('users.index') }}">Usuários</a>
+                                @can('Create Post', Post::class)
+                                <a class="dropdown-item" href="{{ route('permissions.index') }}">Permissões</a>
+                                @endcan
+                                <a href="{{ route('roles.index') }}" class="dropdown-item">Funções</a>
+                            </div>
                         </li>
-                    </ul>
+                        <li class="nav-item dropdown">
+                            <a  href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sian</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ url('usersian') }}">Conexão</a>
+                            </div>
+                        </li>
+                    </ul>                      
+                    
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
@@ -180,7 +126,7 @@
                         @endif
                     </ul>
                 </div>
-            </div>
+            <!-- </div> -->
         </nav>
         
         
