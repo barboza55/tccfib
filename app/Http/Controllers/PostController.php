@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use Auth;
 use Session;
+use App\User;
 
 class PostController extends Controller
 {
@@ -106,10 +107,10 @@ class PostController extends Controller
      */
     public function update(Request $request, $id, User $user)
     {
-        if(!$user->can('update', $post))
+        /*if(!$user->can('update', $post))
         {
             abort('401');
-        }
+        }*/
         
         if(!(Auth::user()->id == Post::findOrFail($id)->user_id) && !(Auth::user()->hasPermissionTo('Edit AllPost')))
         {
