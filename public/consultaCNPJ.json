@@ -1,0 +1,331 @@
+{
+    "protocolo": {
+        "numero": 282696579,
+        "digito": 11
+    },
+    "operador": {
+        "codigo": "398950",
+        "nome": "LIMA BAURU - TESTE"
+    },
+    "consumidor": {
+        "consumidor-pessoa-juridica": {
+            "cnpj": {
+                "numero": "05498127000104"
+            },
+            "situacao-cnpj": {
+                "descricao-situacao": "ATIVA",
+                "data-situacao": "2018-04-03T15:16:01-03:00"
+            },
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO JOSE DOS CAMPOS"
+                },
+                "logradouro": "R JUSTINO COBRA",
+                "numero": "159",
+                "bairro": "VILA EMA",
+                "cep": 12243030
+            },
+            "natureza-juridica": {
+                "descricao": "SOCIEDADE P/COTAS RESPONSABILIDADE LTDA.     ",
+                "codigo": 2062
+            },
+            "atividade-economica-principal": {
+                "descricao": "SERVIÇOS DE ENGENHARIA",
+                "codigo": 7112000
+            },
+            "atividade-economica-secundaria": [
+                {
+                    "descricao": "SERVIÇOS DE ARQUITETURA",
+                    "codigo": 7111100
+                },
+                {
+                    "descricao": "SERVIÇOS DE DESENHO TÉCNICO RELACIONADOS À ARQUITETURA E ENGENHARIA",
+                    "codigo": 7119703
+                },
+                {
+                    "descricao": "INSTALAÇÃO E MANUTENÇÃO ELÉTRICA",
+                    "codigo": 4321500
+                },
+                {
+                    "descricao": "CONSTRUÇÃO DE ESTAÇÕES E REDES DE DISTRIBUIÇÃO DE ENERGIA ELÉTRICA",
+                    "codigo": 4221902
+                },
+                {
+                    "descricao": "MANUTENÇÃO DE REDES DE DISTRIBUIÇÃO DE ENERGIA ELÉTRICA",
+                    "codigo": 4221903
+                },
+                {
+                    "descricao": "CONSTRUÇÃO DE ESTAÇÕES E REDES DE TELECOMUNICAÇÕES",
+                    "codigo": 4221904
+                },
+                {
+                    "descricao": "MANUTENÇÃO DE ESTAÇÕES E REDES DE TELECOMUNICAÇÕES",
+                    "codigo": 4221905
+                },
+                {
+                    "descricao": "CONSTRUÇÃO DE EDIFÍCIOS",
+                    "codigo": 4120400
+                },
+                {
+                    "descricao": "COMÉRCIO VAREJISTA DE MATERIAL ELÉTRICO",
+                    "codigo": 4742300
+                }
+            ],
+            "data-fundacao": "2003-01-08T00:00:00-02:00",
+            "nome-comercial": "POLIS ENGENHARIA",
+            "razao-social": "E C R CONSULTORIA LTDA"
+        }
+    },
+    "grafia-pj": {},
+    "endereco-cep-consultado": {},
+    "telefone-consultado": {},
+    "telefone-vinculado-consumidor": {},
+    "ultimo-telefone-informado": {
+        "detalhe-ultimo-telefone-informado": [
+            {
+                "telefone": {
+                    "numero-ddd": 11,
+                    "numero": 48956849
+                },
+                "data-primeira-consulta": "2016-12-07T00:00:00-02:00",
+                "data-ultima-consulta": "2016-12-07T00:00:00-02:00",
+                "quantidade-consulta": 1
+            },
+            {
+                "telefone": {
+                    "numero-ddd": 11,
+                    "numero": 35496800
+                },
+                "data-primeira-consulta": "2014-09-23T00:00:00-03:00",
+                "data-ultima-consulta": "2016-06-15T00:00:00-03:00",
+                "quantidade-consulta": 2
+            },
+            {
+                "telefone": {
+                    "numero-ddd": 11,
+                    "numero": 33558977
+                },
+                "data-primeira-consulta": "2016-03-30T00:00:00-03:00",
+                "data-ultima-consulta": "2016-03-30T00:00:00-03:00",
+                "quantidade-consulta": 1
+            },
+            {
+                "telefone": {
+                    "numero-ddd": 11,
+                    "numero": 998789767
+                },
+                "data-primeira-consulta": "2015-09-24T00:00:00-03:00",
+                "data-ultima-consulta": "2015-09-24T00:00:00-03:00",
+                "quantidade-consulta": 1
+            },
+            {
+                "telefone": {
+                    "numero-ddd": 55,
+                    "numero": 99995555
+                },
+                "data-primeira-consulta": "2015-04-24T00:00:00-03:00",
+                "data-ultima-consulta": "2015-04-24T00:00:00-03:00",
+                "quantidade-consulta": 1
+            }
+        ]
+    },
+    "ultimo-endereco-informado": {},
+    "alerta-documento": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "spc": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "cheque-lojista": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "ccf": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem-documento-diferente": {
+        "resumo": {
+            "quantidade-total": 1,
+            "data-ultima-ocorrencia": "2018-08-18T00:00:00-03:00"
+        },
+        "detalhe-contra-ordem-documento-diferente": {
+            "motivo": {
+                "codigo": 12,
+                "descricao": "MOTIVO 11x"
+            },
+            "cheque-inicial": {
+                "dados-bancarios": {
+                    "banco": {
+                        "codigo": 1,
+                        "nome": "BANCO DO BRASIL"
+                    },
+                    "numero-agencia": 1234,
+                    "numero-conta-corrente": "123",
+                    "digito-conta-corrente": "123"
+                },
+                "numero": 2,
+                "digito": 7
+            },
+            "cheque-final": {
+                "numero": 3,
+                "digito": 5
+            },
+            "data-inclusao": "2018-08-17T00:00:00-03:00",
+            "data-ocorrencia": "2018-08-18T00:00:00-03:00",
+            "origem": "CDL - GOTHAM CITY / SP",
+            "informante": "INFORMANTE",
+            "documento": "52500287000112",
+            "codigo-tipo-documento": 2
+        }
+    },
+    "protesto": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contumacia": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "credito-concedido": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "dados-agencia-bancaria": {
+        "detalhe-dados-agencia-bancaria": {
+            "dados-bancarios": {
+                "endereco": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "GOTHAM CITY"
+                    },
+                    "logradouro": "RUA A",
+                    "numero": "S/N",
+                    "complemento": "BL C",
+                    "bairro": "CENTRO",
+                    "cep": 22596456
+                },
+                "banco": {
+                    "codigo": 1,
+                    "nome": "BANCO DO BRASIL"
+                },
+                "numero-agencia": 138,
+                "nome-agencia": "AG BB"
+            }
+        }
+    },
+    "consulta-realizada": {
+        "resumo": {
+            "quantidade-total": 3,
+            "data-ultima-ocorrencia": "2018-08-17T00:00:00-03:00"
+        },
+        "detalhe-consulta-realizada": [
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-17T15:06:50-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-06-18T18:58:17-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-06-18T16:51:51-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            }
+        ],
+        "quantidade-dias-consultados": 90
+    },
+    "informacao-poder-judiciario": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "atividade-empresa": {
+        "detalhe-atividade-empresa": {
+            "ramo-atividade": {
+                "descricao": "SERVIÇOS DE ENGENHARIA",
+                "codigo": 7112000
+            },
+            "atividades-economicas-secundarias": [
+                {
+                    "descricao": "SERVIÇOS DE ARQUITETURA",
+                    "codigo": 7111100
+                },
+                {
+                    "descricao": "SERVIÇOS DE DESENHO TÉCNICO RELACIONADOS À ARQUITETURA E ENGENHARIA",
+                    "codigo": 7119703
+                },
+                {
+                    "descricao": "INSTALAÇÃO E MANUTENÇÃO ELÉTRICA",
+                    "codigo": 4321500
+                },
+                {
+                    "descricao": "CONSTRUÇÃO DE ESTAÇÕES E REDES DE DISTRIBUIÇÃO DE ENERGIA ELÉTRICA",
+                    "codigo": 4221902
+                },
+                {
+                    "descricao": "MANUTENÇÃO DE REDES DE DISTRIBUIÇÃO DE ENERGIA ELÉTRICA",
+                    "codigo": 4221903
+                },
+                {
+                    "descricao": "CONSTRUÇÃO DE ESTAÇÕES E REDES DE TELECOMUNICAÇÕES",
+                    "codigo": 4221904
+                },
+                {
+                    "descricao": "MANUTENÇÃO DE ESTAÇÕES E REDES DE TELECOMUNICAÇÕES",
+                    "codigo": 4221905
+                },
+                {
+                    "descricao": "CONSTRUÇÃO DE EDIFÍCIOS",
+                    "codigo": 4120400
+                },
+                {
+                    "descricao": "COMÉRCIO VAREJISTA DE MATERIAL ELÉTRICO",
+                    "codigo": 4742300
+                }
+            ]
+        }
+    },
+    "restricao": true,
+    "data": "2018-08-17T16:28:03.652-03:00"
+}

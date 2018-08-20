@@ -201,69 +201,58 @@ class SianController extends Controller
         return view('sian.boleto');
     }
 
-    public function apagar()
+    public function apagar(Request $request)
     {
-        $pedidos = [
-            '169533',
-            '169545',
-            '169562',
-            '169578',
-            '169580',
-            '169582',
-            '169584',
-            '169587',
-            '169589',
-            '169591',
-            '169593',
-            '169595',
-            '169606',
-            '169610',
-            '169114',
-            '169208',
-            '169357',
-            '169370',
-            '169376',
-            '169384',
-            '169460',
-            '169467',
-            '169468',
-            '169480',
-            '169504',
-            '169508'
 
-        ];
-        /*$sian = new Sian();
-        foreach($pedidos as $idPedido)
-        {
-            $pedido = $sian->getOptions($idPedido);
-            foreach($pedido['itens'] as $item)
-            {
-                if($item['product_id'] == '120')
-                {
-                    echo $pedido['codigo'] . '<br>';
-                }
-            }
-        }*/
-
-
-        //https://homologacao.spc.org.br/spc/remoting/ws/consulta/buscaWebService?wsdl
+        $documento = $request->input('cpfcnpj');
+        $documento = str_replace(".","", $documento);
+        $documento = str_replace("-","", $documento);
+        $documento = str_replace("/","", $documento);
         
-        //$Webservice = 'https://servicos.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
         //$Webservice = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaEntidadeReplicadaWebService?wsdl';
-        $Webservice = 'http://horusws.treinamento.saude.gov.br/horus-ws-service/HorusWSService/HorusWS?wsdl';
-        $username = '91570082';
-        $password = 'lima07ab';
-        $auth =  'Basic ' . base64_encode($username . ':' . $password);
+        $Webservice = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
+        //$Webservice = 'https://servicos.spc.org.br/spc/remoting/ws/consulta/consultaWebServicel?wsdl';
+
+        
+        $username = '398950';
+        $password = '10082018';
+        
         
         
         //$auth = 'Basic ' . base64_encode($username . ':' . $password);
-        $options = [
-            'Authorization' => $auth
-        ];
         
-        $client = new \SoapClient($Webservice, $options);
-        $functions = $client->__getFunctions();
-        print_r($functions);
+        
+        //$client = new \SoapClient($Webservice, $options);
+        $client = new \SoapClient($Webservice, array("login"=>$username,"password"=>$password));
+        //$functions = $client->__getFunctions();
+        //$functions = $client->listarProdutos();
+        //$functions = $client->detalharProduto(7);
+        $parametros = new \stdClass;
+
+        $parametros->{'codigo-produto'} = '333';
+        $parametros->{'documento-consumidor'} = $documento;
+        $parametros->{'tipo-consumidor'} = 'F';
+        
+        
+        $response = $client->consultar($parametros);
+        /*$dados_json = json_encode($functions, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        $fp = fopen("consultaCPF.json", "w");
+        $escreve = fwrite($fp, $dados_json);
+        fclose($fp);*/
+        //$functions = serialize($functions);
+
+        /*echo "<table border='1'>";
+        foreach ($functions->produto as $produto) {
+            
+            echo "<tr>
+            <td>". $produto->nome . "</td>
+            <td>". $produto->codigo.
+            "</tr>" ;
+            
+        }
+        echo "</table>";*/
+
+        //dd($response);
         //$header = "Authorization: Basic " . base64_encode($username . ':' . $password);
         //$client->__setSoapHeaders($header);
 
@@ -276,6 +265,7 @@ class SianController extends Controller
         $client->__setSoapHeaders($header);*/
         //dd($header);
         //return view('sian.apagar');
+        return view('sian.spc-response', compact('response'));
     }
 
     public function sugestaoCompra()

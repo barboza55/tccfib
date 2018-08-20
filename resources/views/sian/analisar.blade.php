@@ -56,11 +56,16 @@
 						</a>
 						<a target="_blank" href="{{ url('localiza', $customer['Hidden']) }}">Pedidos</a>
 						<p>{{ $pedido['cidade'] }}</p>
-						@if(array_key_exists('cnpj', $customer))
-						<input class="noselect" type="text" id="cpfcnpj" onLoad="minha();" value="{{ $customer['cnpj'] }}">
-						@else
-						<input class="noselect" type="text" id="cpfcnpj" onLoad="minha();" value="{{ $customer['cpf'] }}">
-						@endif
+						<form action="{{ route('apagar') }}" method="POST" target="_blank">
+							{{ csrf_field() }}
+							@if(array_key_exists('cnpj', $customer))
+							<input class="noselect" type="text" id="cpfcnpj" name="cpfcnpj" value="{{ $customer['cnpj'] }}">
+							@else
+							<input class="noselect" type="text" id="cpfcnpj" name="cpfcnpj"  value="{{ $customer['cpf'] }}">
+							@endif
+							<input type="submit" value="Consultar" name="consulta">
+						</form>
+						
 						<span id="box_icone_busca">
         					<i id="icone_busca" class="fas fa-copy"></i>
     					</span>
