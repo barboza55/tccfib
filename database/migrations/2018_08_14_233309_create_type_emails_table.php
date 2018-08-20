@@ -16,8 +16,8 @@ class CreateTypeEmailsTable extends Migration
         Schema::create('type_emails', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('name');
-            $table->string('note');
+            $table->string('name',150);
+            $table->string('note',200);
         });
     }
 
