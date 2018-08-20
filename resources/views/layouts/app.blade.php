@@ -26,8 +26,11 @@
     
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container" id="app">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{{ url('/') }}">
+                {{ config('app.name', 'Lima Bauru') }}
+            </a>
             <!-- <div class="container"> -->
                 <!-- <div class="navbar-header"> -->
 
@@ -37,9 +40,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Lima Bauru') }}
-                    </a>
+                    
                 <!-- </div> -->
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -91,9 +92,7 @@
                                 <a class="dropdown-item" href="{{ url('usersian') }}">Conexão</a>
                             </div>
                         </li>
-                    </ul>                      
-                    
-
+                    </ul>         
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
@@ -101,36 +100,31 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li> 
                         @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    {{ Auth::user()->name }}
                                 </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('users.index') }}">Admin</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                        Logout
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </div>
 
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        @role('Admin') {{-- Laravel-permission blade helper --}}
-                                        <a href="{{ route('users.index') }}"><i class="fa fa-btn fa-unlock"></i>Admin</a>
-                                        @endrole
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
+                               
                             </li>
                         @endif
                     </ul>
                 </div>
             <!-- </div> -->
         </nav>
-        
-        
-    </div>
+
+   </div>
     <div class="container">
             @yield('content')
         </div>
