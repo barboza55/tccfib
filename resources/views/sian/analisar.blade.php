@@ -64,7 +64,10 @@
 							@else
 							<input class="form-control mb-2 mr-sm-2" type="text" id="cpfcnpj" name="cpfcnpj"  value="{{ $customer['cpf'] }}">
 							@endif
+							@can('cdlbauru')
 							<input class="btn btn-danger btn-sm" type="submit" value="Consultar" name="consulta">
+							@endcan
+							
 						</form>
 						
 						
