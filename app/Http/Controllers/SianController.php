@@ -208,6 +208,7 @@ class SianController extends Controller
         $documento = str_replace(".","", $documento);
         $documento = str_replace("-","", $documento);
         $documento = str_replace("/","", $documento);
+        $name = $request->input('name');
         
         //$Webservice = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaEntidadeReplicadaWebService?wsdl';
         $Webservice = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
@@ -265,7 +266,7 @@ class SianController extends Controller
         $client->__setSoapHeaders($header);*/
         //dd($header);
         //return view('sian.apagar');
-        return view('sian.spc-response', compact('response'));
+        return view('sian.spc-response', compact('response', 'name'));
     }
 
     public function sugestaoCompra()

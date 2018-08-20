@@ -2,25 +2,11 @@ p.teaser {
   text-indent: 30px; 
   }
 
-#box_icone_busca{
-  width: 30px;
-  height: 30px;
-  padding: 10px;
-  position: relative;
-  left: -39px;
-  top: 1px;
-}
-#icone_busca {
-  color: #000;
-  cursor: pointer;
-}
 
 
 
-#cpfcnpj::-moz-selection{
-  background:#FFF;
-  color:#000;
-}
+
+
 .botao2{
   /*! padding: 6px; */
   background-color: rgb(0, 204, 255);
@@ -28,12 +14,9 @@ p.teaser {
 
 
 }
-#cpfcnpj::selection {
-  background:#FFF;
-  color:#000;
-}
 
-.botao{padding: 20px;}
+
+
 
 #form_search{/*! padding: 5px; */margin-bottom: 5px;}
 

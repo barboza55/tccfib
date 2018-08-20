@@ -26,7 +26,7 @@
     
 </head>
 <body>
-    <div class="container sticky-top" id="app">
+    <div class="container-fluid sticky-top" id="app">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="{{ url('/') }}">
                 {{ config('app.name', 'Lima Bauru') }}
@@ -125,7 +125,7 @@
         </nav>
 
    </div>
-    <div class="container">
+    <div class="container-fluid">
             @yield('content')
     </div>
 

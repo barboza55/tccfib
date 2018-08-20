@@ -2,27 +2,44 @@
 @section('content')
 		<div class="panel panel-success">
 		  	<div class="panel-heading">
-		   		<h3 class="panel-title">Resposta Consulta</h3>
+		   		<h3 class="panel-title">Resposta Consulta - {{ $name }}</h3>
 		  	</div>
 		  	<div class="panel-body">
-		   	 	<p>{{ $response->consumidor->{'consumidor-pessoa-fisica'}->nome }}</p>
-		   	 	@if($response->restricao)
-		   	 	<h3>SPC</h3>
-		   	 	<p>{{ $response->spc->resumo->{'quantidade-total'} }}</p>
-		   	 	<h3>Cheques Lojistas</h3>
-		   	 	<p>{{ $response->{'cheque-lojista'}->resumo->{'quantidade-total'} }}</p>
-		   	 	<h3>CCF</h3>
-		   	 	<p>{{ $response->ccf->resumo->{'quantidade-total'} }}</p>
-		   	 	<h3>Contra Ordem Doc Dif</h3>
-		   	 	<p>{{ $response->{'contra-ordem-documento-diferente'}->resumo->{'quantidade-total'} }}</p>
-		   	 	<h3>Protestos</h3>
-		   	 	<p>{{ $response->protesto->resumo->{'quantidade-total'} }}</p>
-		   	 	<h3>Contra Ordem</h3>
-		   	 	<p>{{ $response->{'contra-ordem'}->resumo->{'quantidade-total'} }}</p>
-		  
-
+		  		<p>{{ $response->consumidor->{'consumidor-pessoa-fisica'}->nome }}</p>
+		  		@if($response->restricao)
+		  		<div class="row border">
+		  			<div class="col-4">SPC</div>
+		  			<div class="col">{{ $response->spc->resumo->{'quantidade-total'} }}</div>
+		  		</div>
+		  		<div class="row border">
+		  			<div class="col-4">Cheques Lojistas</div>
+		  			<div class="col">{{ $response->{'cheque-lojista'}->resumo->{'quantidade-total'} }}</div>
+		  		</div>
+		  		<div class="row border">
+		  			<div class="col-4">CCF</div>
+		  			<div class="col">{{ $response->ccf->resumo->{'quantidade-total'} }}</div>
+		  		</div>
+		  		<div class="row border">
+		  			<div class="col-4">Contra Ordem Documento diferente</div>
+		  			<div class="col">{{ $response->{'contra-ordem-documento-diferente'}->resumo->{'quantidade-total'} }}</div>
+		  		</div>
+		  		<div class="row border">
+		  			<div class="col-4">Protesto</div>
+		  			<div class="col">{{ $response->protesto->resumo->{'quantidade-total'} }}</div>
+		  		</div>
+		  		<div class="row border">
+		  			<div class="col-4">Contra Ordem</div>
+		  			<div class="col">{{ $response->{'contra-ordem'}->resumo->{'quantidade-total'} }}</div>
+		  		</div>
+		  		@endif
 		   	 	
-		   	 	@endif
+		   	 	<!-- <h5>SPC <span class="badge badge-danger"></span></h5>
+		   	 	<h5> <span class="badge badge-danger"></span></h5>
+		   	 	<h5>CCF <span class="badge badge-danger"></span></h5>
+		   	 	<h5>Contra Ordem Doc Dif <span class="badge badge-danger"></span></h5>
+		   	 	<h5>Protestos <span class="badge badge-danger"></span></h5>
+		   	 	<h5>Contra Ordem <span class="badge badge-danger"></span></h5> -->
+		   	 	
 		  	</div>
 		</div>
 @endsection
