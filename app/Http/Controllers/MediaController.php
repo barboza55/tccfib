@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Sian;
 use Illuminate\Support\Facades\Auth;
+use App\UserPassword;
 
 class MediaController extends Controller
 {
