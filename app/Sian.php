@@ -44,7 +44,7 @@ class Sian extends Model
     public function __construct()
     {
         $name = Auth::user()->name;
-        dd(storage_path('teste/' . $name . 'cookie.txt'));
+        //dd(storage_path('teste/' . $name . 'cookie.txt'));
         $this->cookie_file = storage_path('teste\\' . $name . 'cookie.txt');
         //dd($this->cookie_file);
     }
