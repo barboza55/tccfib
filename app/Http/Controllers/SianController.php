@@ -20,7 +20,6 @@ class SianController extends Controller
     }
     public function index()
     {
-    	$sian = new Sian();
         $user_id = Auth::id();
         $userpassword = UserPassword::where('user_id', $user_id)->first();
         $sian = new Sian();
@@ -195,8 +194,12 @@ class SianController extends Controller
 
     public function boleto()
     {
+        $user_id = Auth::id();
+        $userpassword = UserPassword::where('user_id', $user_id)->first();
         $sian = new Sian();
-        $sian->connect('17165', 'porquesou10');
+        $sian->clearCoockie();
+        $sian->connect($userpassword->user, $userpassword->password);
+        
         //echo '01/' . date('m/Y') . '<br>' . date('t/m/Y');
         return view('sian.boleto');
     }
@@ -271,26 +274,35 @@ class SianController extends Controller
 
     public function sugestaoCompra()
     {
+        $user_id = Auth::id();
+        $userpassword = UserPassword::where('user_id', $user_id)->first();
         $sian = new Sian();
-        $sian->connect('caxias', 'lu291205');
+        $sian->clearCoockie();
+        $sian->connect($userpassword->user, $userpassword->password);
         $lista = $sian->sugestaoCompra();
         return view('sian.sugestao', compact('lista'));
     }
 
     public function editar($id)
     {
+        $user_id = Auth::id();
+        $userpassword = UserPassword::where('user_id', $user_id)->first();
         $sian = new Sian();
-        $sian->connect('17165', 'porquesou10');
+        $sian->clearCoockie();
+        $sian->connect($userpassword->user, $userpassword->password);
+    
         $request = $this->request->all();
         //dd($request);
         $lista = $sian->editarPedido($id);
         return redirect(route('sian', $id));
     }
      public function comparativo(Request $request){
+        $user_id = Auth::id();
+        $userpassword = UserPassword::where('user_id', $user_id)->first();
         $sian = new Sian();
-        $user = Auth::user()->sian_user;
-        $pass = Auth::user()->sian_pass;
-        $sian->connect('17165', 'porquesou10');
+        $sian->clearCoockie();
+        $sian->connect($userpassword->user, $userpassword->password);
+        
         //echo Auth::user()->sian_user;
         //echo $request->method;
         //dd($request);

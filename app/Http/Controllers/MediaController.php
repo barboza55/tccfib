@@ -8,8 +8,11 @@ use App\Sian;
 class MediaController extends Controller
 {
 		public function media(Request $request){
-			 $sian = new Sian();
-			 $sian->connect('17165', 'porquesou10');
+			$sian = new Sian();
+			$user_id = Auth::id();
+			$userpassword = UserPassword::where('user_id', $user_id)->first();
+			$sian->clearCoockie();
+			$sian->connect($userpassword->user, $userpassword->password);
 			 $cliente = [];
 			 $cliente['media'] = null;
 			 if($request->isMethod('post')){
@@ -26,7 +29,11 @@ class MediaController extends Controller
 
 		public function zeraCombo($id, $combo, $retira){
 			$sian = new Sian();
-			$sian->connect('17165', 'porquesou10');
+			$user_id = Auth::id();
+			$userpassword = UserPassword::where('user_id', $user_id)->first();
+			$sian->clearCoockie();
+			$sian->connect($userpassword->user, $userpassword->password);
+			
 			$lista = $sian->editarPedido($id, $combo, $retira);
 			return redirect(route('sian', ['id' => $id]));
 		}
