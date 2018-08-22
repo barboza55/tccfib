@@ -1,0 +1,116 @@
+{
+    "protocolo": {
+        "numero": 1965287128,
+        "digito": 2
+    },
+    "operador": {
+        "codigo": "2122539",
+        "nome": "WEB SERVICE"
+    },
+    "consumidor": {
+        "consumidor-pessoa-fisica": {
+            "cpf": {
+                "regiao-origem": "SAO PAULO",
+                "numero": "42798784808"
+            },
+            "situacao-cpf": {
+                "descricao-situacao": "REGULAR",
+                "data-situacao": "2018-04-09T15:25:33-03:00"
+            },
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "ITAPOLIS"
+                },
+                "logradouro": "R JOSE ROSSI 1160",
+                "bairro": "CENTRO",
+                "cep": 14900000
+            },
+            "data-nascimento": "1995-03-04T00:00:00-03:00",
+            "idade": 23,
+            "nome": "JESSICA DE SOUZA",
+            "sexo": "FEMININO",
+            "signo": "PEIXES"
+        }
+    },
+    "grafia-pj": {},
+    "endereco-cep-consultado": {},
+    "telefone-consultado": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "telefone-vinculado-consumidor": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "ultimo-telefone-informado": {},
+    "ultimo-endereco-informado": {},
+    "alerta-documento": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "spc": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "cheque-lojista": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "ccf": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem-documento-diferente": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "protesto": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contumacia": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "credito-concedido": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "dados-agencia-bancaria": {},
+    "consulta-realizada": {
+        "resumo": {
+            "quantidade-total": 0
+        },
+        "quantidade-dias-consultados": 90
+    },
+    "informacao-poder-judiciario": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "cheque-consulta-online-srs": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "restricao": false,
+    "data": "2018-08-22T11:20:38.952-03:00"
+}

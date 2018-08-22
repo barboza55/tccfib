@@ -1,0 +1,416 @@
+{
+    "protocolo": {
+        "numero": 1965204892,
+        "digito": 6
+    },
+    "operador": {
+        "codigo": "2122539",
+        "nome": "WEB SERVICE"
+    },
+    "consumidor": {
+        "consumidor-pessoa-fisica": {
+            "cpf": {
+                "regiao-origem": "SAO PAULO",
+                "numero": "21582615870"
+            },
+            "situacao-cpf": {
+                "descricao-situacao": "REGULAR",
+                "data-situacao": "2018-04-19T13:39:14-03:00"
+            },
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "JAU"
+                },
+                "logradouro": "R JESUS DIZ",
+                "numero": "483",
+                "bairro": "JARDIM NETINHO PRADO",
+                "cep": 17208120
+            },
+            "data-nascimento": "1982-06-07T00:00:00-03:00",
+            "email": "alinebeloto@terra.com.br",
+            "idade": 36,
+            "nome": "ALINE MARIA PONTALTI CAMPANHA",
+            "nome-mae": "VERA LUCIA PONTALTI CAMPANHA",
+            "numero-titulo-eleitor": 0,
+            "sexo": "FEMININO",
+            "signo": "GEMEOS"
+        }
+    },
+    "grafia-pj": {},
+    "endereco-cep-consultado": {},
+    "telefone-consultado": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "telefone-vinculado-consumidor": {
+        "resumo": {
+            "quantidade-total": 4
+        },
+        "detalhe-telefone-vinculado-consumidor": [
+            {
+                "assinante": {
+                    "telefone": {
+                        "numero-ddd": 14,
+                        "numero": 36251370
+                    },
+                    "nome": "ALINE MARIA PONTALTI CAMPANHA",
+                    "tipo-telefone": "Fixo"
+                }
+            },
+            {
+                "assinante": {
+                    "telefone": {
+                        "numero-ddd": 14,
+                        "numero": 36217898
+                    },
+                    "nome": "ALINE MARIA PONTALTI CAMPANHA",
+                    "tipo-telefone": "Fixo"
+                }
+            },
+            {
+                "assinante": {
+                    "telefone": {
+                        "numero-ddd": 14,
+                        "numero": 97198698
+                    },
+                    "nome": "ALINE MARIA PONTALTI CAMPANHA",
+                    "tipo-telefone": "Celular"
+                }
+            },
+            {
+                "assinante": {
+                    "telefone": {
+                        "numero-ddd": 14,
+                        "numero": 97978300
+                    },
+                    "nome": "ALINE MARIA PONTALTI CAMPANHA",
+                    "tipo-telefone": "Celular"
+                }
+            }
+        ]
+    },
+    "ultimo-telefone-informado": {
+        "detalhe-ultimo-telefone-informado": {
+            "telefone": {
+                "numero-ddd": 14,
+                "numero": 36251370
+            },
+            "data-primeira-consulta": "2014-01-11T00:00:00-02:00",
+            "data-ultima-consulta": "2014-01-11T00:00:00-02:00",
+            "quantidade-consulta": 1
+        }
+    },
+    "ultimo-endereco-informado": {
+        "detalhe-ultimo-endereco-informado": [
+            {
+                "endereco": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "JAU"
+                    },
+                    "logradouro": "R JESUS DIZ",
+                    "numero": "483",
+                    "bairro": "JARDIM NETINHO PRADO",
+                    "cep": 17208120
+                }
+            },
+            {
+                "endereco": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "JAU"
+                    },
+                    "logradouro": "RUA   JESUS DIZ",
+                    "numero": "483",
+                    "bairro": "JARDIM NETINHO PRADO",
+                    "cep": 17208120
+                }
+            }
+        ]
+    },
+    "alerta-documento": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "spc": {
+        "resumo": {
+            "quantidade-total": 3,
+            "data-ultima-ocorrencia": "2018-08-06T00:00:00-03:00",
+            "valor-total": "1445.37"
+        },
+        "detalhe-spc": [
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "OSASCO"
+                },
+                "telefone-associado": {
+                    "numero-ddd": 800,
+                    "numero": 557222
+                },
+                "nome-associado": "BANCO BRADESCO S/A",
+                "data-inclusao": "2018-08-06T00:00:00-03:00",
+                "data-vencimento": "2018-06-26T00:00:00-03:00",
+                "nome-entidade": "SERASA EXPERIAN",
+                "contrato": "215826158000070AD",
+                "registro-instituicao-financeira": "SIM",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "706.08"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "telefone-associado": {
+                    "numero-ddd": 11,
+                    "numero": 40030520
+                },
+                "nome-associado": "BANCO BRADESCO CARTOES S/A",
+                "data-inclusao": "2018-01-12T00:00:00-02:00",
+                "data-vencimento": "2017-09-24T00:00:00-03:00",
+                "nome-entidade": "SERASA EXPERIAN",
+                "contrato": "215826158000070CT",
+                "registro-instituicao-financeira": "SIM",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "97.81"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "OSASCO"
+                },
+                "telefone-associado": {
+                    "numero-ddd": 800,
+                    "numero": 557222
+                },
+                "nome-associado": "BANCO BRADESCO S/A",
+                "data-inclusao": "2017-07-14T00:00:00-03:00",
+                "data-vencimento": "2017-05-03T00:00:00-03:00",
+                "nome-entidade": "SERASA EXPERIAN",
+                "contrato": "215826158000070FI",
+                "registro-instituicao-financeira": "SIM",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "641.48"
+            }
+        ]
+    },
+    "cheque-lojista": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "ccf": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem-documento-diferente": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "protesto": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contumacia": {
+        "resumo": {
+            "quantidade-total": 4,
+            "data-ultima-ocorrencia": "2018-04-11T00:00:00-03:00"
+        },
+        "detalhe-contumacia": [
+            {
+                "motivo": {
+                    "codigo": 29,
+                    "descricao": "EXTRAVIADO"
+                },
+                "cheque-inicial": {
+                    "dados-bancarios": {
+                        "banco": {
+                            "codigo": 237,
+                            "nome": "BANCO BRADESCO S/A "
+                        },
+                        "numero-agencia": 60,
+                        "numero-conta-corrente": "76858"
+                    },
+                    "numero": 61
+                },
+                "cheque-final": {
+                    "numero": 64
+                },
+                "data-inclusao": "2018-04-11T00:00:00-03:00",
+                "data-ocorrencia": "2018-04-11T00:00:00-03:00",
+                "origem": "SERASA EXPERIAN"
+            },
+            {
+                "motivo": {
+                    "codigo": 29,
+                    "descricao": "EXTRAVIADO"
+                },
+                "cheque-inicial": {
+                    "dados-bancarios": {
+                        "banco": {
+                            "codigo": 237,
+                            "nome": "BANCO BRADESCO S/A "
+                        },
+                        "numero-agencia": 60,
+                        "numero-conta-corrente": "76858"
+                    },
+                    "numero": 30
+                },
+                "cheque-final": {
+                    "numero": 30
+                },
+                "data-inclusao": "2018-04-06T00:00:00-03:00",
+                "data-ocorrencia": "2018-04-06T00:00:00-03:00",
+                "origem": "SERASA EXPERIAN"
+            },
+            {
+                "motivo": {
+                    "codigo": 29,
+                    "descricao": "EXTRAVIADO"
+                },
+                "cheque-inicial": {
+                    "dados-bancarios": {
+                        "banco": {
+                            "codigo": 237,
+                            "nome": "BANCO BRADESCO S/A "
+                        },
+                        "numero-agencia": 60,
+                        "numero-conta-corrente": "76858"
+                    },
+                    "numero": 17
+                },
+                "cheque-final": {
+                    "numero": 17
+                },
+                "data-inclusao": "2018-04-04T00:00:00-03:00",
+                "data-ocorrencia": "2018-04-04T00:00:00-03:00",
+                "origem": "SERASA EXPERIAN"
+            },
+            {
+                "motivo": {
+                    "codigo": 29,
+                    "descricao": "EXTRAVIADO"
+                },
+                "cheque-inicial": {
+                    "dados-bancarios": {
+                        "banco": {
+                            "codigo": 237,
+                            "nome": "BANCO BRADESCO S/A "
+                        },
+                        "numero-agencia": 60,
+                        "numero-conta-corrente": "76858"
+                    },
+                    "numero": 57
+                },
+                "cheque-final": {
+                    "numero": 57
+                },
+                "data-inclusao": "2018-03-28T00:00:00-03:00",
+                "data-ocorrencia": "2018-03-28T00:00:00-03:00",
+                "origem": "SERASA EXPERIAN"
+            }
+        ],
+        "data-final-periodo-consultado": "2018-08-22T00:00:00-03:00",
+        "data-inicial-periodo-consultado": "2018-02-23T00:00:00-03:00"
+    },
+    "credito-concedido": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "dados-agencia-bancaria": {},
+    "consulta-realizada": {
+        "resumo": {
+            "quantidade-total": 5,
+            "data-ultima-ocorrencia": "2018-08-07T00:00:00-03:00"
+        },
+        "detalhe-consulta-realizada": [
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "SEGUROS NÃOVIDA",
+                "data-consulta": "2018-08-07T00:00:00-03:00",
+                "nome-entidade-origem": "SERASA EXPERIAN"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "Sao Paulo"
+                },
+                "nome-associado": "SEGUROS NÃOVIDA",
+                "data-consulta": "2018-08-07T00:00:00-03:00",
+                "nome-entidade-origem": "SERASA EXPERIAN"
+            },
+            {
+                "nome-associado": "SEGUROS NÃOVIDA",
+                "data-consulta": "2018-08-07T00:00:00-03:00",
+                "nome-entidade-origem": "SERASA EXPERIAN"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "SEGUROS NÃOVIDA",
+                "data-consulta": "2018-07-07T00:00:00-03:00",
+                "nome-entidade-origem": "SERASA EXPERIAN"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "DF"
+                    },
+                    "nome": "BRASILIA"
+                },
+                "nome-associado": "CAIXAS ECONÔMICAS",
+                "data-consulta": "2018-05-16T00:00:00-03:00",
+                "nome-entidade-origem": "SERASA EXPERIAN"
+            }
+        ],
+        "quantidade-dias-consultados": 90
+    },
+    "informacao-poder-judiciario": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "cheque-consulta-online-srs": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "restricao": true,
+    "data": "2018-08-22T09:50:03.400-03:00"
+}
