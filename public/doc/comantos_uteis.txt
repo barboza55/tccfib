@@ -14,7 +14,10 @@ https://git-scm.com/book/pt-br/v1/Git-Essencial-Trabalhando-com-Remotos
 
 	git push -u luidyRemoto master
 
-###Criar um Branch###
+
+###ALTER TABLE NO LARAVEL###
+
+	php artisan make:migration add_type_users --table=users
 
 
 
