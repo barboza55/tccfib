@@ -1,10 +1,25 @@
-Comando para serem executados sempre que for trabalhar no projeto:
+###Git Essencial - Trabalhando com Remotos###
+1 Renomear repositorio remoto
+	git remote rename nome_atual nome_novo
 
+https://git-scm.com/book/pt-br/v1/Git-Essencial-Trabalhando-com-Remotos
+
+###Comando para serem executados sempre que for trabalhar no projeto:###
 1 Atualizar repositório local com o repositorio remoto de terceiro
 (esse repositório de terceiro foi apelidado como “upstream”)
 
-	git pull upstream master
+	git pull luizRemoto master
 
 2 Atualizar meu repositório remoto (origin) com meu repositório local (branch atual)
 
-	git push -u origin master
+	git push -u luidyRemoto master
+
+
+###ALTER TABLE NO LARAVEL###
+
+	php artisan make:migration add_type_users --table=users
+
+
+
+
+
