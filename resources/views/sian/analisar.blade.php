@@ -59,10 +59,11 @@
 						<form class="form-inline" action="{{ route('apagar') }}" method="POST" target="_blank">
 							{{ csrf_field() }}
 							<input type="hidden" name="name" value="{{ $customer['name'] }}">
+							<input type="hidden" name="codigo" value="{{ $customer['Hidden'] }}">
 							@if(array_key_exists('cnpj', $customer))
-							<input class="form-control mb-2 mr-sm-2" type="text" id="cpfcnpj" name="cpfcnpj" value="{{ $customer['cnpj'] }}">
+							<input class="form-control mb-2 mr-sm-2" type="text" id="cnpj" name="cnpj" value="{{ $customer['cnpj'] }}">
 							@else
-							<input class="form-control mb-2 mr-sm-2" type="text" id="cpfcnpj" name="cpfcnpj"  value="{{ $customer['cpf'] }}">
+							<input class="form-control mb-2 mr-sm-2" type="text" id="cpf" name="cpf"  value="{{ $customer['cpf'] }}">
 							@endif
 							@can('cdlbauru')
 							<input class="btn btn-danger btn-sm" type="submit" value="Consultar" name="consulta">

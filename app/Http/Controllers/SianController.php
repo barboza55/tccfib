@@ -206,20 +206,19 @@ class SianController extends Controller
 
     public function apagar(Request $request)
     {
+        
+        
 
-        $documento = $request->input('cpfcnpj');
-        $documento = str_replace(".","", $documento);
-        $documento = str_replace("-","", $documento);
-        $documento = str_replace("/","", $documento);
-        $name = $request->input('name');
+        
+        
         
         //$Webservice = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaEntidadeReplicadaWebService?wsdl';
-        $Webservice = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
-        //$Webservice = 'https://servicos.spc.org.br/spc/remoting/ws/consulta/consultaWebServicel?wsdl';
+        //$Webservice = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
+        $Webservice = 'https://servicos.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
 
         
-        $username = '398950';
-        $password = '10082018';
+        $username = '2122539';
+        $password = '20180822';
         
         
         
@@ -229,20 +228,41 @@ class SianController extends Controller
         //$client = new \SoapClient($Webservice, $options);
         $client = new \SoapClient($Webservice, array("login"=>$username,"password"=>$password));
         //$functions = $client->__getFunctions();
-        //$functions = $client->listarProdutos();
+        $functions = $client->listarProdutos();
         //$functions = $client->detalharProduto(7);
+        //dd($functions);
         $parametros = new \stdClass;
+        $parametros->{'codigo-produto'} = '240';
+        if ($request->exists('cpf')) {
+            $documento = $request->input('cpf');
+            $parametros->{'tipo-consumidor'} = 'F';
+        }elseif ($request->exists('cnpj')) {
+            $documento = $request->input('cnpj');
+            $parametros->{'tipo-consumidor'} = 'J';
+        }
 
-        $parametros->{'codigo-produto'} = '333';
+        $documento = str_replace(".","", $documento);
+        $documento = str_replace("-","", $documento);
+        $documento = str_replace("/","", $documento);
         $parametros->{'documento-consumidor'} = $documento;
-        $parametros->{'tipo-consumidor'} = 'F';
+        $name = $request->input('name');
+        
+
+        
+        
+
+
+
+        
         
         
         $response = $client->consultar($parametros);
-        /*$dados_json = json_encode($functions, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-        $fp = fopen("consultaCPF.json", "w");
+        $codigo = $request->input('codigo');
+        $protocolo = $codigo . 'Protocolo' . $response->protocolo->numero . '-' . $response->protocolo->digito;
+        $dados_json = json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        $fp = fopen($protocolo."consulta.json", "w");
         $escreve = fwrite($fp, $dados_json);
-        fclose($fp);*/
+        fclose($fp);
         //$functions = serialize($functions);
 
         /*echo "<table border='1'>";

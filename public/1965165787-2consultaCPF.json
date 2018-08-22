@@ -1,0 +1,179 @@
+{
+    "protocolo": {
+        "numero": 1965165787,
+        "digito": 2
+    },
+    "operador": {
+        "codigo": "2122539",
+        "nome": "WEB SERVICE"
+    },
+    "consumidor": {
+        "consumidor-pessoa-juridica": {
+            "cnpj": {
+                "numero": "14165282000191"
+            },
+            "situacao-cnpj": {},
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "PARANAPANEMA"
+                },
+                "logradouro": "R AVARE",
+                "numero": "300",
+                "bairro": "CENTRO",
+                "cep": 18720000
+            },
+            "natureza-juridica": {
+                "descricao": "EMPRESARIO INDIVIDUAL",
+                "codigo": 2135
+            },
+            "atividade-economica-principal": {
+                "descricao": "CABELEIREIROS",
+                "codigo": 9602501
+            },
+            "atividade-economica-secundaria": [
+                {
+                    "descricao": "COMÉRCIO VAREJISTA DE SUVENIRES, BIJUTERIAS E ARTESANATOS",
+                    "codigo": 4789001
+                },
+                {
+                    "descricao": "COMÉRCIO VAREJISTA DE ARTIGOS DO VESTUÁRIO E ACESSÓRIOS",
+                    "codigo": 4781400
+                },
+                {
+                    "descricao": "OUTRAS ATIVIDADES DE TRATAMENTO DE BELEZA",
+                    "codigo": 9602502
+                },
+                {
+                    "descricao": "COMÉRCIO VAREJISTA DE COSMÉTICOS, PRODUTOS DE PERFUMARIA E DE HIGIENE PESSOAL",
+                    "codigo": 4772500
+                }
+            ],
+            "data-fundacao": "2011-08-23T00:00:00-03:00",
+            "nome-comercial": "HADASSA ESPACO DE BELEZA",
+            "razao-social": "DEBORAH ALVES DE COSTA 34224507854"
+        }
+    },
+    "grafia-pj": {},
+    "endereco-cep-consultado": {},
+    "telefone-consultado": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "telefone-vinculado-consumidor": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "ultimo-telefone-informado": {},
+    "ultimo-endereco-informado": {
+        "detalhe-ultimo-endereco-informado": {
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "PARANAPANEMA"
+                },
+                "logradouro": "R BOM SUCESSO",
+                "numero": "22",
+                "complemento": "SALA 01",
+                "bairro": "CENTRO",
+                "cep": 18720000
+            }
+        }
+    },
+    "alerta-documento": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "spc": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "cheque-lojista": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "ccf": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem-documento-diferente": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "protesto": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contumacia": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "credito-concedido": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "dados-agencia-bancaria": {},
+    "consulta-realizada": {
+        "resumo": {
+            "quantidade-total": 0
+        },
+        "quantidade-dias-consultados": 90
+    },
+    "informacao-poder-judiciario": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "cheque-consulta-online-srs": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "atividade-empresa": {
+        "detalhe-atividade-empresa": {
+            "ramo-atividade": {
+                "descricao": "CABELEIREIROS",
+                "codigo": 9602501
+            },
+            "atividades-economicas-secundarias": [
+                {
+                    "descricao": "COMÉRCIO VAREJISTA DE SUVENIRES, BIJUTERIAS E ARTESANATOS",
+                    "codigo": 4789001
+                },
+                {
+                    "descricao": "COMÉRCIO VAREJISTA DE ARTIGOS DO VESTUÁRIO E ACESSÓRIOS",
+                    "codigo": 4781400
+                },
+                {
+                    "descricao": "OUTRAS ATIVIDADES DE TRATAMENTO DE BELEZA",
+                    "codigo": 9602502
+                },
+                {
+                    "descricao": "COMÉRCIO VAREJISTA DE COSMÉTICOS, PRODUTOS DE PERFUMARIA E DE HIGIENE PESSOAL",
+                    "codigo": 4772500
+                }
+            ]
+        }
+    },
+    "restricao": false,
+    "data": "2018-08-22T08:56:43.861-03:00"
+}
