@@ -1,0 +1,177 @@
+{
+    "protocolo": {
+        "numero": 1965501928,
+        "digito": 5
+    },
+    "operador": {
+        "codigo": "2122539",
+        "nome": "WEB SERVICE"
+    },
+    "consumidor": {
+        "consumidor-pessoa-fisica": {
+            "cpf": {
+                "regiao-origem": "SAO PAULO",
+                "numero": "39316662800"
+            },
+            "situacao-cpf": {
+                "descricao-situacao": "REGULAR",
+                "data-situacao": "2016-01-17T06:34:29-02:00"
+            },
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "UBIRAJARA"
+                },
+                "logradouro": "R GASPAR RICARDO 334",
+                "bairro": "CENTRO",
+                "cep": 17440000
+            },
+            "data-nascimento": "1992-09-02T00:00:00-03:00",
+            "idade": 25,
+            "nome": "ELITON GOMES RAMOS",
+            "nome-mae": "MARIA LUZIA GOMES RAMOS",
+            "sexo": "MASCULINO",
+            "signo": "VIRGEM"
+        }
+    },
+    "grafia-pj": {},
+    "endereco-cep-consultado": {},
+    "telefone-consultado": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "telefone-vinculado-consumidor": {
+        "resumo": {
+            "quantidade-total": 1
+        },
+        "detalhe-telefone-vinculado-consumidor": {
+            "assinante": {
+                "telefone": {
+                    "numero-ddd": 14,
+                    "numero": 38417561
+                },
+                "nome": "ELITON GOMES RAMOS",
+                "tipo-telefone": "Fixo"
+            }
+        }
+    },
+    "ultimo-telefone-informado": {
+        "detalhe-ultimo-telefone-informado": {
+            "telefone": {
+                "numero-ddd": 14,
+                "numero": 34727144
+            },
+            "data-primeira-consulta": "2011-08-08T00:00:00-03:00",
+            "data-ultima-consulta": "2011-08-08T00:00:00-03:00",
+            "quantidade-consulta": 1
+        }
+    },
+    "ultimo-endereco-informado": {
+        "detalhe-ultimo-endereco-informado": {
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO MANUEL"
+                },
+                "logradouro": "R ANTONIO DE VICENTE",
+                "numero": "186",
+                "bairro": "JD BRASILIA",
+                "cep": 18650000
+            }
+        }
+    },
+    "alerta-documento": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "spc": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "cheque-lojista": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "ccf": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem-documento-diferente": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "protesto": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contumacia": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "credito-concedido": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "dados-agencia-bancaria": {},
+    "consulta-realizada": {
+        "resumo": {
+            "quantidade-total": 2,
+            "data-ultima-ocorrencia": "2018-08-14T00:00:00-03:00"
+        },
+        "detalhe-consulta-realizada": [
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "DF"
+                    },
+                    "nome": "BRASILIA"
+                },
+                "nome-associado": "CAIXAS ECONÔMICAS",
+                "data-consulta": "2018-08-14T00:00:00-03:00",
+                "nome-entidade-origem": "SERASA EXPERIAN"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ADMINISTRAÇÃO DE CARTÕES DE CRÉDITO",
+                "data-consulta": "2018-06-21T00:00:00-03:00",
+                "nome-entidade-origem": "SERASA EXPERIAN"
+            }
+        ],
+        "quantidade-dias-consultados": 90
+    },
+    "informacao-poder-judiciario": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "cheque-consulta-online-srs": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "restricao": false,
+    "data": "2018-08-22T16:12:08.847-03:00"
+}

@@ -206,19 +206,62 @@ class SianController extends Controller
 
     public function apagar(Request $request)
     {
-        
-        
+        try {
+            $username = '2122539';
+            $password = '20180822';
+            $opts = array(
+                'https' => array(
+                    'user_agent' => 'PHPSoapClient'
+                )
+            );
+            $context = stream_context_create($opts);
 
-        
-        
-        
+            $wsdlUrl = 'https://servicos.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
+            $soapClientOptions = array(
+                'stream_context' => $context,
+                'cache_wsdl' => WSDL_CACHE_NONE,
+                'login' => $username,
+                'password' => $password
+            );
+
+            $client = new SoapClient($wsdlUrl, $soapClientOptions);
+
+            $parametros = new \stdClass;
+            $parametros->{'codigo-produto'} = '240';
+            if ($request->exists('cpf')) {
+                $documento = $request->input('cpf');
+                $parametros->{'tipo-consumidor'} = 'F';
+            }elseif ($request->exists('cnpj')) {
+                $documento = $request->input('cnpj');
+                $parametros->{'tipo-consumidor'} = 'J';
+            }
+
+            $documento = str_replace(".","", $documento);
+            $documento = str_replace("-","", $documento);
+            $documento = str_replace("/","", $documento);
+            $parametros->{'documento-consumidor'} = $documento;
+            $name = $request->input('name');
+
+            $response = $client->consultar($parametros);
+            $codigo = $request->input('codigo');
+            $protocolo = $codigo . 'Protocolo' . $response->protocolo->numero . '-' . $response->protocolo->digito;
+            $dados_json = json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+            $fp = fopen("consulta\\".$protocolo."consulta.json", "w");
+            $escreve = fwrite($fp, $dados_json);
+            fclose($fp);
+
+            
+        }
+        catch(Exception $e) {
+            echo $e->getMessage();
+        }
+ 
         //$Webservice = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaEntidadeReplicadaWebService?wsdl';
         //$Webservice = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
-        $Webservice = 'https://servicos.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
+        //$Webservice = '';
 
         
-        $username = '2122539';
-        $password = '20180822';
+        
         
         
         
@@ -226,26 +269,12 @@ class SianController extends Controller
         
         
         //$client = new \SoapClient($Webservice, $options);
-        $client = new \SoapClient($Webservice, array("login"=>$username,"password"=>$password));
+        //$client = new \SoapClient($Webservice, array("login"=>$username,"password"=>$password));
         //$functions = $client->__getFunctions();
-        $functions = $client->listarProdutos();
+        //$functions = $client->listarProdutos();
         //$functions = $client->detalharProduto(7);
         //dd($functions);
-        $parametros = new \stdClass;
-        $parametros->{'codigo-produto'} = '240';
-        if ($request->exists('cpf')) {
-            $documento = $request->input('cpf');
-            $parametros->{'tipo-consumidor'} = 'F';
-        }elseif ($request->exists('cnpj')) {
-            $documento = $request->input('cnpj');
-            $parametros->{'tipo-consumidor'} = 'J';
-        }
-
-        $documento = str_replace(".","", $documento);
-        $documento = str_replace("-","", $documento);
-        $documento = str_replace("/","", $documento);
-        $parametros->{'documento-consumidor'} = $documento;
-        $name = $request->input('name');
+        
         
 
         
@@ -256,13 +285,7 @@ class SianController extends Controller
         
         
         
-        $response = $client->consultar($parametros);
-        $codigo = $request->input('codigo');
-        $protocolo = $codigo . 'Protocolo' . $response->protocolo->numero . '-' . $response->protocolo->digito;
-        $dados_json = json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-        $fp = fopen("consulta\\".$protocolo."consulta.json", "w");
-        $escreve = fwrite($fp, $dados_json);
-        fclose($fp);
+        
         //$functions = serialize($functions);
 
         /*echo "<table border='1'>";
