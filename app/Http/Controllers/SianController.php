@@ -218,6 +218,7 @@ class SianController extends Controller
 
             $wsdlUrl = 'https://servicos.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
             $soapClientOptions = array(
+                'soap_version'=>SOAP_1_1,
                 'stream_context' => $context,
                 'cache_wsdl' => WSDL_CACHE_NONE,
                 'login' => $username,
