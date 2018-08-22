@@ -5,7 +5,7 @@
 		   		<h3 class="panel-title">Resposta Consulta - {{ $name }}</h3>
 		  	</div>
 		  	<div class="panel-body">
-		  		<p>{{ $response->consumidor->{'consumidor-pessoa-fisica'}->nome }}</p>
+		  		<p>{{ $response->consumidor->{'consumidor-pessoa-juridica'}->{'razao-social'} }}</p>
 		  		@if($response->restricao)
 		  		<div class="row border">
 		  			<div class="col-4">SPC</div>
@@ -30,6 +30,15 @@
 		  		<div class="row border">
 		  			<div class="col-4">Contra Ordem</div>
 		  			<div class="col">{{ $response->{'contra-ordem'}->resumo->{'quantidade-total'} }}</div>
+		  		</div>
+		  		
+		  		<div class="row border">
+		  			<div class="col-4">Contumacia</div>
+		  			<div class="col">{{ $response->contumacia->resumo->{'quantidade-total'} }}</div>
+		  		</div>
+		  		<div class="row border">
+		  			<div class="col-4">Judiciario</div>
+		  			<div class="col">{{ $response->{'informacao-poder-judiciario'}->resumo->{'quantidade-total'} }}</div>
 		  		</div>
 		  		@endif
 		   	 	
