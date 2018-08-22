@@ -10,4 +10,9 @@ class City extends Model
     {
     	return $this->belongsTo('App\Model\State');
     }
+
+    public function zipCodes()
+    {
+        return $this->hasMany('App\Model\Panel\ZipCode');
+    }
 }
