@@ -15,4 +15,14 @@ class ZipCode extends Model
     {
         return $this->hasMany('App\Model\Panel\ZipCodeDistrict');
     }
+
+    public function city()
+    {
+        return $this->belongsTo('App\Model\Panel\City');
+    }
+
+    public function state()
+    {
+        return $this->belongsTo('App\Model\Panel\State');
+    }
 }
