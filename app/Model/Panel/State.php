@@ -10,5 +10,10 @@ class State extends Model
     {
         return $this->hasMany('App\Model\City');
     }
+
+    public function zipCodes()
+    {
+        return $this->hasMany('App\Model\Panel\ZipCode');
+    }
     
 }
