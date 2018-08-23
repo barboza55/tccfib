@@ -412,7 +412,7 @@ class Sian extends Model
                 $combos['combo1'] = 'ok';
                 $combos['combo2'] = 'ok';
                 $combos['combo3'] = 'Nao';
-            }else{
+            }elseif($valorPedido >= 350 && $cinzaHome >= 3){
                 $combos['combo1'] = 'ok';
                 $combos['combo2'] = 'Nao';
                 $combos['combo3'] = 'Nao';

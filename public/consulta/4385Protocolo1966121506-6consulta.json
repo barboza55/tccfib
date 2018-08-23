@@ -1,0 +1,190 @@
+{
+    "protocolo": {
+        "numero": 1966121506,
+        "digito": 6
+    },
+    "operador": {
+        "codigo": "2122539",
+        "nome": "WEB SERVICE"
+    },
+    "consumidor": {
+        "consumidor-pessoa-fisica": {
+            "cpf": {
+                "regiao-origem": "SAO PAULO",
+                "numero": "25037248841"
+            },
+            "situacao-cpf": {
+                "descricao-situacao": "REGULAR",
+                "data-situacao": "2015-12-07T03:00:16-02:00"
+            },
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "PIRAJUI"
+                },
+                "logradouro": "AV DR DOS BARBANTES 680 0",
+                "bairro": "VL ORTIZ",
+                "cep": 16600000
+            },
+            "data-nascimento": "1952-10-06T00:00:00-03:00",
+            "idade": 65,
+            "nome": "EROTIDES TEIXEIRA DE OLIVEIRA",
+            "nome-mae": "ROSA TEIXEIRA",
+            "numero-titulo-eleitor": 36765930175,
+            "sexo": "FEMININO",
+            "signo": "LIBRA"
+        }
+    },
+    "grafia-pj": {},
+    "endereco-cep-consultado": {},
+    "telefone-consultado": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "telefone-vinculado-consumidor": {
+        "resumo": {
+            "quantidade-total": 2
+        },
+        "detalhe-telefone-vinculado-consumidor": [
+            {
+                "assinante": {
+                    "telefone": {
+                        "numero-ddd": 14,
+                        "numero": 35723488
+                    },
+                    "nome": "EROTIDES TEIXEIRA DE OLIVEIRA",
+                    "tipo-telefone": "Fixo"
+                }
+            },
+            {
+                "assinante": {
+                    "telefone": {
+                        "numero-ddd": 14,
+                        "numero": 35722073
+                    },
+                    "nome": "EROTIDES TEIXEIRA DE OLIVEIRA",
+                    "tipo-telefone": "Fixo"
+                }
+            }
+        ]
+    },
+    "ultimo-telefone-informado": {},
+    "ultimo-endereco-informado": {
+        "detalhe-ultimo-endereco-informado": {
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "PIRAJUI"
+                },
+                "logradouro": "AV DR LUIZ BARBANTE",
+                "numero": "680",
+                "bairro": "VL ORTIZ",
+                "cep": 16600000
+            }
+        }
+    },
+    "alerta-documento": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "spc": {
+        "resumo": {
+            "quantidade-total": 2,
+            "data-ultima-ocorrencia": "2018-04-18T00:00:00-03:00",
+            "valor-total": "1685.96"
+        },
+        "detalhe-spc": [
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    }
+                },
+                "nome-associado": "ITAPEVA VII MULTICARTEIRA FUNDO DE INVESTIMENTO EM DIR 16",
+                "data-inclusao": "2018-04-18T00:00:00-03:00",
+                "data-vencimento": "2017-02-10T00:00:00-02:00",
+                "nome-entidade": "SERASA EXPERIAN",
+                "contrato": "13929986",
+                "registro-instituicao-financeira": "SIM",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "857.41"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "DF"
+                    },
+                    "nome": "BRASILIA"
+                },
+                "nome-associado": "CAIXA ECONOMICA FEDERAL",
+                "data-inclusao": "2017-06-07T00:00:00-03:00",
+                "data-vencimento": "2017-02-12T00:00:00-02:00",
+                "nome-entidade": "SERASA EXPERIAN",
+                "contrato": "01240290191000021573",
+                "registro-instituicao-financeira": "SIM",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "828.55"
+            }
+        ]
+    },
+    "cheque-lojista": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "ccf": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem-documento-diferente": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "protesto": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contumacia": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "credito-concedido": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "dados-agencia-bancaria": {},
+    "consulta-realizada": {
+        "resumo": {
+            "quantidade-total": 0
+        },
+        "quantidade-dias-consultados": 90
+    },
+    "informacao-poder-judiciario": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "cheque-consulta-online-srs": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "restricao": true,
+    "data": "2018-08-23T16:23:58.842-03:00"
+}
