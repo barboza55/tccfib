@@ -214,8 +214,7 @@ class SianController extends Controller
                     'user_agent' => 'PHPSoapClient'
                 ),
                 'ssl' => [
-                        'verify_peer'      => false,
-                        'verify_peer_name' => false
+                        'allow_self_signed' => true,
                     ]
             );
             $context = stream_context_create($opts);
