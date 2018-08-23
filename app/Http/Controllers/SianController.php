@@ -210,13 +210,14 @@ class SianController extends Controller
             $username = '2122539';
             $password = '20180822';
             $opts = array(
-                'https' => array(
+                'http' => array(
                     'user_agent' => 'PHPSoapClient'
                 )
             );
             $context = stream_context_create($opts);
 
             $wsdlUrl = 'https://servicos.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
+            //$wsdlUrl = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
             $soapClientOptions = array(
                 'soap_version'=>SOAP_1_1,
                 'stream_context' => $context,
