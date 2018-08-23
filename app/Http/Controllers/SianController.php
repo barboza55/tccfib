@@ -210,9 +210,13 @@ class SianController extends Controller
             $username = '2122539';
             $password = '20180822';
             $opts = array(
-                'http' => array(
+                'https' => array(
                     'user_agent' => 'PHPSoapClient'
-                )
+                ),
+                'ssl' => [
+                        'verify_peer'      => false,
+                        'verify_peer_name' => false
+                    ]
             );
             $context = stream_context_create($opts);
 

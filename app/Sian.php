@@ -43,7 +43,15 @@ class Sian extends Model
     ];
     public function __construct()
     {
-        $name = Auth::user()->name;
+        if(Auth::guest()){
+            $name = 'conv';
+        }else{
+            $name = Auth::user()->name;
+        }
+
+        //$name = Auth::user()->name ? Auth::user()->name : 'convidado';
+
+
         //dd(storage_path('teste/' . $name . 'cookie.txt'));
         $this->cookie_file = storage_path('teste\\' . $name . 'cookie.txt');
         //dd($this->cookie_file);

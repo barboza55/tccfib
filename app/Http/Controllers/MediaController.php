@@ -11,10 +11,11 @@ class MediaController extends Controller
 {
 		public function media(Request $request){
 			$sian = new Sian();
-			$user_id = Auth::id();
+			/*$user_id = Auth::id();
 			$userpassword = UserPassword::where('user_id', $user_id)->first();
-			$sian->clearCoockie();
-			$sian->connect($userpassword->user, $userpassword->password);
+			$sian->clearCoockie();*/
+			//$sian->connect($userpassword->user, $userpassword->password);
+			$sian->connect('17165', 'porquesou10');
 			 $cliente = [];
 			 $cliente['media'] = null;
 			 if($request->isMethod('post')){
