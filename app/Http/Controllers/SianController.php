@@ -239,7 +239,7 @@ class SianController extends Controller
 
             $client = new SoapClient($wsdlUrl, $soapClientOptions);
             //$client = new SoapClient($wsdlUrl, array("trace" => 1, "exceptions" => 0,
-                     "login" => $username, "password" => $password) );
+                     //"login" => $username, "password" => $password) );
 
             $parametros = new \stdClass;
             $parametros->{'codigo-produto'} = '240';
