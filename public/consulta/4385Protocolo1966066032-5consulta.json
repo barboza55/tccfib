@@ -1,0 +1,377 @@
+{
+    "protocolo": {
+        "numero": 1966066032,
+        "digito": 5
+    },
+    "operador": {
+        "codigo": "2122539",
+        "nome": "WEB SERVICE"
+    },
+    "consumidor": {
+        "consumidor-pessoa-fisica": {
+            "cpf": {
+                "regiao-origem": "SAO PAULO",
+                "numero": "29010199860"
+            },
+            "situacao-cpf": {},
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "PIRAJUI"
+                },
+                "logradouro": "AV DR LUIS BARBANTE 680",
+                "bairro": "VL ORTIZ",
+                "cep": 16600000
+            },
+            "data-nascimento": "1981-05-01T00:00:00-03:00",
+            "email": "jubed_@hotmail.com",
+            "idade": 37,
+            "nome": "JULIANA BEDUSCH TEIXEIRA DE OLIVEIRA",
+            "nome-mae": "EROTIDES TEIXEIRA DE OLIVEIRA",
+            "numero-titulo-eleitor": 194423520124,
+            "sexo": "FEMININO",
+            "signo": "TOURO"
+        }
+    },
+    "grafia-pj": {},
+    "endereco-cep-consultado": {},
+    "telefone-consultado": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "telefone-vinculado-consumidor": {
+        "resumo": {
+            "quantidade-total": 5
+        },
+        "detalhe-telefone-vinculado-consumidor": [
+            {
+                "assinante": {
+                    "telefone": {
+                        "numero-ddd": 14,
+                        "numero": 35721115
+                    },
+                    "nome": "JULIANA BEDUSCH TEIXEIRA DE OLIVEIRA",
+                    "tipo-telefone": "Fixo"
+                }
+            },
+            {
+                "assinante": {
+                    "telefone": {
+                        "numero-ddd": 14,
+                        "numero": 35723890
+                    },
+                    "nome": "JULIANA BEDUSCH TEIXEIRA DE OLIVEIRA",
+                    "tipo-telefone": "Fixo"
+                }
+            },
+            {
+                "assinante": {
+                    "telefone": {
+                        "numero-ddd": 14,
+                        "numero": 35722873
+                    },
+                    "nome": "JULIANA BEDUSCH TEIXEIRA DE OLIVEIRA",
+                    "tipo-telefone": "Fixo"
+                }
+            },
+            {
+                "assinante": {
+                    "telefone": {
+                        "numero-ddd": 14,
+                        "numero": 97957501
+                    },
+                    "nome": "JULIANA BEDUSCH TEIXEIRA DE OLIVEIRA",
+                    "tipo-telefone": "Celular"
+                }
+            },
+            {
+                "assinante": {
+                    "telefone": {
+                        "numero-ddd": 14,
+                        "numero": 98140454
+                    },
+                    "nome": "JULIANA BEDUSCH TEIXEIRA DE OLIVEIRA",
+                    "tipo-telefone": "Celular"
+                }
+            }
+        ]
+    },
+    "ultimo-telefone-informado": {},
+    "ultimo-endereco-informado": {
+        "detalhe-ultimo-endereco-informado": {
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "PIRAJUI"
+                },
+                "logradouro": "R CAMPOS SALLES",
+                "numero": "909",
+                "bairro": "CENTRO",
+                "cep": 16600000
+            }
+        }
+    },
+    "alerta-documento": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "spc": {
+        "resumo": {
+            "quantidade-total": 2,
+            "data-ultima-ocorrencia": "2018-02-23T00:00:00-03:00",
+            "valor-total": "30007.34"
+        },
+        "detalhe-spc": [
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "RS"
+                    },
+                    "nome": "PORTO ALEGRE"
+                },
+                "telefone-associado": {
+                    "numero-ddd": 0,
+                    "numero": 40042262
+                },
+                "nome-associado": "BANCO SANTANDER S/A",
+                "data-inclusao": "2018-02-23T00:00:00-03:00",
+                "data-vencimento": "2017-12-11T00:00:00-02:00",
+                "nome-entidade": "SERASA EXPERIAN",
+                "contrato": "UG002200026088889932",
+                "registro-instituicao-financeira": "SIM",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "28979.62"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "DF"
+                    },
+                    "nome": "BRASILIA"
+                },
+                "nome-associado": "CAIXA ECONOMICA FEDERAL",
+                "data-inclusao": "2018-01-12T00:00:00-02:00",
+                "data-vencimento": "2017-03-12T00:00:00-03:00",
+                "nome-entidade": "SERASA EXPERIAN",
+                "contrato": "01240290191000021816",
+                "registro-instituicao-financeira": "SIM",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "1027.72"
+            }
+        ]
+    },
+    "cheque-lojista": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "ccf": {
+        "resumo": {
+            "quantidade-total": 1,
+            "data-ultima-ocorrencia": "2018-08-16T00:00:00-03:00"
+        },
+        "detalhe-ccf": {
+            "motivo": {
+                "codigo": 12,
+                "descricao": "MOTIVO 12"
+            },
+            "ultimo-cheque": {
+                "dados-bancarios": {
+                    "banco": {
+                        "codigo": 33,
+                        "nome": "BANCO SANTANDER BRASIL S/A"
+                    },
+                    "numero-agencia": 22
+                }
+            },
+            "data-ultimo-cheque": "2018-08-16T00:00:00-03:00",
+            "origem": "BANCO CENTRAL DO BRASIL",
+            "quantidade": 1
+        }
+    },
+    "contra-ordem-documento-diferente": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "protesto": {
+        "resumo": {
+            "quantidade-total": 10,
+            "data-primeira-ocorrencia": "2015-10-02T00:00:00-03:00",
+            "data-ultima-ocorrencia": "2018-01-26T00:00:00-02:00",
+            "valor-total": "3572.32"
+        },
+        "detalhe-protesto": [
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "PIRAJUI"
+                    },
+                    "nome": "0002"
+                },
+                "data-protesto": "2018-01-26T00:00:00-02:00",
+                "valor": "407.05"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "PIRAJUI"
+                    },
+                    "nome": "0002"
+                },
+                "data-protesto": "2017-08-01T00:00:00-03:00",
+                "valor": "327.96"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "PIRAJUI"
+                    },
+                    "nome": "0002"
+                },
+                "data-protesto": "2017-07-04T00:00:00-03:00",
+                "valor": "295.88"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "PIRAJUI"
+                    },
+                    "nome": "0002"
+                },
+                "data-protesto": "2017-06-01T00:00:00-03:00",
+                "valor": "327.96"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "PIRAJUI"
+                    },
+                    "nome": "0002"
+                },
+                "data-protesto": "2017-05-03T00:00:00-03:00",
+                "valor": "470.76"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "PIRAJUI"
+                    },
+                    "nome": "0002"
+                },
+                "data-protesto": "2016-10-04T00:00:00-03:00",
+                "valor": "550.55"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "PIRAJUI"
+                    },
+                    "nome": "0002"
+                },
+                "data-protesto": "2016-07-07T00:00:00-03:00",
+                "valor": "228.53"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "PIRAJUI"
+                    },
+                    "nome": "0002"
+                },
+                "data-protesto": "2016-06-02T00:00:00-03:00",
+                "valor": "228.53"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "PIRAJUI"
+                    },
+                    "nome": "0002"
+                },
+                "data-protesto": "2016-01-06T00:00:00-02:00",
+                "valor": "458.03"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "PIRAJUI"
+                    },
+                    "nome": "0002"
+                },
+                "data-protesto": "2015-10-02T00:00:00-03:00",
+                "valor": "277.07"
+            }
+        ]
+    },
+    "contra-ordem": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contumacia": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "credito-concedido": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "dados-agencia-bancaria": {},
+    "consulta-realizada": {
+        "resumo": {
+            "quantidade-total": 0
+        },
+        "quantidade-dias-consultados": 90
+    },
+    "informacao-poder-judiciario": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "cheque-consulta-online-srs": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "restricao": true,
+    "data": "2018-08-23T15:22:16.029-03:00"
+}
