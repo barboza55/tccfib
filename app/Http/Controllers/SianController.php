@@ -224,7 +224,7 @@ class SianController extends Controller
                     ]
             );
 
-            //$context = stream_context_create($opts);
+            $context = stream_context_create($opts);
 
             $wsdlUrl = 'https://servicos.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
             //$wsdlUrl = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
