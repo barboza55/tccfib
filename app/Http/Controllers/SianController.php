@@ -228,17 +228,17 @@ class SianController extends Controller
 
             $wsdlUrl = 'https://servicos.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
             //$wsdlUrl = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
-            /*$soapClientOptions = array(
+            $soapClientOptions = array(
                 'soap_version'=>SOAP_1_1,
                 'stream_context' => $context,
                 'cache_wsdl' => WSDL_CACHE_NONE,
                 
                 'login' => $username,
                 'password' => $password
-            );*/
+            );
 
-            //$client = new SoapClient($wsdlUrl, $soapClientOptions);
-            $client = new SoapClient($wsdlUrl, array("trace" => 1, "exceptions" => 0,
+            $client = new SoapClient($wsdlUrl, $soapClientOptions);
+            //$client = new SoapClient($wsdlUrl, array("trace" => 1, "exceptions" => 0,
                      "login" => $username, "password" => $password) );
 
             $parametros = new \stdClass;
