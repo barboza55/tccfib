@@ -209,9 +209,13 @@ class SianController extends Controller
         try {
             $username = '2122539';
             $password = '20180822';
+            $auth = 'Basic ' . base64_encode("2122539:20180822");
             $opts = array(
                 'https' => array(
-                    'user_agent' => 'PHPSoapClient'
+                    //'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                    'Authorization' => $auth,
+                    'user_agent' => 'PHPSoapClient',
+
                 ),
                 'ssl' => [
                         'allow_self_signed' => true,
@@ -225,8 +229,9 @@ class SianController extends Controller
                 'soap_version'=>SOAP_1_1,
                 'stream_context' => $context,
                 'cache_wsdl' => WSDL_CACHE_NONE,
-                'login' => $username,
-                'password' => $password
+                
+                //'login' => $username,
+                //'password' => $password
             );
 
             $client = new SoapClient($wsdlUrl, $soapClientOptions);
