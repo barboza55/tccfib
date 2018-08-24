@@ -1,0 +1,144 @@
+{
+    "protocolo": {
+        "numero": 1966394155,
+        "digito": 4
+    },
+    "operador": {
+        "codigo": "2122539",
+        "nome": "WEB SERVICE"
+    },
+    "consumidor": {
+        "consumidor-pessoa-fisica": {
+            "cpf": {
+                "regiao-origem": "SAO PAULO",
+                "numero": "43509612833"
+            },
+            "situacao-cpf": {
+                "descricao-situacao": "REGULAR",
+                "data-situacao": "2015-12-20T19:58:18-02:00"
+            },
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "PRESIDENTE PRUDENTE"
+                },
+                "logradouro": "R RUA CONSTANTINA CORAZZA MILANI 88",
+                "bairro": "JD STA FE",
+                "cep": 19063810
+            },
+            "data-nascimento": "1995-04-27T00:00:00-03:00",
+            "idade": 23,
+            "nome": "BRUNNA GRANDO DOS SANTOS",
+            "sexo": "FEMININO",
+            "signo": "TOURO"
+        }
+    },
+    "grafia-pj": {},
+    "endereco-cep-consultado": {},
+    "telefone-consultado": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "telefone-vinculado-consumidor": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "ultimo-telefone-informado": {},
+    "ultimo-endereco-informado": {},
+    "alerta-documento": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "spc": {
+        "resumo": {
+            "quantidade-total": 1,
+            "data-ultima-ocorrencia": "2018-01-17T00:00:00-02:00",
+            "valor-total": "199.28"
+        },
+        "detalhe-spc": {
+            "cidade-associado": {
+                "estado": {
+                    "sigla-uf": "SP"
+                },
+                "nome": "BARUERI"
+            },
+            "telefone-associado": {
+                "numero-ddd": 0,
+                "numero": 40041203
+            },
+            "nome-associado": "BANCO BRADESCARD S/A",
+            "data-inclusao": "2018-01-17T00:00:00-02:00",
+            "data-vencimento": "2017-09-08T00:00:00-03:00",
+            "nome-entidade": "SERASA EXPERIAN",
+            "contrato": "1001211417180000",
+            "registro-instituicao-financeira": "SIM",
+            "comprador-fiador-avalista": "COMPRADOR",
+            "valor": "199.28"
+        }
+    },
+    "cheque-lojista": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "ccf": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem-documento-diferente": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "protesto": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contumacia": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "credito-concedido": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "dados-agencia-bancaria": {},
+    "consulta-realizada": {
+        "resumo": {
+            "quantidade-total": 1,
+            "data-ultima-ocorrencia": "2018-06-06T00:00:00-03:00"
+        },
+        "detalhe-consulta-realizada": {
+            "nome-associado": "SOCIEDADES DE CRÉDITO, FINANCIAMENTO E INVESTIMENTO  FINANCEIRAS",
+            "data-consulta": "2018-06-06T00:00:00-03:00",
+            "nome-entidade-origem": "SERASA EXPERIAN"
+        },
+        "quantidade-dias-consultados": 90
+    },
+    "informacao-poder-judiciario": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "cheque-consulta-online-srs": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "restricao": true,
+    "data": "2018-08-24T09:26:07.738-03:00"
+}

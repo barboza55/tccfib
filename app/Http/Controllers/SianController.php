@@ -209,11 +209,13 @@ class SianController extends Controller
         try {
             $username = '2122539';
             $password = '20180822';
-            $auth = 'Basic ' . base64_encode("2122539:20180822");
+            //$auth = 'Basic ' . base64_encode("2122539:20180822");
+            //echo $auth;
+
             $opts = array(
                 'https' => array(
-                    //'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-                    'Authorization' => $auth,
+                    'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                    //'Authorization' => $auth,
                     'user_agent' => 'PHPSoapClient',
 
                 ),
@@ -221,20 +223,23 @@ class SianController extends Controller
                         'allow_self_signed' => true,
                     ]
             );
-            $context = stream_context_create($opts);
+
+            //$context = stream_context_create($opts);
 
             $wsdlUrl = 'https://servicos.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
             //$wsdlUrl = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
-            $soapClientOptions = array(
+            /*$soapClientOptions = array(
                 'soap_version'=>SOAP_1_1,
                 'stream_context' => $context,
                 'cache_wsdl' => WSDL_CACHE_NONE,
                 
-                //'login' => $username,
-                //'password' => $password
-            );
+                'login' => $username,
+                'password' => $password
+            );*/
 
-            $client = new SoapClient($wsdlUrl, $soapClientOptions);
+            //$client = new SoapClient($wsdlUrl, $soapClientOptions);
+            $client = new SoapClient($wsdlUrl, array("trace" => 1, "exceptions" => 0,
+                     "login" => $username, "password" => $password) );
 
             $parametros = new \stdClass;
             $parametros->{'codigo-produto'} = '240';
