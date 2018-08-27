@@ -23,7 +23,7 @@ class SianController extends Controller
         $user_id = Auth::id();
         $userpassword = UserPassword::where('user_id', $user_id)->first();
         $sian = new Sian();
-        $sian->clearCoockie();
+        //$sian->clearCoockie();
         $sian->connect($userpassword->user, $userpassword->password);
     	
         
@@ -76,8 +76,8 @@ class SianController extends Controller
         $user_id = Auth::id();
         $userpassword = UserPassword::where('user_id', $user_id)->first();
         $sian = new Sian();
-        $sian->clearCoockie();
-        $sian->connect($userpassword->user, $userpassword->password);
+        //$sian->clearCoockie();
+        //$sian->connect($userpassword->user, $userpassword->password);
 
     	$pedido = $sian->getOptions($idPedido, $status);
 
@@ -125,8 +125,8 @@ class SianController extends Controller
         $user_id = Auth::id();
         $userpassword = UserPassword::where('user_id', $user_id)->first();
     	$sian = new Sian();
-        $sian->clearCoockie();
-        $sian->connect($userpassword->user, $userpassword->password);
+        //$sian->clearCoockie();
+        //$sian->connect($userpassword->user, $userpassword->password);
         $data = $request->all();
         
         if($data['action'] == 'aprove')
@@ -197,7 +197,7 @@ class SianController extends Controller
         $user_id = Auth::id();
         $userpassword = UserPassword::where('user_id', $user_id)->first();
         $sian = new Sian();
-        $sian->clearCoockie();
+        //$sian->clearCoockie();
         $sian->connect($userpassword->user, $userpassword->password);
         
         //echo '01/' . date('m/Y') . '<br>' . date('t/m/Y');
@@ -335,7 +335,7 @@ class SianController extends Controller
         $user_id = Auth::id();
         $userpassword = UserPassword::where('user_id', $user_id)->first();
         $sian = new Sian();
-        $sian->clearCoockie();
+        //$sian->clearCoockie();
         $sian->connect($userpassword->user, $userpassword->password);
         $lista = $sian->sugestaoCompra();
         return view('sian.sugestao', compact('lista'));
@@ -346,8 +346,8 @@ class SianController extends Controller
         $user_id = Auth::id();
         $userpassword = UserPassword::where('user_id', $user_id)->first();
         $sian = new Sian();
-        $sian->clearCoockie();
-        $sian->connect($userpassword->user, $userpassword->password);
+        //$sian->clearCoockie();
+        //$sian->connect($userpassword->user, $userpassword->password);
     
         $request = $this->request->all();
         //dd($request);
@@ -358,7 +358,7 @@ class SianController extends Controller
         $user_id = Auth::id();
         $userpassword = UserPassword::where('user_id', $user_id)->first();
         $sian = new Sian();
-        $sian->clearCoockie();
+        //$sian->clearCoockie();
         $sian->connect($userpassword->user, $userpassword->password);
         
         //echo Auth::user()->sian_user;
