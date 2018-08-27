@@ -68,7 +68,7 @@ class Sian extends Model
     public function connect($login, $password, $response = TRUE)
     {
     	$unidade = 'bauru';
-		$site = "http://aneethun-sian.com.br/app";
+		$site = "http://54.207.118.27/app";
 		$datapost = [
 			'formids' => 'Hidden,login,password',
 			'component' => 'form',
@@ -86,7 +86,7 @@ class Sian extends Model
 		curl_setopt($post, CURLOPT_TIMEOUT, 40000);
 		curl_setopt($post, CURLOPT_HEADER, FALSE);
 		curl_setopt($post, CURLOPT_RETURNTRANSFER, $response);
-		curl_setopt($post, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6");
+		curl_setopt($post, CURLOPT_USERAGENT, "Mozilla/6.0 (Windows; U; Windows NT 5.1; pt-BR; rv:1.9.5.6) Gecko/20054986 Firefox/2.0.7.6");
 		curl_setopt($post, CURLOPT_POST, TRUE);
 		curl_setopt($post, CURLOPT_POSTFIELDS, $datapost);
 		curl_setopt($post, CURLOPT_COOKIEJAR, $this->cookie_file);
@@ -207,7 +207,7 @@ class Sian extends Model
 
     public function getOrders()
     {
-        $url = 'http://aneethun-sian.com.br/app?page=pages/sale/SaleOrderAnalysisOrderList&service=page';
+        $url = 'http://54.207.118.27/app?page=pages/sale/SaleOrderAnalysisOrderList&service=page';
         //dd($url);
         $post = $this->getHiddenSian($url, 'filterForm');
         unset($post['Submit_0']);
@@ -215,7 +215,7 @@ class Sian extends Model
         $post['filterMaxResults_'] = 100;
         $post['RadioGroup'] = 0;
         //dd($post);
-        $url = 'http://aneethun-sian.com.br/app';
+        $url = 'http://54.207.118.27/app';
         $this->setDomDocument($url, TRUE, TRUE, $post);
     	$orders = [];
     	$trs = $this->getAnaliseList($this->dom);
@@ -241,7 +241,7 @@ class Sian extends Model
     	//{
     		$pedido = [];
     		$pedido['codigo'] = $order;
-    		$url = "http://aneethun-sian.com.br/app?component=edit_&page=pages%2Fsale%2FSaleOrderAnalysisOrderList&service=direct&session=T&sp=" . $order;
+    		$url = "http://54.207.118.27/app?component=edit_&page=pages%2Fsale%2FSaleOrderAnalysisOrderList&service=direct&session=T&sp=" . $order;
     		
     		$this->setDomDocument($url);
     		$xpath = new \DOMXpath($this->dom);
@@ -345,9 +345,9 @@ class Sian extends Model
 
     public function getCustomerData($id)
     {
-        $url = 'http://aneethun-sian.com.br/app?component=edit_&page=pages%2Frecord%2FClientRecordList&service=direct&session=T&sp=' . $id;
+        $url = 'http://54.207.118.27/app?component=edit_&page=pages%2Frecord%2FClientRecordList&service=direct&session=T&sp=' . $id;
         $customerData = $this->getHiddenSian($url, 'form');
-        $url = 'http://aneethun-sian.com.br/app?component=%24partials%24ClientTabs.%24PageTabs.changePage&page=pages%2Fclient%2FClientSalesHistory&service=direct&sp=4&sp='. $id .'&sp=X';
+        $url = 'http://54.207.118.27/app?component=%24partials%24ClientTabs.%24PageTabs.changePage&page=pages%2Fclient%2FClientSalesHistory&service=direct&sp=4&sp='. $id .'&sp=X';
         $this->setDomDocument($url);
         $xpath = new \DOMXpath($this->dom);
         $tabela = $xpath->query("//table[@class='list-table']")->item(1);
@@ -498,7 +498,7 @@ class Sian extends Model
     {
         $pedidos = [];
 
-        $url = 'http://aneethun-sian.com.br/app?component=%24partials%24ClientTabs.%24PageTabs.changePage&page=pages%2Frecord%2FClientRecordEdit&service=direct&sp=1&sp=' . $id .'&sp=X';
+        $url = 'http://54.207.118.27/app?component=%24partials%24ClientTabs.%24PageTabs.changePage&page=pages%2Frecord%2FClientRecordEdit&service=direct&sp=1&sp=' . $id .'&sp=X';
         
         $this->setDomDocument($url);
         $xpath = new \DOMXpath($this->dom);
@@ -531,7 +531,7 @@ class Sian extends Model
     {
         $pedidos = [];
 
-        $url = 'http://aneethun-sian.com.br/app?page=pages%2Fsale%2FSaleOrderSearch&service=page';
+        $url = 'http://54.207.118.27/app?page=pages%2Fsale%2FSaleOrderSearch&service=page';
         
         
         $post = $this->getHiddenSian($url, 'filterForm');
@@ -544,7 +544,7 @@ class Sian extends Model
         $post['filterClientCode'] = $filtros['filterClientCode'];
         $post['input_0'] = $filtros['input_0'];
         $post['input_1'] = $filtros['input_1'];
-        $url = 'http://aneethun-sian.com.br/app';
+        $url = 'http://54.207.118.27/app';
         $this->setDomDocument($url, TRUE, TRUE, $post);
         $xpath = new \DOMXpath($this->dom);
 
@@ -599,35 +599,35 @@ class Sian extends Model
 
     public function getContas($fields, $page, $flag = FALSE)
     {
-        //$url = 'http://aneethun-sian.com.br/app?component=filter.received1&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=' . $flag;
+        //$url = 'http://54.207.118.27/app?component=filter.received1&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=' . $flag;
         
 
         switch ($page) {
             case '1':
-                $url = 'http://aneethun-sian.com.br/app?component=filter.toReceive3&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=1';
+                $url = 'http://54.207.118.27/app?component=filter.toReceive3&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=1';
                 break;
             case '2':
-                $url = 'http://aneethun-sian.com.br/app?component=filter.received1&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=2';
+                $url = 'http://54.207.118.27/app?component=filter.received1&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=2';
                 break;
             case '3':
-                $url = 'http://aneethun-sian.com.br/app?component=filter.replaced2&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=3';
+                $url = 'http://54.207.118.27/app?component=filter.replaced2&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=3';
                 break;
         }
         $post = $this->getHiddenSian($url, 'filterForm');
         /*if($flag)
         {
-            $url = 'http://aneethun-sian.com.br/app?component=filter.received1&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=2';
+            $url = 'http://54.207.118.27/app?component=filter.received1&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=2';
             $post = $this->getHiddenSian($url, 'filterForm');
         }
         else
         {
-            $url = 'http://aneethun-sian.com.br/app?component=filter.toReceive2&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=1';
+            $url = 'http://54.207.118.27/app?component=filter.toReceive2&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=1';
             $post = $this->getHiddenSian($url, 'filterForm');
         }*/
         $this->setDomDocument($url);
         unset($post['Submit_0']);
         unset($post['showingOnlyProblemBills']);
-        $url = 'http://aneethun-sian.com.br/app';
+        $url = 'http://54.207.118.27/app';
         $post['billToReceiveDate'] = '0';
         $post['clientCodeOrName'] = '';
         foreach($fields as $key => $value)
@@ -750,14 +750,14 @@ class Sian extends Model
 
     public function buildPost($id)
     {
-        $url = 'http://aneethun-sian.com.br/app?component=edit_&page=pages%2Fsale%2FSaleOrderAnalysisOrderList&service=direct&session=T&sp=' . $id;
+        $url = 'http://54.207.118.27/app?component=edit_&page=pages%2Fsale%2FSaleOrderAnalysisOrderList&service=direct&session=T&sp=' . $id;
         $post = $this->getFormAnalise($url, 'form');
         return $post;
     }
 
     public function aproveOrder($post)
     {
-        $url = 'http://aneethun-sian.com.br/app';
+        $url = 'http://54.207.118.27/app';
         $this->setDomDocument($url, TRUE, TRUE, $post);
     }
 
@@ -891,7 +891,7 @@ class Sian extends Model
 
     public function tirarTaxa($conta_id, $sinal)
     {
-        $url = 'http://aneethun-sian.com.br/app?component=edit&page=pages%2Fsale%2FBankSlipManagement&service=direct&session=T&sp='. $conta_id;
+        $url = 'http://54.207.118.27/app?component=edit&page=pages%2Fsale%2FBankSlipManagement&service=direct&session=T&sp='. $conta_id;
         $fields = $this->getHiddenSian($url, 'Form');
         $this->setDomDocument($url);
         $xpath = new \DOMXpath($this->dom);
@@ -906,7 +906,7 @@ class Sian extends Model
         $valor = $this->operacao($fields['value'], $sinal);
         $fields['value'] = $valor;
         //dd($fields['value']);
-        $url = 'http://aneethun-sian.com.br/app';
+        $url = 'http://54.207.118.27/app';
         if(in_array($codigo, $this->liberadoTaxa))
         {
             $this->setDomDocument($url, TRUE, TRUE, $fields);
@@ -930,7 +930,7 @@ class Sian extends Model
             'submitmode'    =>  'submit',
             'submitname'    => ''
         ];
-        $url = 'http://aneethun-sian.com.br/app';
+        $url = 'http://54.207.118.27/app';
         $this->setDomDocument($url, TRUE, TRUE, $data);
         $xpath = new \DOMXpath($this->dom);
         
@@ -951,7 +951,7 @@ class Sian extends Model
 
     public function localizaPedido()
     {
-        $url = 'http://aneethun-sian.com.br/app?page=pages%2Fsale%2FSaleOrderSearch&service=page';
+        $url = 'http://54.207.118.27/app?page=pages%2Fsale%2FSaleOrderSearch&service=page';
         $fields = $this->getHiddenSian($url, 'filterForm');
         $fields['submitmode'] = 'submit';
         unset($fields['Submit_0']);
@@ -961,7 +961,7 @@ class Sian extends Model
     public function sugestaoCompra()
     {
 
-        $url = 'http://aneethun-sian.com.br/app?page=pages%2Fpurchase%2FSendPurchaseOrder&service=page';
+        $url = 'http://54.207.118.27/app?page=pages%2Fpurchase%2FSendPurchaseOrder&service=page';
         $this->setDomDocument($url);
         $trs = $this->getAnaliseList($this->dom);
         $lista1 = [];
@@ -975,7 +975,7 @@ class Sian extends Model
             $lista1[] = $item;
         }
         //dd($lista1);
-        $url = 'http://aneethun-sian.com.br/app?page=pages%2Fpurchase%2FBufferSupply&service=page';
+        $url = 'http://54.207.118.27/app?page=pages%2Fpurchase%2FBufferSupply&service=page';
         $this->setDomDocument($url);
         $xpath = new \DOMXpath($this->dom);
         $tabelaItens = $xpath->query("//table[@class='list-table']")->item(0);
@@ -1069,7 +1069,7 @@ class Sian extends Model
 
     public function editarPedido($id, $combo = null, $retira = null)
     {
-        $url = 'http://aneethun-sian.com.br/app?component=edit_&page=pages%2Fsale%2FSaleOrderAnalysisOrderList&service=direct&session=T&sp='.$id;
+        $url = 'http://54.207.118.27/app?component=edit_&page=pages%2Fsale%2FSaleOrderAnalysisOrderList&service=direct&session=T&sp='.$id;
         $fields = $this->getFormAnalise($url, 'form');
         $fields['submitmode'] = 'submit';
 
@@ -1080,7 +1080,7 @@ class Sian extends Model
         unset($fields['confirm_0']);
         unset($fields['campaign']);
         $post = $this->buildPostQuery($fields);
-        $url = 'http://aneethun-sian.com.br/app';
+        $url = 'http://54.207.118.27/app';
         //dd($post);
         $this->setDomDocument($url, TRUE, TRUE, $post);
         $fields = $this->getFormAnalise2($url, 'form');
@@ -1205,7 +1205,7 @@ class Sian extends Model
     }
 
     public function comparativo($request){
-        $url = 'http://aneethun-sian.com.br/app?page=pages%2Fperformance%2FPerformanceComparison&service=page';
+        $url = 'http://54.207.118.27/app?page=pages%2Fperformance%2FPerformanceComparison&service=page';
         $form = $this->getHiddenSian($url, 'config');
         $areas = $this->dom->getElementById('input_0')->getElementsByTagName('option');
         
@@ -1233,7 +1233,7 @@ class Sian extends Model
         unset($form['year']);
         unset($form['year']);
         unset($form['month']);
-        $url = 'http://aneethun-sian.com.br/app';
+        $url = 'http://54.207.118.27/app';
         //dd($form);
         $this->setDomDocument($url, TRUE, TRUE, $form);
         
