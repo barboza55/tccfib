@@ -53,7 +53,7 @@ class Sian extends Model
 
 
         //dd(storage_path('teste/' . $name . 'cookie.txt'));
-        $this->cookie_file = storage_path('teste\\' . $name . 'cookie.txt');
+        $this->cookie_file = storage_path('teste/' . $name . 'cookie.txt');
         //dd($this->cookie_file);
     }
 
