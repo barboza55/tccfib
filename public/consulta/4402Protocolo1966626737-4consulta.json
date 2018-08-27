@@ -1,0 +1,153 @@
+{
+    "protocolo": {
+        "numero": 1966626737,
+        "digito": 4
+    },
+    "operador": {
+        "codigo": "2122539",
+        "nome": "WEB SERVICE"
+    },
+    "consumidor": {
+        "consumidor-pessoa-fisica": {
+            "cpf": {
+                "regiao-origem": "SAO PAULO",
+                "numero": "15210825884"
+            },
+            "situacao-cpf": {},
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "ITATINGA"
+                },
+                "logradouro": "R MAJ PRADO 604",
+                "bairro": "CENTRO",
+                "cep": 18690000
+            },
+            "data-nascimento": "1967-02-23T00:00:00-02:00",
+            "idade": 51,
+            "nome": "GENI GONCALVES DE BRITO",
+            "nome-mae": "ROSALINA GONCALVES DE BRITO",
+            "numero-titulo-eleitor": 69245350159,
+            "sexo": "FEMININO",
+            "signo": "PEIXES"
+        }
+    },
+    "grafia-pj": {},
+    "endereco-cep-consultado": {},
+    "telefone-consultado": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "telefone-vinculado-consumidor": {
+        "resumo": {
+            "quantidade-total": 1
+        },
+        "detalhe-telefone-vinculado-consumidor": {
+            "assinante": {
+                "telefone": {
+                    "numero-ddd": 14,
+                    "numero": 97760534
+                },
+                "nome": "GENI GONCALVES DE BRITO",
+                "tipo-telefone": "Celular"
+            }
+        }
+    },
+    "ultimo-telefone-informado": {},
+    "ultimo-endereco-informado": {
+        "detalhe-ultimo-endereco-informado": {
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "ITATINGA"
+                },
+                "logradouro": "R RESIERI PARENTE",
+                "numero": "710",
+                "complemento": "CS",
+                "bairro": "VL UNIAO",
+                "cep": 18690000
+            }
+        }
+    },
+    "alerta-documento": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "spc": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "cheque-lojista": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "ccf": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem-documento-diferente": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "protesto": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contumacia": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "credito-concedido": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "dados-agencia-bancaria": {},
+    "consulta-realizada": {
+        "resumo": {
+            "quantidade-total": 1,
+            "data-ultima-ocorrencia": "2018-08-24T00:00:00-03:00"
+        },
+        "detalhe-consulta-realizada": {
+            "origem-associado": {
+                "estado": {
+                    "sigla-uf": "SP"
+                },
+                "nome": "BAURU"
+            },
+            "nome-associado": "LIMA BAURU COMERCIO DE COSMETICOS",
+            "data-consulta": "2018-08-24T13:57:53-03:00",
+            "nome-entidade-origem": "CDL - CAXIAS DO SUL / RS"
+        },
+        "quantidade-dias-consultados": 90
+    },
+    "informacao-poder-judiciario": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "cheque-consulta-online-srs": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "restricao": false,
+    "data": "2018-08-24T14:57:10.383-03:00"
+}
