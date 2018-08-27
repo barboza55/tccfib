@@ -261,7 +261,7 @@ class SianController extends Controller
             $codigo = $request->input('codigo');
             $protocolo = $codigo . 'Protocolo' . $response->protocolo->numero . '-' . $response->protocolo->digito;
             $dados_json = json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-            $fp = fopen("consulta\\".$protocolo."consulta.json", "w");
+            $fp = fopen("consulta/".$protocolo."consulta.json", "w");
             $escreve = fwrite($fp, $dados_json);
             fclose($fp);
 
