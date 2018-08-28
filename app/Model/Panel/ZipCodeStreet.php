@@ -6,17 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class ZipCodeStreet extends Model
 {
-    public function dataSources()
-    {
-        return $this->hasMany('App\Model\Panel\DataSource');
+    public function dataSources(){
+        return $this->belongsTo(DataSource::class);
     }
-    public function zipCodes()
-    {
-        return $this->hasMany('App\Model\Panel\ZipCode');
+    
+    public function zipCode(){
+        return $this->belongsTo(ZipCode::class);
     }
-    public function streets()
-    {
-        return $this->hasMany('App\Model\Panel\Street');
+
+    public function streets(){
+        return $this->belongsTo(Street::class);
     }
     
 }
