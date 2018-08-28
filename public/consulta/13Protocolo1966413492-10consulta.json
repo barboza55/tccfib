@@ -1,0 +1,238 @@
+{
+    "protocolo": {
+        "numero": 1966413492,
+        "digito": 10
+    },
+    "operador": {
+        "codigo": "2122539",
+        "nome": "WEB SERVICE"
+    },
+    "consumidor": {
+        "consumidor-pessoa-fisica": {
+            "cpf": {
+                "regiao-origem": "SAO PAULO",
+                "numero": "06953420880"
+            },
+            "situacao-cpf": {},
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "IBITINGA"
+                },
+                "logradouro": "R FCO BATISTA DE OLIVEIRA",
+                "bairro": "JARDIM MARIA HELENA",
+                "cep": 14940000
+            },
+            "data-nascimento": "1966-09-01T00:00:00-03:00",
+            "email": "neide_4310@hotmail.com",
+            "idade": 51,
+            "nome": "NEIDE APARECIDA JORGE SANTOS",
+            "nome-mae": "DELMINA BORTOLI JORGE",
+            "numero-titulo-eleitor": 117977680132,
+            "sexo": "FEMININO",
+            "signo": "VIRGEM"
+        }
+    },
+    "grafia-pj": {},
+    "endereco-cep-consultado": {},
+    "telefone-consultado": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "telefone-vinculado-consumidor": {
+        "resumo": {
+            "quantidade-total": 4
+        },
+        "detalhe-telefone-vinculado-consumidor": [
+            {
+                "assinante": {
+                    "telefone": {
+                        "numero-ddd": 16,
+                        "numero": 33424310
+                    },
+                    "nome": "NEIDE APARECIDA JORGE SANTOS",
+                    "tipo-telefone": "Fixo"
+                }
+            },
+            {
+                "assinante": {
+                    "telefone": {
+                        "numero-ddd": 16,
+                        "numero": 33427122
+                    },
+                    "nome": "NEIDE APARECIDA JORGE SANTOS",
+                    "tipo-telefone": "Fixo"
+                }
+            },
+            {
+                "assinante": {
+                    "telefone": {
+                        "numero-ddd": 16,
+                        "numero": 97171971
+                    },
+                    "nome": "NEIDE APARECIDA JORGE SANTOS",
+                    "tipo-telefone": "Celular"
+                }
+            },
+            {
+                "assinante": {
+                    "telefone": {
+                        "numero-ddd": 14,
+                        "numero": 96865328
+                    },
+                    "nome": "NEIDE APARECIDA JORGE SANTOS",
+                    "tipo-telefone": "Celular"
+                }
+            }
+        ]
+    },
+    "ultimo-telefone-informado": {},
+    "ultimo-endereco-informado": {
+        "detalhe-ultimo-endereco-informado": {
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "IBITINGA"
+                },
+                "logradouro": "R FRANCISCO BATISTA OLIVEIRA",
+                "numero": "259",
+                "bairro": "JD MARIA HELENA",
+                "cep": 14940000
+            }
+        }
+    },
+    "alerta-documento": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "spc": {
+        "resumo": {
+            "quantidade-total": 1,
+            "data-ultima-ocorrencia": "2018-08-19T00:00:00-03:00",
+            "valor-total": "1135.46"
+        },
+        "detalhe-spc": {
+            "cidade-associado": {
+                "estado": {
+                    "sigla-uf": "DF"
+                },
+                "nome": "BRASILIA"
+            },
+            "nome-associado": "CAIXA ECONOMICA FEDERAL",
+            "data-inclusao": "2018-08-19T00:00:00-03:00",
+            "data-vencimento": "2018-06-18T00:00:00-03:00",
+            "nome-entidade": "SERASA EXPERIAN",
+            "contrato": "18000008098060892824",
+            "registro-instituicao-financeira": "SIM",
+            "comprador-fiador-avalista": "COMPRADOR",
+            "valor": "1135.46"
+        }
+    },
+    "cheque-lojista": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "ccf": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem-documento-diferente": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "protesto": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contumacia": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "credito-concedido": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "dados-agencia-bancaria": {},
+    "consulta-realizada": {
+        "resumo": {
+            "quantidade-total": 4,
+            "data-ultima-ocorrencia": "2018-08-24T00:00:00-03:00"
+        },
+        "detalhe-consulta-realizada": [
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "BAURU"
+                },
+                "nome-associado": "LIMA BAURU COMERCIO DE COSMETICOS",
+                "data-consulta": "2018-08-24T09:35:23-03:00",
+                "nome-entidade-origem": "CDL - CAXIAS DO SUL / RS"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "BAURU"
+                },
+                "nome-associado": "LIMA BAURU COMERCIO DE COSMETICOS",
+                "data-consulta": "2018-08-23T19:35:17-03:00",
+                "nome-entidade-origem": "CDL - CAXIAS DO SUL / RS"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "SOCIEDADES DE CRÉDITO, FINANCIAMENTO E INVESTIMENTO  FINANCEIRAS",
+                "data-consulta": "2018-08-23T00:00:00-03:00",
+                "nome-entidade-origem": "SERASA EXPERIAN"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "BANCOS MÚLTIPLOS, COM CARTEIRA COMERCIAL",
+                "data-consulta": "2018-08-23T00:00:00-03:00",
+                "nome-entidade-origem": "SERASA EXPERIAN"
+            }
+        ],
+        "quantidade-dias-consultados": 90
+    },
+    "informacao-poder-judiciario": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "cheque-consulta-online-srs": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "restricao": true,
+    "data": "2018-08-24T09:49:29.150-03:00"
+}
