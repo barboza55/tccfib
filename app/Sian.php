@@ -93,7 +93,7 @@ class Sian extends Model
         curl_setopt($post, CURLOPT_COOKIEFILE, $this->cookie_file);
 		$error = curl_error($post);
 		curl_exec($post);
-        //echo 'conecta'. curl_getinfo($post,CURLINFO_TOTAL_TIME) . '<br>';
+        echo 'conecta'. curl_getinfo($post,CURLINFO_TOTAL_TIME) . '<br>';
 		curl_close($post);
     }
 
@@ -171,7 +171,7 @@ class Sian extends Model
 		curl_setopt($post, CURLOPT_COOKIEFILE, $this->cookie_file);
 		//$error = curl_error($post);
 		$html = curl_exec($post);
-        //echo curl_getinfo($post, CURLINFO_TOTAL_TIME) . '<br>';
+        echo curl_getinfo($post, CURLINFO_TOTAL_TIME) . '<br>';
 		$dom = new \DOMDocument();
         @$dom->loadHTML($html);
 		curl_close($post);
@@ -325,7 +325,7 @@ class Sian extends Model
     		$pedido['cidade'] = $div->getElementsByTagName('tr')[1]->getElementsByTagName('td')[2]->textContent;
     		$pedido['nome'] = $div->getElementsByTagName('tr')[0]->getElementsByTagName('td')[1]->textContent;
             $pedido['statuscliente'] = $div->getElementsByTagName('tr')[0]->getElementsByTagName('td')[0]->getElementsByTagName('img')[0]->getAttribute('title');
-            $pedido['contas'] = $this->getPendencia();
+            //$pedido['contas'] = $this->getPendencia();
 
     		//dd($options);
     		//echo $dom;
@@ -626,7 +626,7 @@ class Sian extends Model
             $url = 'http://54.207.118.27/app?component=filter.toReceive2&page=pages%2Ffinance%2FBillToReceiveList&service=direct&session=T&sp=1';
             $post = $this->getHiddenSian($url, 'filterForm');
         }*/
-        $this->setDomDocument($url);
+        //$this->setDomDocument($url);
         unset($post['Submit_0']);
         unset($post['showingOnlyProblemBills']);
         $url = 'http://54.207.118.27/app';
