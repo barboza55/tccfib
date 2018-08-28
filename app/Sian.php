@@ -93,7 +93,7 @@ class Sian extends Model
         curl_setopt($post, CURLOPT_COOKIEFILE, $this->cookie_file);
 		$error = curl_error($post);
 		curl_exec($post);
-        echo 'conecta'. curl_getinfo($post,CURLINFO_TOTAL_TIME) . '<br>';
+        //echo 'conecta'. curl_getinfo($post,CURLINFO_TOTAL_TIME) . '<br>';
 		curl_close($post);
     }
 
@@ -171,7 +171,7 @@ class Sian extends Model
 		curl_setopt($post, CURLOPT_COOKIEFILE, $this->cookie_file);
 		//$error = curl_error($post);
 		$html = curl_exec($post);
-        echo curl_getinfo($post, CURLINFO_TOTAL_TIME) . '<br>';
+        //echo curl_getinfo($post, CURLINFO_TOTAL_TIME) . '<br>';
 		$dom = new \DOMDocument();
         @$dom->loadHTML($html);
 		curl_close($post);
