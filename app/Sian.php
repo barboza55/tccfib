@@ -93,7 +93,7 @@ class Sian extends Model
         curl_setopt($post, CURLOPT_COOKIEFILE, $this->cookie_file);
 		$error = curl_error($post);
 		curl_exec($post);
-        echo curl_getinfo($post,CURLINFO_TOTAL_TIME);
+        echo 'conecta'. curl_getinfo($post,CURLINFO_TOTAL_TIME) . '<br>';
 		curl_close($post);
     }
 
@@ -148,10 +148,10 @@ class Sian extends Model
     private function setDomDocument($url, $response = TRUE, $flag = FALSE, $datapost = null)
     {
         //$response = FALSE;
-    	$unidade = 'bauru';
-    	$login = '17165';
+    	//$unidade = 'bauru';
+    	//$login = '17165';
     	$post = curl_init();
-		$headers = array("Expect:");
+		$headers = array("Expect: ");
 		curl_setopt($post, CURLOPT_URL, $url);
 		curl_setopt($post, CURLOPT_TIMEOUT, 40000);
 		curl_setopt($post, CURLOPT_HEADER, FALSE);
@@ -243,7 +243,7 @@ class Sian extends Model
     	//{
     		$pedido = [];
     		$pedido['codigo'] = $order;
-    		$url = "http://54.207.118.27/app?component=edit_&page=pages%2Fsale%2FSaleOrderAnalysisOrderList&service=direct&session=T&sp=" . $order;
+    		$url = "http://54.207.118.27/app?component=edit_&page=pages/sale/SaleOrderAnalysisOrderList&service=direct&session=T&sp=" . $order;
     		
     		$this->setDomDocument($url);
     		$xpath = new \DOMXpath($this->dom);
@@ -349,7 +349,7 @@ class Sian extends Model
     {
         $url = 'http://54.207.118.27/app?component=edit_&page=pages%2Frecord%2FClientRecordList&service=direct&session=T&sp=' . $id;
         $customerData = $this->getHiddenSian($url, 'form');
-        $url = 'http://54.207.118.27/app?component=%24partials%24ClientTabs.%24PageTabs.changePage&page=pages%2Fclient%2FClientSalesHistory&service=direct&sp=4&sp='. $id .'&sp=X';
+        $url = 'http://54.207.118.27/app?component=$partials$ClientTabs.$PageTabs.changePage&page=pages/client/ClientSalesHistory&service=direct&sp=4&sp='. $id .'&sp=X';
         $this->setDomDocument($url);
         $xpath = new \DOMXpath($this->dom);
         $tabela = $xpath->query("//table[@class='list-table']")->item(1);
