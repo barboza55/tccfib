@@ -18,14 +18,13 @@ class CreateAddressesTable extends Migration
             $table->timestamps();            
             $table->string('number');
             $table->string('adjunct');
-            
-            $table->integer('district_id')->unsigned();
-            $table->integer('zip_code_id')->unsigned();
+
+            $table->integer('address_compose_id')->unsigned();
             $table->integer('type_address_id')->unsigned();
             $table->integer('entity_id')->unsigned();
 
-            $table->foreign('district_id')->references('id')->on('districts')->onUpdate('cascade');
-            $table->foreign('zip_code_id')->references('id')->on('zip_codes')->onUpdate('cascade');
+            
+            $table->foreign('address_compose_id')->references('id')->on('address_composes')->onUpdate('cascade');
             $table->foreign('type_address_id')->references('id')->on('type_addresses')->onUpdate('cascade');
             $table->foreign('entity_id')->references('id')->on('entities')->onUpdate('cascade');
         });
