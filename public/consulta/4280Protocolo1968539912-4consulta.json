@@ -1,0 +1,442 @@
+{
+    "protocolo": {
+        "numero": 1968539912,
+        "digito": 4
+    },
+    "operador": {
+        "codigo": "2122539",
+        "nome": "WEB SERVICE"
+    },
+    "consumidor": {
+        "consumidor-pessoa-fisica": {
+            "cpf": {
+                "regiao-origem": "SAO PAULO",
+                "numero": "34526351806"
+            },
+            "situacao-cpf": {},
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "BAURU"
+                },
+                "logradouro": "R ANTONIO ALCAZAR QD 3 44",
+                "bairro": "NUCLEO RES BEIJA-F",
+                "cep": 17025640
+            },
+            "telefone-residencial": {
+                "numero-ddd": 14,
+                "numero": 38796606
+            },
+            "data-nascimento": "1987-02-26T00:00:00-03:00",
+            "idade": 31,
+            "nome": "RUDSON RODRIGO CUNHA",
+            "nome-mae": "ESTELA CRISTIANA EMILIO CUNHA",
+            "sexo": "MASCULINO",
+            "signo": "PEIXES"
+        }
+    },
+    "grafia-pj": {},
+    "endereco-cep-consultado": {},
+    "telefone-consultado": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "telefone-vinculado-consumidor": {
+        "resumo": {
+            "quantidade-total": 2
+        },
+        "detalhe-telefone-vinculado-consumidor": [
+            {
+                "assinante": {
+                    "telefone": {
+                        "numero-ddd": 14,
+                        "numero": 34225861
+                    },
+                    "nome": "RUDSON RODRIGO CUNHA",
+                    "tipo-telefone": "Fixo"
+                }
+            },
+            {
+                "assinante": {
+                    "telefone": {
+                        "numero-ddd": 14,
+                        "numero": 34321277
+                    },
+                    "nome": "RUDSON RODRIGO CUNHA",
+                    "tipo-telefone": "Fixo"
+                }
+            }
+        ]
+    },
+    "ultimo-telefone-informado": {},
+    "ultimo-endereco-informado": {
+        "detalhe-ultimo-endereco-informado": {
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "MARILIA"
+                },
+                "logradouro": "AV NELSON SPIELMANN",
+                "numero": "974",
+                "complemento": "CS",
+                "bairro": "PALMITAL",
+                "cep": 17509001
+            }
+        }
+    },
+    "alerta-documento": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "spc": {
+        "resumo": {
+            "quantidade-total": 3,
+            "data-ultima-ocorrencia": "2015-01-06T00:00:00-02:00",
+            "valor-total": "255.43"
+        },
+        "detalhe-spc": [
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    }
+                },
+                "telefone-associado": {
+                    "numero-ddd": 800,
+                    "numero": 7741515
+                },
+                "nome-associado": "TELEFONICA BRASIL S/A",
+                "data-inclusao": "2015-01-06T00:00:00-02:00",
+                "data-vencimento": "2013-12-24T00:00:00-02:00",
+                "nome-entidade": "SERASA EXPERIAN",
+                "contrato": "C96332956161213",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "56.69"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    }
+                },
+                "telefone-associado": {
+                    "numero-ddd": 800,
+                    "numero": 7741515
+                },
+                "nome-associado": "TELEFONICA BRASIL S/A",
+                "data-inclusao": "2015-01-06T00:00:00-02:00",
+                "data-vencimento": "2013-11-24T00:00:00-02:00",
+                "nome-entidade": "SERASA EXPERIAN",
+                "contrato": "C96332956161113",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "192.35"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    }
+                },
+                "telefone-associado": {
+                    "numero-ddd": 800,
+                    "numero": 7741515
+                },
+                "nome-associado": "TELEFONICA BRASIL S/A",
+                "data-inclusao": "2015-01-06T00:00:00-02:00",
+                "data-vencimento": "2013-10-24T00:00:00-02:00",
+                "nome-entidade": "SERASA EXPERIAN",
+                "contrato": "C96332956161013",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "6.39"
+            }
+        ]
+    },
+    "cheque-lojista": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "ccf": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem-documento-diferente": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "protesto": {
+        "resumo": {
+            "quantidade-total": 15,
+            "data-primeira-ocorrencia": "2015-01-07T00:00:00-02:00",
+            "data-ultima-ocorrencia": "2015-12-07T00:00:00-02:00",
+            "valor-total": "1180.20"
+        },
+        "detalhe-protesto": [
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "BAURU"
+                    },
+                    "nome": "0001"
+                },
+                "data-protesto": "2015-12-07T00:00:00-02:00",
+                "valor": "70.00"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "BAURU"
+                    },
+                    "nome": "0001"
+                },
+                "data-protesto": "2015-11-30T00:00:00-02:00",
+                "valor": "113.40"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "BAURU"
+                    },
+                    "nome": "0002"
+                },
+                "data-protesto": "2015-11-18T00:00:00-02:00",
+                "valor": "113.40"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "BAURU"
+                    },
+                    "nome": "0003"
+                },
+                "data-protesto": "2015-11-11T00:00:00-02:00",
+                "valor": "113.40"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "BAURU"
+                    },
+                    "nome": "0002"
+                },
+                "data-protesto": "2015-11-09T00:00:00-02:00",
+                "valor": "70.00"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "BAURU"
+                    },
+                    "nome": "0002"
+                },
+                "data-protesto": "2015-10-29T00:00:00-02:00",
+                "valor": "70.00"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "BAURU"
+                    },
+                    "nome": "0002"
+                },
+                "data-protesto": "2015-09-08T00:00:00-03:00",
+                "valor": "70.00"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "BAURU"
+                    },
+                    "nome": "0001"
+                },
+                "data-protesto": "2015-08-10T00:00:00-03:00",
+                "valor": "70.00"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "BAURU"
+                    },
+                    "nome": "0003"
+                },
+                "data-protesto": "2015-07-13T00:00:00-03:00",
+                "valor": "70.00"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "BAURU"
+                    },
+                    "nome": "0002"
+                },
+                "data-protesto": "2015-06-08T00:00:00-03:00",
+                "valor": "70.00"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "BAURU"
+                    },
+                    "nome": "0001"
+                },
+                "data-protesto": "2015-05-11T00:00:00-03:00",
+                "valor": "70.00"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "BAURU"
+                    },
+                    "nome": "0003"
+                },
+                "data-protesto": "2015-04-10T00:00:00-03:00",
+                "valor": "70.00"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "BAURU"
+                    },
+                    "nome": "0003"
+                },
+                "data-protesto": "2015-03-19T00:00:00-03:00",
+                "valor": "70.00"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "BAURU"
+                    },
+                    "nome": "0001"
+                },
+                "data-protesto": "2015-02-06T00:00:00-02:00",
+                "valor": "70.00"
+            },
+            {
+                "cartorio": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "BAURU"
+                    },
+                    "nome": "0003"
+                },
+                "data-protesto": "2015-01-07T00:00:00-02:00",
+                "valor": "70.00"
+            }
+        ]
+    },
+    "contra-ordem": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contumacia": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "credito-concedido": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "dados-agencia-bancaria": {},
+    "consulta-realizada": {
+        "resumo": {
+            "quantidade-total": 2,
+            "data-ultima-ocorrencia": "2018-08-29T00:00:00-03:00"
+        },
+        "detalhe-consulta-realizada": [
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "BAURU"
+                },
+                "nome-associado": "LIMA BAURU COMERCIO DE COSMETICOS",
+                "data-consulta": "2018-08-29T08:57:20-03:00",
+                "nome-entidade-origem": "CDL - CAXIAS DO SUL / RS"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "BAURU"
+                },
+                "nome-associado": "LIMA BAURU COMERCIO DE COSMETICOS",
+                "data-consulta": "2018-08-28T14:58:21-03:00",
+                "nome-entidade-origem": "CDL - CAXIAS DO SUL / RS"
+            }
+        ],
+        "quantidade-dias-consultados": 90
+    },
+    "informacao-poder-judiciario": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "cheque-consulta-online-srs": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "restricao": true,
+    "data": "2018-08-29T08:58:59.137-03:00"
+}
