@@ -236,7 +236,7 @@ class SianController extends Controller
                 'password' => $password
             );
 
-            //$client = new SoapClient($wsdlUrl, $soapClientOptions);
+            $client = new SoapClient($wsdlUrl, $soapClientOptions);
             
 
             $parametros = new \stdClass;
