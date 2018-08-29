@@ -269,8 +269,8 @@ class SianController extends Controller
         }
  
         
-        //return view('sian.spc-response', compact('response', 'name'));
-        return view('sian.spc-response-cnpj');
+        return view('sian.spc-response', compact('response', 'name'));
+        //return view('sian.spc-response-cnpj');
     }
 
     public function sugestaoCompra()
