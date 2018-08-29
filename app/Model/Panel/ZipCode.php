@@ -6,14 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class ZipCode extends Model
 {
-    public function city()
-    {
-        return $this->belongsTo('App\Model\Panel\City');
+    public function city(){
+        return $this->belongsTo(City::class);
     }
 
-    public function state()
-    {
-        return $this->belongsTo('App\Model\Panel\State');
+    public function state(){
+        return $this->belongsTo(State::class);
+    }
+
+    public function contry(){
+        return $this->belongsTo(Country::class);
     }
 
     // a partir daqui é o luidy

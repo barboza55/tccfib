@@ -1,3 +1,6 @@
+﻿###Link tutorial completo###
+https://imasters.com.br/desenvolvimento/como-contribuir-com-um-projeto-no-github
+
 ###Git Essencial - Trabalhando com Remotos###
 1 Renomear repositorio remoto
 	git remote rename nome_atual nome_novo
