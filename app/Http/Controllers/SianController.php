@@ -239,7 +239,7 @@ class SianController extends Controller
             //$client = new SoapClient($wsdlUrl, $soapClientOptions);
             
 
-            /*$parametros = new \stdClass;
+            $parametros = new \stdClass;
             $parametros->{'codigo-produto'} = '240';
             if ($request->exists('cpf')) {
                 $documento = $request->input('cpf');
@@ -256,13 +256,13 @@ class SianController extends Controller
             $name = $request->input('name');
 
             $response = $client->consultar($parametros);
-            $codigo = $request->input('codigo');*/
+            $codigo = $request->input('codigo');
 
-            /*$protocolo = $codigo . 'Protocolo' . $response->protocolo->numero . '-' . $response->protocolo->digito;
+            $protocolo = $codigo . 'Protocolo' . $response->protocolo->numero . '-' . $response->protocolo->digito;
             $dados_json = json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
             $fp = fopen("consulta/".$protocolo."consulta.json", "w");
             $escreve = fwrite($fp, $dados_json);
-            fclose($fp);*/    
+            fclose($fp);    
         }
         catch(Exception $e) {
             //echo $e->getMessage();
