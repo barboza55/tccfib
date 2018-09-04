@@ -93,7 +93,7 @@ class Sian extends Model
         curl_setopt($post, CURLOPT_COOKIEFILE, $this->cookie_file);
 		$error = curl_error($post);
 		curl_exec($post);
-        echo 'conecta'. curl_getinfo($post,CURLINFO_TOTAL_TIME) . '<br>';
+        //echo 'conecta'. curl_getinfo($post,CURLINFO_TOTAL_TIME) . '<br>';
 		curl_close($post);
     }
 
@@ -171,7 +171,7 @@ class Sian extends Model
 		curl_setopt($post, CURLOPT_COOKIEFILE, $this->cookie_file);
 		//$error = curl_error($post);
 		$html = curl_exec($post);
-        echo curl_getinfo($post, CURLINFO_TOTAL_TIME) . '<br>';
+        //echo curl_getinfo($post, CURLINFO_TOTAL_TIME) . '<br>';
 		$dom = new \DOMDocument();
         @$dom->loadHTML($html);
 		curl_close($post);
@@ -432,8 +432,8 @@ class Sian extends Model
     *
     */
     public function media($id){
-        $dataInicio = '01/08/2017';
-        $dataFim = '31/07/2018';
+        $dataInicio = '01/09/2017';
+        $dataFim = '31/08/2018';
 
         $filtros = [
             'filterClientCode'  =>  $id,

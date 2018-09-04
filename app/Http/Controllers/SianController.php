@@ -207,15 +207,16 @@ class SianController extends Controller
     public function apagar(Request $request)
     {
         try {
-            $username = '2122539';
-            $password = '20180822';
-            //$auth = 'Basic ' . base64_encode("2122539:20180822");
-            //echo $auth;
+            //$username = '2122539';
+            //$password = '20180822';
+            $password = '10082018';
+            $username = '398950';
+            
 
             $opts = array(
                 'https' => array(
                     'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-                    //'Authorization' => $auth,
+                    
                     'user_agent' => 'PHPSoapClient',
 
                 ),
@@ -226,8 +227,9 @@ class SianController extends Controller
 
             $context = stream_context_create($opts);
 
-            $wsdlUrl = 'https://servicos.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
-            //$wsdlUrl = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
+            //$wsdlUrl = 'https://servicos.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
+            $wsdlUrl = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
+            
             $soapClientOptions = array(
                 'soap_version'=>SOAP_1_1,
                 'stream_context' => $context,
@@ -238,11 +240,11 @@ class SianController extends Controller
             );
 
             $client = new SoapClient($wsdlUrl, $soapClientOptions);
-            //$client = new SoapClient($wsdlUrl, array("trace" => 1, "exceptions" => 0,
-                     //"login" => $username, "password" => $password) );
+            
 
             $parametros = new \stdClass;
-            $parametros->{'codigo-produto'} = '240';
+            //$parametros->{'codigo-produto'} = '240';
+            $parametros->{'codigo-produto'} = '333';
             if ($request->exists('cpf')) {
                 $documento = $request->input('cpf');
                 $parametros->{'tipo-consumidor'} = 'F';
@@ -259,75 +261,20 @@ class SianController extends Controller
 
             $response = $client->consultar($parametros);
             $codigo = $request->input('codigo');
+
             $protocolo = $codigo . 'Protocolo' . $response->protocolo->numero . '-' . $response->protocolo->digito;
             $dados_json = json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
             $fp = fopen("consulta/".$protocolo."consulta.json", "w");
             $escreve = fwrite($fp, $dados_json);
-            fclose($fp);
-
-            
+            fclose($fp);    
         }
         catch(Exception $e) {
             echo $e->getMessage();
         }
  
-        //$Webservice = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaEntidadeReplicadaWebService?wsdl';
-        //$Webservice = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
-        //$Webservice = '';
-
         
-        
-        
-        
-        
-        //$auth = 'Basic ' . base64_encode($username . ':' . $password);
-        
-        
-        //$client = new \SoapClient($Webservice, $options);
-        //$client = new \SoapClient($Webservice, array("login"=>$username,"password"=>$password));
-        //$functions = $client->__getFunctions();
-        //$functions = $client->listarProdutos();
-        //$functions = $client->detalharProduto(7);
-        //dd($functions);
-        
-        
-
-        
-        
-
-
-
-        
-        
-        
-        
-        //$functions = serialize($functions);
-
-        /*echo "<table border='1'>";
-        foreach ($functions->produto as $produto) {
-            
-            echo "<tr>
-            <td>". $produto->nome . "</td>
-            <td>". $produto->codigo.
-            "</tr>" ;
-            
-        }
-        echo "</table>";*/
-
-        //dd($response);
-        //$header = "Authorization: Basic " . base64_encode($username . ':' . $password);
-        //$client->__setSoapHeaders($header);
-
-       /* $auth = array(
-                'UserName'=>'USERNAME',
-                'Password'=>'PASSWORD',
-                'SystemId'=> array('_'=>'DATA','Param'=>'PARAM'),
-        );
-        $header = new \SoapHeader('NAMESPACE','Auth',$auth,false);
-        $client->__setSoapHeaders($header);*/
-        //dd($header);
-        //return view('sian.apagar');
-        return view('sian.spc-response', compact('response', 'name'));
+        //return view('sian.spc-response', compact('response', 'name'));
+        return view('sian.spc-response-cnpj', compact('response', 'name'));
     }
 
     public function sugestaoCompra()

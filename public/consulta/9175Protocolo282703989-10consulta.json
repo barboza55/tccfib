@@ -1,0 +1,138 @@
+{
+    "protocolo": {
+        "numero": 282703989,
+        "digito": 10
+    },
+    "operador": {
+        "codigo": "398950",
+        "nome": "LIMA BAURU - TESTE"
+    },
+    "consumidor": {
+        "consumidor-pessoa-fisica": {
+            "cpf": {
+                "regiao-origem": "SAO PAULO",
+                "numero": "29670664861"
+            },
+            "nome": "CADASTRO NAO LOCALIZADO"
+        }
+    },
+    "grafia-pj": {},
+    "endereco-cep-consultado": {},
+    "telefone-consultado": {},
+    "telefone-vinculado-consumidor": {},
+    "ultimo-telefone-informado": {},
+    "ultimo-endereco-informado": {},
+    "alerta-documento": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "spc": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "cheque-lojista": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "ccf": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem-documento-diferente": {
+        "resumo": {
+            "quantidade-total": 1,
+            "data-ultima-ocorrencia": "2018-08-31T00:00:00-03:00"
+        },
+        "detalhe-contra-ordem-documento-diferente": {
+            "motivo": {
+                "codigo": 12,
+                "descricao": "MOTIVO 11x"
+            },
+            "cheque-inicial": {
+                "dados-bancarios": {
+                    "banco": {
+                        "codigo": 1,
+                        "nome": "BANCO DO BRASIL"
+                    },
+                    "numero-agencia": 1234,
+                    "numero-conta-corrente": "123",
+                    "digito-conta-corrente": "123"
+                },
+                "numero": 2,
+                "digito": 7
+            },
+            "cheque-final": {
+                "numero": 3,
+                "digito": 5
+            },
+            "data-inclusao": "2018-08-30T00:00:00-03:00",
+            "data-ocorrencia": "2018-08-31T00:00:00-03:00",
+            "origem": "CDL - GOTHAM CITY / SP",
+            "informante": "INFORMANTE",
+            "documento": "52500287000112",
+            "codigo-tipo-documento": 2
+        }
+    },
+    "protesto": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contumacia": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "credito-concedido": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "dados-agencia-bancaria": {
+        "detalhe-dados-agencia-bancaria": {
+            "dados-bancarios": {
+                "endereco": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "GOTHAM CITY"
+                    },
+                    "logradouro": "RUA A",
+                    "numero": "S/N",
+                    "complemento": "BL C",
+                    "bairro": "CENTRO",
+                    "cep": 22596456
+                },
+                "banco": {
+                    "codigo": 1,
+                    "nome": "BANCO DO BRASIL"
+                },
+                "numero-agencia": 138,
+                "nome-agencia": "AG BB"
+            }
+        }
+    },
+    "consulta-realizada": {
+        "resumo": {
+            "quantidade-total": 0
+        },
+        "quantidade-dias-consultados": 90
+    },
+    "informacao-poder-judiciario": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "restricao": true,
+    "data": "2018-08-30T09:51:33.225-03:00"
+}
