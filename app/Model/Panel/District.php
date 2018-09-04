@@ -6,7 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class District extends Model
 {
-    public function zipCodeDistricts(){
-        return $this->hasMany(zipCodeDistrict::class);
+    public function zipCodes(){
+        return $this->belongsToMany(ZipCode::class,'address_compose');
+    }
+
+    public function streets(){
+        return $this->belongsToMany(Street::class,'address_compose');
     }
 }
