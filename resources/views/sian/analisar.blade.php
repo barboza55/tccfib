@@ -206,7 +206,7 @@
 						
 							<div class="form-group">
 								<label for="fpagto" class="col-sm-2 control-label">Forma Pagto</label>
-								<div class="col-sm-2">
+								<div class="col-sm">
 									<select class="form-control" name="fpagto">
 										@foreach($pedido['opts'] as $opt)
 										<option @if($opt['selected']) selected="selected" @endif value="{{ $opt['value'] }}">{{ $opt['text'] }}</option>
