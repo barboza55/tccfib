@@ -207,8 +207,10 @@ class SianController extends Controller
     public function apagar(Request $request)
     {
         try {
-            $username = '2122539';
-            $password = '20180822';
+            //$username = '2122539';
+            //$password = '20180822';
+            $password = '10082018';
+            $username = '398950';
             
 
             $opts = array(
@@ -225,7 +227,8 @@ class SianController extends Controller
 
             $context = stream_context_create($opts);
 
-            $wsdlUrl = 'https://servicos.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
+            //$wsdlUrl = 'https://servicos.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
+            $wsdlUrl = 'https://treina.spc.org.br/spc/remoting/ws/consulta/consultaWebService?wsdl';
             
             $soapClientOptions = array(
                 'soap_version'=>SOAP_1_1,
@@ -240,7 +243,8 @@ class SianController extends Controller
             
 
             $parametros = new \stdClass;
-            $parametros->{'codigo-produto'} = '240';
+            //$parametros->{'codigo-produto'} = '240';
+            $parametros->{'codigo-produto'} = '333';
             if ($request->exists('cpf')) {
                 $documento = $request->input('cpf');
                 $parametros->{'tipo-consumidor'} = 'F';
@@ -265,12 +269,12 @@ class SianController extends Controller
             fclose($fp);    
         }
         catch(Exception $e) {
-            //echo $e->getMessage();
+            echo $e->getMessage();
         }
  
         
-        return view('sian.spc-response', compact('response', 'name'));
-        //return view('sian.spc-response-cnpj');
+        //return view('sian.spc-response', compact('response', 'name'));
+        return view('sian.spc-response-cnpj', compact('response', 'name'));
     }
 
     public function sugestaoCompra()

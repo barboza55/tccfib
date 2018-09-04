@@ -1,0 +1,1509 @@
+{
+    "protocolo": {
+        "numero": 282704009,
+        "digito": 10
+    },
+    "operador": {
+        "codigo": "398950",
+        "nome": "LIMA BAURU - TESTE"
+    },
+    "consumidor": {
+        "consumidor-pessoa-fisica": {
+            "cpf": {
+                "regiao-origem": "RIO DE JANEIRO E ESPIRITO SANTO",
+                "numero": "00752477714"
+            },
+            "situacao-cpf": {
+                "descricao-situacao": "REGULAR",
+                "data-situacao": "2018-04-05T10:46:38-03:00"
+            },
+            "estado-rg": {
+                "sigla-uf": "PR"
+            },
+            "endereco": {
+                "cidade": {
+                    "estado": {
+                        "sigla-uf": "SC"
+                    },
+                    "nome": "NAVEGANTES"
+                },
+                "logradouro": "RUA VEREADOR  NEREU LIBERATO NUNES",
+                "numero": "321A",
+                "bairro": "CENTRO",
+                "cep": 88370232
+            },
+            "telefone-residencial": {
+                "numero-ddd": 44,
+                "numero": 32629895
+            },
+            "data-nascimento": "1945-09-02T00:00:00-03:00",
+            "email": "teste@bol.com.br",
+            "estado-civil": "SOLTEIRO",
+            "idade": 72,
+            "nome": "MARIA OLIVIA ALMEIDA DE OLIVEIRA",
+            "nome-mae": "OCTACILIA DE SOUZA ALMEIDA",
+            "nome-pai": "TESTE PAI",
+            "numero-rg": "328332732",
+            "numero-titulo-eleitor": 752477714,
+            "sexo": "FEMININO",
+            "signo": "VIRGEM"
+        }
+    },
+    "grafia-pj": {},
+    "endereco-cep-consultado": {},
+    "telefone-consultado": {},
+    "telefone-vinculado-consumidor": {},
+    "ultimo-telefone-informado": {
+        "detalhe-ultimo-telefone-informado": [
+            {
+                "telefone": {
+                    "numero-ddd": 19,
+                    "numero": 36562854
+                },
+                "data-primeira-consulta": "2013-11-13T00:00:00-02:00",
+                "data-ultima-consulta": "2018-07-30T00:00:00-03:00",
+                "quantidade-consulta": 140
+            },
+            {
+                "telefone": {
+                    "numero-ddd": 64,
+                    "numero": 999826491
+                },
+                "data-primeira-consulta": "2018-04-09T00:00:00-03:00",
+                "data-ultima-consulta": "2018-04-09T00:00:00-03:00",
+                "quantidade-consulta": 1
+            },
+            {
+                "telefone": {
+                    "numero-ddd": 64,
+                    "numero": 992319980
+                },
+                "data-primeira-consulta": "2018-04-03T00:00:00-03:00",
+                "data-ultima-consulta": "2018-04-03T00:00:00-03:00",
+                "quantidade-consulta": 1
+            },
+            {
+                "telefone": {
+                    "numero-ddd": 12,
+                    "numero": 32556622
+                },
+                "data-primeira-consulta": "2018-02-08T00:00:00-02:00",
+                "data-ultima-consulta": "2018-03-20T00:00:00-03:00",
+                "quantidade-consulta": 32
+            },
+            {
+                "telefone": {
+                    "numero-ddd": 6,
+                    "numero": 992319980
+                },
+                "data-primeira-consulta": "2018-02-26T00:00:00-03:00",
+                "data-ultima-consulta": "2018-02-26T00:00:00-03:00",
+                "quantidade-consulta": 2
+            }
+        ]
+    },
+    "ultimo-endereco-informado": {
+        "detalhe-ultimo-endereco-informado": [
+            {
+                "endereco": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SC"
+                        },
+                        "nome": "NAVEGANTES"
+                    },
+                    "logradouro": "RUA VEREADOR  NEREU LIBERATO NUNES",
+                    "numero": "321A",
+                    "bairro": "CENTRO",
+                    "cep": 88370232
+                }
+            },
+            {
+                "endereco": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SC"
+                        },
+                        "nome": "FLORIANOPOLIS"
+                    },
+                    "logradouro": "RODOVIA   ARMANDO CALIL BULOS",
+                    "numero": "50",
+                    "complemento": "casa1",
+                    "bairro": "VARGEM GRANDE",
+                    "cep": 88058000
+                }
+            },
+            {
+                "endereco": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SC"
+                        },
+                        "nome": "FLORIANOPOLIS"
+                    },
+                    "logradouro": "RUA  DO MARISCO",
+                    "numero": "500",
+                    "bairro": "INGLESES DO RIO VERMELHO",
+                    "cep": 88058090
+                }
+            },
+            {
+                "endereco": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "PR"
+                        },
+                        "nome": "MARINGA"
+                    },
+                    "logradouro": "TRAVESSA   MARFIM",
+                    "numero": "633",
+                    "bairro": "JARDIM VITORIA",
+                    "cep": 87023710
+                }
+            },
+            {
+                "endereco": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "ITANHAEM"
+                    },
+                    "logradouro": "AVENIDA CONDESSA",
+                    "numero": "999",
+                    "bairro": "CENTRO",
+                    "cep": 11740000
+                }
+            }
+        ]
+    },
+    "alerta-documento": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "spc": {
+        "resumo": {
+            "quantidade-total": 53,
+            "data-ultima-ocorrencia": "2018-08-24T00:00:00-03:00",
+            "valor-total": "10236.24"
+        },
+        "detalhe-spc": [
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-08-24T00:00:00-03:00",
+                "data-vencimento": "2018-06-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "56",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "999.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-08-23T00:00:00-03:00",
+                "data-vencimento": "2018-08-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "589",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "999.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-07-13T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34121489922",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-07-03T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34024489922",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-07-03T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34021989922",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-26T00:00:00-03:00",
+                "data-vencimento": "2018-03-15T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "1234567890",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "115.2"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-18T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34455989122",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-18T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34057989922",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-18T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34055989922",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-18T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34455981122",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-18T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34455989922",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-15T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34432111122",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-15T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34433211122",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-15T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34433111122",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-15T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34455281122",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-15T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34455221122",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-15T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34433221122",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-14T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "300011111121",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-14T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "310011111122",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-14T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34431111122",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-14T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34011111122",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-14T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34331111122",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-14T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "300011111122",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-14T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "34311111122",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "129.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-13T00:00:00-03:00",
+                "data-vencimento": "2017-10-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "300011111111",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "100.05"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-06-12T00:00:00-03:00",
+                "data-vencimento": "2018-05-12T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "1234",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "99.99"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-05-14T00:00:00-03:00",
+                "data-vencimento": "2017-11-30T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "224",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "93.6"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-05-14T00:00:00-03:00",
+                "data-vencimento": "2017-11-30T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "223",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "93.6"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-05-14T00:00:00-03:00",
+                "data-vencimento": "2017-11-30T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "6046",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "93.6"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-05-04T00:00:00-03:00",
+                "data-vencimento": "2018-05-03T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "5",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "100"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-04-11T00:00:00-03:00",
+                "data-vencimento": "2018-02-02T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "NF600168",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "451"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-04-11T00:00:00-03:00",
+                "data-vencimento": "2018-01-11T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "11111",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "100"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-04-09T00:00:00-03:00",
+                "data-vencimento": "2018-04-01T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "3336",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "1000"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-04-09T00:00:00-03:00",
+                "data-vencimento": "2018-03-31T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "333222",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "100"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-03-06T00:00:00-03:00",
+                "data-vencimento": "2017-11-30T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "2223",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "93.6"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-03-06T00:00:00-03:00",
+                "data-vencimento": "2017-11-30T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "1517",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "93.6"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-03-05T00:00:00-03:00",
+                "data-vencimento": "2017-11-30T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "6056",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "93.6"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-03-05T00:00:00-03:00",
+                "data-vencimento": "2017-11-30T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "6048",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "93.6"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-03-05T00:00:00-03:00",
+                "data-vencimento": "2017-11-30T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "1516",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "93.6"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-03-02T00:00:00-03:00",
+                "data-vencimento": "2017-11-30T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "DOC44",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "93.6"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-03-02T00:00:00-03:00",
+                "data-vencimento": "2017-11-30T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "DOC4433",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "93.6"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-03-02T00:00:00-03:00",
+                "data-vencimento": "2017-11-30T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "66/55",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "93.6"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-03-02T00:00:00-03:00",
+                "data-vencimento": "2017-11-30T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "6054",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "93.6"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-03-02T00:00:00-03:00",
+                "data-vencimento": "2017-11-30T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "CT4422",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "93.6"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-02-26T00:00:00-03:00",
+                "data-vencimento": "2017-11-30T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "6060",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "93.6"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-02-15T00:00:00-02:00",
+                "data-vencimento": "2017-11-30T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "6059",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "93.6"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2018-02-08T00:00:00-02:00",
+                "data-vencimento": "2017-12-30T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "133",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "14"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2017-11-09T00:00:00-02:00",
+                "data-vencimento": "2016-05-13T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "2015/23221203",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "78.35"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2017-02-20T00:00:00-03:00",
+                "data-vencimento": "2016-12-01T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "1",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "100.43"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2015-09-06T00:00:00-03:00",
+                "data-vencimento": "2015-05-06T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "45300_1",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "1086.66"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2015-08-31T00:00:00-03:00",
+                "data-vencimento": "2015-07-22T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "45343_1",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "201.79"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2015-08-31T00:00:00-03:00",
+                "data-vencimento": "2015-07-18T00:00:00-03:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "45340_1",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "55"
+            },
+            {
+                "cidade-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "codigo-entidade": 4,
+                "data-inclusao": "2014-03-27T00:00:00-03:00",
+                "data-vencimento": "2014-02-01T00:00:00-02:00",
+                "nome-entidade": "CDL - ADAMANTINA / SP",
+                "contrato": "305-G",
+                "registro-instituicao-financeira": "NAO",
+                "comprador-fiador-avalista": "COMPRADOR",
+                "valor": "500"
+            }
+        ]
+    },
+    "cheque-lojista": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "ccf": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem-documento-diferente": {
+        "resumo": {
+            "quantidade-total": 1,
+            "data-ultima-ocorrencia": "2018-08-31T00:00:00-03:00"
+        },
+        "detalhe-contra-ordem-documento-diferente": {
+            "motivo": {
+                "codigo": 12,
+                "descricao": "MOTIVO 11x"
+            },
+            "cheque-inicial": {
+                "dados-bancarios": {
+                    "banco": {
+                        "codigo": 1,
+                        "nome": "BANCO DO BRASIL"
+                    },
+                    "numero-agencia": 1234,
+                    "numero-conta-corrente": "123",
+                    "digito-conta-corrente": "123"
+                },
+                "numero": 2,
+                "digito": 7
+            },
+            "cheque-final": {
+                "numero": 3,
+                "digito": 5
+            },
+            "data-inclusao": "2018-08-30T00:00:00-03:00",
+            "data-ocorrencia": "2018-08-31T00:00:00-03:00",
+            "origem": "CDL - GOTHAM CITY / SP",
+            "informante": "INFORMANTE",
+            "documento": "52500287000112",
+            "codigo-tipo-documento": 2
+        }
+    },
+    "protesto": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contra-ordem": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "contumacia": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "credito-concedido": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "dados-agencia-bancaria": {
+        "detalhe-dados-agencia-bancaria": {
+            "dados-bancarios": {
+                "endereco": {
+                    "cidade": {
+                        "estado": {
+                            "sigla-uf": "SP"
+                        },
+                        "nome": "GOTHAM CITY"
+                    },
+                    "logradouro": "RUA A",
+                    "numero": "S/N",
+                    "complemento": "BL C",
+                    "bairro": "CENTRO",
+                    "cep": 22596456
+                },
+                "banco": {
+                    "codigo": 1,
+                    "nome": "BANCO DO BRASIL"
+                },
+                "numero-agencia": 138,
+                "nome-agencia": "AG BB"
+            }
+        }
+    },
+    "consulta-realizada": {
+        "resumo": {
+            "quantidade-total": 28,
+            "data-ultima-ocorrencia": "2018-08-30T00:00:00-03:00"
+        },
+        "detalhe-consulta-realizada": [
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-30T10:00:00-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-30T09:20:24-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-30T08:22:28-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-29T14:31:00-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-29T12:20:24-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-29T11:00:03-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-29T10:14:44-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-29T09:00:21-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-29T08:49:59-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-28T19:03:24-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-28T18:19:42-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-28T17:46:43-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-28T14:09:50-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-27T11:00:50-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-24T15:15:01-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-24T09:07:05-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-24T08:58:41-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-23T16:34:59-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-23T15:08:54-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-23T13:51:57-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-23T12:02:20-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-23T11:08:10-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-23T09:24:28-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-22T18:07:17-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-22T09:50:11-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-21T16:22:28-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-20T18:07:58-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            },
+            {
+                "origem-associado": {
+                    "estado": {
+                        "sigla-uf": "SP"
+                    },
+                    "nome": "SAO PAULO"
+                },
+                "nome-associado": "ASSOCIADO TESTE - HOMOLOGAÇÃO MEIOS DE ACESSO REMOTOS",
+                "data-consulta": "2018-08-19T21:38:39-03:00",
+                "nome-entidade-origem": "CDL - ADAMANTINA / SP"
+            }
+        ],
+        "quantidade-dias-consultados": 90
+    },
+    "informacao-poder-judiciario": {
+        "resumo": {
+            "quantidade-total": 0
+        }
+    },
+    "restricao": true,
+    "data": "2018-08-30T10:11:15.559-03:00"
+}

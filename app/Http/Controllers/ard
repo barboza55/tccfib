@@ -1,0 +1,146 @@
+// C�digo adaptado por Ivan Morales
+// N�o esque�a de abrir o monitor serial para acompanhar os resultados
+
+// Biblioteca Esp8266
+#include <ESP8266WiFi.h>
+
+// Credenciais para Wireless
+const char* ssid     = "Lunataks";
+const char* password = "pegaoutrowifi";
+
+// Leitura do servidor Web: se falhar troque para 8080
+WiFiServer server(80);
+
+// Vari�vel de armazenamento da requisi��o do HTTP
+String header;
+
+// Vari�veis auxiliars de armazenamento dos estados de sa�da
+String output5State = "off";
+String output4State = "off";
+String output3State = "off";
+
+// Pinos de Saida -> veja a correspondencia na placa base do Nodemcu
+const int output5 = 5;
+const int output4 = 4;
+const int output3 = 3;
+
+void setup() {
+  Serial.begin(115200);
+  // Inidicializa��o das variaveis de saida.
+  pinMode(output5, OUTPUT);
+  pinMode(output4, OUTPUT);
+  pinMode(output3, OUTPUT);
+  // Setando as sa�das em n�vel Baixo.
+  digitalWrite(output5, LOW);
+  digitalWrite(output4, LOW);
+
+  // Autentica��o utilizando os parametros passados ssid e password
+  Serial.print("Connecting to ");
+  Serial.println(ssid);
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  // Print dos resultados no monitor serial.
+  Serial.println("");
+  Serial.println("WiFi connected.");
+  Serial.println("IP address: ");
+  Serial.println(WiFi.localIP());
+  server.begin();
+}
+
+void loop(){
+  WiFiClient client = server.available();   // Aguardando entrada dos clientes
+
+  if (client) {                             // Se um novo cliente conectar, 
+    Serial.println("New Client.");          // Envia mensagem para Monitor serial
+    String currentLine = "";                // String para manter os dados dos clientes
+    while (client.connected()) {            // loop enquanto cliente estiver conectado
+      if (client.available()) {             // Se houver bytes de leitura, 
+        char c = client.read();             // byte sera lido 
+        Serial.write(c);                    // resultado ser� enviado ao monitor serial
+        header += c;
+        if (c == '\n') {                    // if the byte is a newline character
+          // se a linha atual estiver em branco, voc� ter� dois caracteres de nova linha;
+          // esse � o fim da solicita��o HTTP do cliente, ent�o envie uma resposta:
+          if (currentLine.length() == 0) {
+            // HTTP headers smpre inicia com uma uma resposta c�digo (e.g. HTTP/1.1 200 OK)
+            // Cliente conhece a entrada :
+            client.println("HTTP/1.1 200 OK");
+            client.println("Content-type:text/html");
+            client.println("Connection: close");
+            client.println();
+            
+            // Seta as GPIOs on e off
+            if (header.indexOf("GET /5/on") >= 0) {
+              Serial.println("GPIO 5 on");
+              output5State = "on";
+              digitalWrite(output5, HIGH);
+            } else if (header.indexOf("GET /5/off") >= 0) {
+              Serial.println("GPIO 5 off");
+              output5State = "off";
+              digitalWrite(output5, LOW);
+            } else if (header.indexOf("GET /4/on") >= 0) {
+              Serial.println("GPIO 4 on");
+              output4State = "on";
+              digitalWrite(output4, HIGH);
+            } else if (header.indexOf("GET /4/off") >= 0) {
+              Serial.println("GPIO 4 off");
+              output4State = "off";
+              digitalWrite(output4, LOW);
+            }
+            
+            // Mostrando pagina HTML
+            client.println("<!DOCTYPE html><html>");
+            client.println("<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
+            client.println("<link rel=\"icon\" href=\"data:,\">");
+            // CSS para estilizar os bot�es liga / desliga 
+            // Altere os atributos de cor de fundo e tamanho de fonte para adequ�-lo �s suas prefer�ncias
+            client.println("<style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}");
+            client.println(".button { background-color: #195B6A; border: none; color: white; padding: 16px 40px;");
+            client.println("text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}");
+            client.println(".button2 {background-color: #77878A;}</style></head>");
+            
+            // Cabe�alho Web Page
+            client.println("<body><h1>FIB AUTOMACAO II - PRATICAS COM ESP8266  - WEB SERVER</h1>");
+            
+            // Display current state, and ON/OFF buttons for GPIO 5  
+            client.println("<p>GPIO 5 - State " + output5State + "</p>");
+            // If the output5State is off, it displays the ON button       
+            if (output5State=="off") {
+              client.println("<p><a href=\"/5/on\"><button class=\"button\">ON</button></a></p>");
+            } else {
+              client.println("<p><a href=\"/5/off\"><button class=\"button button2\">OFF</button></a></p>");
+            } 
+               
+            // Mostra o estado, ON/OFF dos bot�es para a GPIO 4  
+            client.println("<p>GPIO 4 - State " + output4State + "</p>");
+            // Se a sa�da output4State est� em is off, � mostrado na tela ON button       
+            if (output4State=="off") {
+              client.println("<p><a href=\"/4/on\"><button class=\"button\">ON</button></a></p>");
+            } else {
+              client.println("<p><a href=\"/4/off\"><button class=\"button button2\">OFF</button></a></p>");
+            }
+            client.println("</body></html>");
+            
+            // O HTTP responde fim com outra linha em branco.
+            client.println();
+            // Parada 
+            break;
+          } else { // se voc� tem uma nova linha, ent�o desmarque currentLine
+            currentLine = "";
+          }
+        } else if (c != '\r') {  // se voc� tem outra coisa que n�o seja um caractere de retorno,
+          currentLine += c;      // adicione-o ao final do currentLine
+        }
+      }
+    }
+    // Limpar a vari�vel de cabe�alho
+    header = "";
+    // Fecha conex�o
+    client.stop();
+    Serial.println("Client est� desconectado.");
+    Serial.println("");
+  }
+}
