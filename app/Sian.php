@@ -432,8 +432,8 @@ class Sian extends Model
     *
     */
     public function media($id){
-        $dataInicio = '01/08/2017';
-        $dataFim = '31/07/2018';
+        $dataInicio = '01/09/2017';
+        $dataFim = '31/08/2018';
 
         $filtros = [
             'filterClientCode'  =>  $id,

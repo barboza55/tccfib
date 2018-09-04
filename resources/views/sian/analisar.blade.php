@@ -195,74 +195,45 @@
 				</div>
 			</div>
 		</div>
-		<form action="{{ url('aprove') }}" class="form-horizontal">
+		<form action="{{ url('aprove') }}">
 		<div class="row">
-			<div class="col-md-12">
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						<h3 class="panel-title">Ações</h3>
+			<div class="col-sm">
+				<div class="card">
+					<div class="card-header">
+						<h3 class="card-title">Ações</h3>
 					</div>
-					<div class="panel-body">
-						
-							<div class="form-group">
-								<label for="fpagto" class="col-sm-2 control-label">Forma Pagto</label>
-								<div class="col-sm">
-									<select class="form-control" name="fpagto">
-										@foreach($pedido['opts'] as $opt)
-										<option @if($opt['selected']) selected="selected" @endif value="{{ $opt['value'] }}">{{ $opt['text'] }}</option>
-										@endforeach
-									</select>
-								</div>
-								<div class="col-sm-4">
-									<table class="table table-striped table-condensed">
-										<tr>
-											<td>
-												<a target="_blank" href="http://aneethun-sian.com.br/app?component=edit_&page=pages%2Fsale%2FSaleOrderAnalysisOrderList&service=direct&session=T&sp={{ $pedido['codigo'] }}">
-													<label for="vendedor" class="control-label">Vendedor</label>
-												</a>
-											</td>
-											<td>{{ $pedido['vendedor'] }}</td>
-										</tr>
-										<tr>
-											<td>
-												<label for="valor" class="control-label">Valor</label>
-											</td>
-											<td>
-												{{ $pedido['valor'] }}
-												<span>
-													Média
-													{{ $customer['mediaAnual'] }}
-												</span>
-											</td>
-										</tr>
-									</table>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="obs" class="col-sm-2 control-label">Publica</label>
-								<div class="col-sm-8">
-									<input type="text" class="form-control" id="obs" name="obs" value="{{ $pedido['publicObs'] }}">
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="obsP" class="col-sm-2 control-label">Privada</label>
-								<div class="col-sm-8">
-									<input type="text" class="form-control" id="obsP" name="obsP" value="{{ $pedido['privateObs'] }}">
-								</div>
-							</div>
+					<div class="card-body">
+						<div class="form-group">
+							<label for="fpagto">Forma Pagto</label>
+							<select class="form-control" name="fpagto" id="fpagto">
+								@foreach($pedido['opts'] as $opt)
+								<option @if($opt['selected']) selected="selected" @endif value="{{ $opt['value'] }}">{{ $opt['text'] }}</option>
+								@endforeach
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="obs">Publica</label>
+							<input type="text" class="form-control" id="obs" name="obs" value="{{ $pedido['publicObs'] }}">
+						</div>
+						<div class="form-group">
+							<label for="obsP">Privada</label>
+							<input type="text" class="form-control" id="obsP" name="obsP" value="{{ $pedido['privateObs'] }}">	
+						</div>
+						<div class="form-group">
 							{{ csrf_field() }}
 							<input type="hidden" name="codigo" value="{{ $pedido['codigo'] }}">
-							<div class="form-group">
-								<div class="row botao">
-									<div class="col-sm-offset-2 col-sm-10">
-										<a class="btn btn-primary botao2" href="{{ url('editar', $pedido['codigo']) }}">Zerar</a>
-										<button type="submit" class="btn btn-success" name="action" value="aprove" title="Tooltip on top">Aprovar</button>
-										<button type="submit" class="btn btn-primary" name="action" value="save">Salvar</button>
-										<button type="submit" class="btn btn-danger" name="action" value="cancel">Cancelar</button>
-										<a class="btn btn-primary" href="{{ url('sian') }}" role="button">Voltar</a>
-									</div>
-								</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-sm">
+								<a class="btn btn-primary" href="{{ url('editar', $pedido['codigo']) }}">Zerar</a>
+								<button type="submit" class="btn btn-success" name="action" value="aprove">Aprovar</button>
+								<button type="submit" class="btn btn-primary" name="action" value="save">Salvar</button>
+								<button type="submit" class="btn btn-danger" name="action" value="cancel">Cancelar</button>
+								<a class="btn btn-primary" href="{{ url('sian') }}" role="button">Voltar</a>
 							</div>
+						</div>
+							
 						
 						<!-- <a class="btn btn-success" href="{{ url('aprove', $pedido['codigo']) }}" role="button">Aprovar</a> -->
 					</div>
