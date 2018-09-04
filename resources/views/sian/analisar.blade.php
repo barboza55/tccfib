@@ -197,12 +197,22 @@
 		</div>
 		<form action="{{ url('aprove') }}">
 		<div class="row">
-			<div class="col-sm">
+			<div class="col">
 				<div class="card">
 					<div class="card-header">
 						<h3 class="card-title">Ações</h3>
 					</div>
 					<div class="card-body">
+						<div class="form-group">
+						    <label for="exampleFormControlSelect1">Example select</label>
+						    <select class="form-control" id="exampleFormControlSelect1">
+						      <option>1</option>
+						      <option>2</option>
+						      <option>3</option>
+						      <option>4</option>
+						      <option>5</option>
+						    </select>
+						  </div>
 						<div class="form-group">
 							<label for="fpagto">Forma Pagto</label>
 							<select class="form-control" name="fpagto" id="fpagto">
@@ -223,7 +233,6 @@
 							{{ csrf_field() }}
 							<input type="hidden" name="codigo" value="{{ $pedido['codigo'] }}">
 						</div>
-						
 						<div class="row">
 							<div class="col-sm">
 								<a class="btn btn-primary" href="{{ url('editar', $pedido['codigo']) }}">Zerar</a>
@@ -232,14 +241,13 @@
 								<button type="submit" class="btn btn-danger" name="action" value="cancel">Cancelar</button>
 								<a class="btn btn-primary" href="{{ url('sian') }}" role="button">Voltar</a>
 							</div>
-						</div>
-							
-						
+						</div>	
 						<!-- <a class="btn btn-success" href="{{ url('aprove', $pedido['codigo']) }}" role="button">Aprovar</a> -->
 					</div>
 				</div>
-			</div>
 		</div>
+		</div>
+	</form>
 		<div class="row">
 			<div class="col-md-4">
 				<div class="panel panel-primary">
@@ -367,5 +375,5 @@
 				<a class="btn btn-primary" href="{{ url('sian') }}" role="button">Voltar</a>
 			</div>
 		</div>
-		</form>
+		
 		@endsection
