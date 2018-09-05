@@ -15,7 +15,7 @@ class City extends Model
         return $this->belongsToMany(State::class,'zip_code');
     }
 
-    public function countrie(){
+    public function countries(){
         return $this->belongsToMany(Country::class,'zip_code');
     }
 }

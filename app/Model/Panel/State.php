@@ -11,7 +11,7 @@ class State extends Model
         return $this->hasMany(ZipCode::class);
     }
 
-    public function countrie(){
+    public function countries(){
         return $this->belongsToMany(Country::class,'zip_code');
     }
 

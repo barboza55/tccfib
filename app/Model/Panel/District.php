@@ -13,4 +13,8 @@ class District extends Model
     public function streets(){
         return $this->belongsToMany(Street::class,'address_compose');
     }
+
+    public function dataSources(){
+        return $this->belongsToMany(DataSource::class,'address_compose');
+    }
 }
