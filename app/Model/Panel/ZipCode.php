@@ -18,13 +18,12 @@ class ZipCode extends Model
         return $this->belongsTo(Country::class);
     }
 
-    // a partir daqui é o luidy
-    public function zipCodeStreets(){
-        return $this->hasMany(ZipCodeStreet::class);
+    public function districts(){
+        return $this->belongsToMany(District::class,'address_compose');
     }
 
-    public function zipCodeDistricts(){
-        return $this->hasMany(ZipCodeDistrict::class);
+    public function streets(){
+        return $this->belongsToMany(Street::class,'address_compose');
     }
 
 }
