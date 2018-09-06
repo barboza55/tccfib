@@ -57,6 +57,8 @@ Route::post('/media', 'MediaController@media');
 Route::get('/zera-combo/{id}/combo/{combo}/retira/{retira?}', 'MediaController@zeraCombo');
 Route::get('usersian', 'UserPasswordController@index');
 Route::post('usersiangrava', 'UserPasswordController@store')->name('usersiangrava');
+Route::get('/formteste', 'MediaController@formTeste');
+Route::get('/sian/visit/{id}', 'Sian\VisitController@index');
 
 
 
