@@ -59,6 +59,7 @@ Route::get('usersian', 'UserPasswordController@index');
 Route::post('usersiangrava', 'UserPasswordController@store')->name('usersiangrava');
 Route::get('/formteste', 'MediaController@formTeste');
 Route::get('/sian/visit/{id}', 'Sian\VisitController@index');
+Route::get('/test', 'TestController@index');
 
 
 
