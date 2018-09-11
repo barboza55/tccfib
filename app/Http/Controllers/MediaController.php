@@ -40,4 +40,8 @@ class MediaController extends Controller
 			$lista = $sian->editarPedido($id, $combo, $retira);
 			return redirect(route('sian', ['id' => $id]));
 		}
+
+		public function formTeste(){
+			return view('sian.testeform');
+		}
 }

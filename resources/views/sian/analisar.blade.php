@@ -195,7 +195,7 @@
 				</div>
 			</div>
 		</div>
-		<form action="{{ url('aprove') }}">
+		
 		<div class="row">
 			<div class="col">
 				<div class="card">
@@ -203,16 +203,9 @@
 						<h3 class="card-title">Ações</h3>
 					</div>
 					<div class="card-body">
-						<div class="form-group">
-						    <label for="exampleFormControlSelect1">Example select</label>
-						    <select class="form-control" id="exampleFormControlSelect1">
-						      <option>1</option>
-						      <option>2</option>
-						      <option>3</option>
-						      <option>4</option>
-						      <option>5</option>
-						    </select>
-						  </div>
+						<form action="{{ url('aprove') }}">
+							
+						
 						<div class="form-group">
 							<label for="fpagto">Forma Pagto</label>
 							<select class="form-control" name="fpagto" id="fpagto">
@@ -221,6 +214,32 @@
 								@endforeach
 							</select>
 						</div>
+						<div class="form-group">
+								
+									<table class="table table-striped table-condensed">
+										<tr>
+											<td>
+												<a target="_blank" href="http://aneethun-sian.com.br/app?component=edit_&page=pages%2Fsale%2FSaleOrderAnalysisOrderList&service=direct&session=T&sp={{ $pedido['codigo'] }}">
+													<label for="vendedor" class="control-label">Vendedor</label>
+												</a>
+											</td>
+											<td>{{ $pedido['vendedor'] }}</td>
+										</tr>
+										<tr>
+											<td>
+												<label for="valor" class="control-label">Valor</label>
+											</td>
+											<td>
+												{{ $pedido['valor'] }}
+												<span>
+													Média
+													{{ $customer['mediaAnual'] }}
+												</span>
+											</td>
+										</tr>
+									</table>
+								
+							</div>
 						<div class="form-group">
 							<label for="obs">Publica</label>
 							<input type="text" class="form-control" id="obs" name="obs" value="{{ $pedido['publicObs'] }}">
@@ -243,11 +262,12 @@
 							</div>
 						</div>	
 						<!-- <a class="btn btn-success" href="{{ url('aprove', $pedido['codigo']) }}" role="button">Aprovar</a> -->
+						</form>
 					</div>
 				</div>
 		</div>
 		</div>
-	</form>
+	
 		<div class="row">
 			<div class="col-md-4">
 				<div class="panel panel-primary">

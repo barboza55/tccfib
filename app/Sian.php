@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-ini_set('max_execution_time', 3000);
+ini_set('max_execution_time', 30000);
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 
@@ -457,7 +457,7 @@ class Sian extends Model
         }elseif($vendaAnual >= 350){
             $vendaAnual *= 1.11;
         }elseif($vendaAnual >= 250){
-            $vendaAnual *= 1.13;
+            $vendaAnual *= 1.15;
         }elseif($vendaAnual == 0){
             $vendaAnual = 350.00;
         }else{
@@ -1290,6 +1290,41 @@ class Sian extends Model
         //dd($tabela['trs']);
 
         return $tabela;
+    }
+
+    public function visit($post){
+        $postfinal = $post;
+        $post['contact'] = 'Acerto de rota'; //nome do contato
+        $post['input'] = '03/09/2018'; //data da visita
+        //$post['input_0'] = '04/09/2018'; //data proxima visita
+        $post['input_1'] = '2'; 
+        $post['notSaleReason'] = '1'; 
+        $post['obs'] = 'Acerto de rota'; 
+        $post['phoneContact'] = '0'; 
+        $post['saleRealized'] = '0'; 
+        //$post['Submit'] = 'Aguarde...'; 
+        unset($post['Submit']);
+        $post['submitmode'] = 'refresh'; 
+        
+
+        $post = $this->buildPostQuery($post);
+        $url = 'http://54.207.118.27/app';
+        $this->setDomDocument($url, TRUE, TRUE, $post);
+
+        $postfinal['contact'] = 'Acerto de rota'; //nome do contato
+        $postfinal['input'] = '03/09/2018'; //data da visita
+        //$postfinal['input_0'] = '05/09/2018'; //data proxima visita
+        $postfinal['input_1'] = '2'; 
+        $postfinal['notSaleReason'] = '1'; 
+        $postfinal['obs'] = 'Acerto de rota'; 
+        $postfinal['phoneContact'] = '0'; 
+        $postfinal['saleRealized'] = '0'; 
+        $postfinal['Submit'] = 'Aguarde...'; 
+        $postfinal['submitmode'] = 'submit';
+        $postfinal = $this->buildPostQuery($postfinal);
+        $this->setDomDocument($url, FALSE, TRUE, $postfinal);
+
+
     }
 
 

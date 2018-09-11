@@ -6,14 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class State extends Model
 {
-    public function cities()
-    {
-        return $this->hasMany('App\Model\City');
+
+    public function zipCodes(){
+        return $this->hasMany(ZipCode::class);
     }
 
-    public function zipCodes()
-    {
-        return $this->hasMany('App\Model\Panel\ZipCode');
+    public function countries(){
+        return $this->belongsToMany(Country::class,'zip_code');
+    }
+
+    public function cities(){
+        return $this->belongsToMany(City::class,'zip_code');
     }
     
 }

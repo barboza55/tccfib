@@ -5,8 +5,8 @@
 @section('content')
 
 <div class="col-lg-10 col-lg-offset-1">
-    <h1><i class="fa fa-users"></i> Usuários <a href="{{ route('roles.index') }}" class="btn btn-default pull-right">Funções</a>
-    <a href="{{ route('permissions.index') }}" class="btn btn-default pull-right">Permissões</a></h1>
+    <h1><i class="fa fa-users"></i> Usuários <a href="{{ route('roles.index') }}" class="btn btn-primary float-right">Funções</a>
+    <a href="{{ route('permissions.index') }}" class="btn btn-primary float-right">Permissões</a></h1>
     <hr>
     <div class="table-responsive">
         <table class="table table-bordered table-striped">
