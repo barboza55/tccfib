@@ -16,8 +16,13 @@
 });*/
 
 Route::get('/cunha', function () {
-	return view('cunha');
+    return view('cunha');
 });
+
+Route::get('/cadastro', function () {
+    return view('cadastros.cadastro');
+}); 
+
 
 Auth::routes();
 
